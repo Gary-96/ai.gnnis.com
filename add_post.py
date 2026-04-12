@@ -51,7 +51,7 @@ def main():
     data = load_content()
     
     while True:
-        print("\n=== 建绘 AI 内容管理助手 ===")
+        print("\n=== 格尼斯 AI 内容管理助手 ===")
         print("1. 添加工具 (Tool)")
         print("2. 添加文章 (Article)")
         print("3. 保存并退出")
