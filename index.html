@@ -29,6 +29,19 @@
     <link href="static/iconfont.css" rel="stylesheet">
     <link rel="stylesheet" href="static/index.082d951a.css">
     <script type="module" src="static/hoisted.8051735c.js"></script>
+    <style>
+      .blog-section { padding: 5rem 1rem; max-width: 1200px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .blog-header { margin-bottom: 3rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem; }
+      .blog-header h2 { font-size: 2.5rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
+      .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 4rem; }
+      .blog-card { display: flex; flex-direction: column; text-decoration: none; transition: opacity 0.2s ease; }
+      .blog-card:hover { opacity: 0.8; }
+      .blog-card .meta { font-size: 0.75rem; color: #14b8a6; font-weight: 600; text-transform: uppercase; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+      .blog-card h3 { font-size: 1.5rem; line-height: 1.3; color: #fff; margin-bottom: 0.75rem; font-weight: 600; }
+      .blog-card p { font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+      .blog-card .btn-read { font-size: 0.875rem; color: #fff; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.2); align-self: flex-start; padding-bottom: 2px; }
+      @media (max-width: 768px) { .blog-header h2 { font-size: 2rem; } .blog-grid { gap: 3rem; } }
+    </style>
     </head>
   <body class="dark">
     <div id="page">
@@ -336,196 +349,110 @@
       </div>
     </div>
 
-    <div class="width astro-J7PV25F6">
-      <div class="module astro-J7PV25F6">
-        <div class="item draw astro-J7PV25F6">
-          <div class="module-left astro-J7PV25F6">
-            <img alt="" class="img astro-J7PV25F6" src="img/home.png">
-          </div>
-          <div class="module-right astro-J7PV25F6">
-            <div class="astro-J7PV25F6">
-              <div class="title astro-J7PV25F6">灵感绘图</div>
-              <div class="subtitle astro-J7PV25F6">
-                新创新，新想法，新构思，新视角<br class="astro-J7PV25F6">
-                让AI拓展你的灵感边界，体验不一样的世界吧！
-              </div>
-            </div>
-            <div class="button astro-J7PV25F6" style="margin-top: 9rem;">
-              <span class="astro-J7PV25F6">开始创作</span>
-              <div class="icon astro-J7PV25F6">
-                <i class="iconfont  icon-arrow-right astro-J7PV25F6"></i>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div id="hero-container"></div>
+    <div id="feature-container"></div>
+    <div id="compact-container"></div>
+    
+    <section class="blog-section">
+      <div class="blog-header">
+        <h2>Editor's Choice / 深度专栏</h2>
       </div>
-    </div>
-    <div class="width astro-J7PV25F6">
-      <div class="module1 astro-J7PV25F6">
-        <div class="item module1-left draw astro-J7PV25F6">
-          <div class="astro-J7PV25F6">
-            <img alt="" class="img astro-J7PV25F6" src="img/home1.png">
-          </div>
-          <div class="module1-left-text astro-J7PV25F6">
-            <div class="astro-J7PV25F6">
-              <div class="title astro-J7PV25F6">3D盲盒人物</div>
-              <div class="subtitle astro-J7PV25F6">制作你的专属盲盒人物吧！</div>
-            </div>
+      <div id="blog-container" class="blog-grid">
+        <!-- Blog cards will be injected here -->
+      </div>
+    </section>
 
-            <div class="button astro-J7PV25F6">
-              <span class="astro-J7PV25F6">开始创作</span>
-              <div class="icon astro-J7PV25F6">
-                <i class="iconfont  icon-arrow-right astro-J7PV25F6"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="module1-hr astro-J7PV25F6"></div>
-        <div class="module1-right astro-J7PV25F6">
-          <div class="item draw astro-J7PV25F6">
-            <div class="module1-right-img astro-J7PV25F6">
-              <img alt="" class="img astro-J7PV25F6" src="img/home2.png">
-            </div>
-            <div class="module1-right-text astro-J7PV25F6">
-              <div class="astro-J7PV25F6">
-                <div class="title astro-J7PV25F6">专属人物头像</div>
-                <div class="subtitle astro-J7PV25F6">制作你自己的Q版头像吧！</div>
-              </div>
-
-              <div class="button astro-J7PV25F6">
-                <span class="astro-J7PV25F6">开始创作</span><div class="icon astro-J7PV25F6">
-                  <i class="iconfont  icon-arrow-right astro-J7PV25F6"></i>
+    <script>
+      async function loadContent() {
+        try {
+          const res = await fetch('content.json');
+          const data = await res.json();
+          
+          // Render Hero
+          const heroContainer = document.getElementById('hero-container');
+          data.tools.hero.forEach(item => {
+            heroContainer.innerHTML += `
+              <div class="width astro-J7PV25F6" style="margin-top:2rem">
+                <div class="module astro-J7PV25F6">
+                  <div class="item draw astro-J7PV25F6">
+                    <div class="module-left astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
+                    <div class="module-right astro-J7PV25F6">
+                      <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
+                      <div class="button astro-J7PV25F6" style="margin-top: 9rem;" onclick="location.href='${item.url}'">
+                        <span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="module1-hr astro-J7PV25F6"></div>
-          <div class="item chat astro-J7PV25F6">
-            <div class="module1-right-img astro-J7PV25F6">
-              <img alt="" class="img astro-J7PV25F6" src="img/home3.png">
-            </div>
-            <div class="module1-right-text astro-J7PV25F6">
-              <div class="astro-J7PV25F6">
-                <div class="title astro-J7PV25F6">超级问答</div>
-                <div class="subtitle astro-J7PV25F6">你想问的答案都在这里</div>
-              </div>
-              <div class="button astro-J7PV25F6">
-                <span class="astro-J7PV25F6">开始问答</span>
-                <div class="icon astro-J7PV25F6">
-                  <i class="iconfont  icon-arrow-right astro-J7PV25F6"></i>
+              </div>`;
+          });
+
+          // Render Features
+          const featContainer = document.getElementById('feature-container');
+          if (data.tools.feature && data.tools.feature.length > 0) {
+            let featHtml = `<div class="width astro-J7PV25F6"><div class="module1 astro-J7PV25F6">`;
+            // Left Big Card
+            const f1 = data.tools.feature[0];
+            featHtml += `
+              <div class="item module1-left draw astro-J7PV25F6">
+                <div><img src="${f1.img}" class="img astro-J7PV25F6"></div>
+                <div class="module1-left-text astro-J7PV25F6">
+                  <div><div class="title astro-J7PV25F6">${f1.title}</div><div class="subtitle astro-J7PV25F6">${f1.subtitle}</div></div>
+                  <div class="button astro-J7PV25F6" onclick="location.href='${f1.url}'"><span>${f1.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="width astro-J7PV25F6">
-      <div class="module1_phone astro-J7PV25F6">
-        <div class="item draw astro-J7PV25F6">
-          <div class="astro-J7PV25F6">
-            <img alt="" class="img astro-J7PV25F6" src="img/home1.png">
-          </div>
-          <div class="module1-left-text astro-J7PV25F6">
-            <div class="astro-J7PV25F6">
-              <div class="title astro-J7PV25F6">3D盲盒人物</div>
-              <div class="subtitle astro-J7PV25F6">制作你的专属盲盒人物吧！</div>
-            </div>
-            <div class="button astro-J7PV25F6">
-              <span class="astro-J7PV25F6">开始创作</span><div class="icon astro-J7PV25F6">
-                <i class="iconfont  icon-arrow-right astro-J7PV25F6"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="module1_phone-hr astro-J7PV25F6"></div>
-        <div class="item draw astro-J7PV25F6">
-          <div class="astro-J7PV25F6">
-            <img alt="" class="img astro-J7PV25F6" src="img/home2.png">
-          </div>
-          <div class="module1-left-text astro-J7PV25F6">
-            <div class="astro-J7PV25F6">
-              <div class="title astro-J7PV25F6">专属人物头像</div>
-              <div class="subtitle astro-J7PV25F6">制作你自己的Q版头像吧！</div>
-            </div>
-            <div class="button astro-J7PV25F6">
-              <span class="astro-J7PV25F6">开始创作</span><div class="icon astro-J7PV25F6">
-                <i class="iconfont  icon-arrow-right astro-J7PV25F6"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="module1_phone-hr astro-J7PV25F6"></div>
-        <div class="item chat astro-J7PV25F6">
-          <div class="astro-J7PV25F6">
-            <img alt="" class="img astro-J7PV25F6" src="img/home3.png">
-          </div>
-          <div class="module1-left-text astro-J7PV25F6">
-            <div class="astro-J7PV25F6">
-              <div class="title astro-J7PV25F6">超级问答</div>
-              <div class="subtitle astro-J7PV25F6">你想问的答案都在这里</div>
-            </div>
-            <div class="button astro-J7PV25F6">
-              <span class="astro-J7PV25F6">开始创作</span><div class="icon astro-J7PV25F6">
-                <i class="iconfont  icon-arrow-right astro-J7PV25F6"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              </div><div class="module1-hr astro-J7PV25F6"></div><div class="module1-right astro-J7PV25F6">`;
+            
+            // Right Small Cards
+            data.tools.feature.slice(1).forEach((item, idx) => {
+              featHtml += `
+                <div class="item ${idx===1?'chat':'draw'} astro-J7PV25F6">
+                  <div class="module1-right-img astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
+                  <div class="module1-right-text astro-J7PV25F6">
+                    <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
+                    <div class="button astro-J7PV25F6" onclick="location.href='${item.url}'"><span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
+                  </div>
+                </div>`;
+              if (idx < data.tools.feature.slice(1).length - 1) featHtml += `<div class="module1-hr astro-J7PV25F6"></div>`;
+            });
+            featHtml += `</div></div></div>`;
+            featContainer.innerHTML = featHtml;
+          }
 
-    <div class="sub astro-J7PV25F6">
-      <div class="width astro-J7PV25F6">
-        <div class="text astro-J7PV25F6">未来已来，创作效率翻倍提升。</div>
-        <div class="text1 astro-J7PV25F6">
-          数字化创造时代的崛起：智能化工具唤醒创造新力，创造效率提升提升。
-        </div>
-      </div>
-    </div>
+          // Render Compact
+          const compactContainer = document.getElementById('compact-container');
+          let compHtml = `<div class="width astro-J7PV25F6"><div class="module3 astro-J7PV25F6">`;
+          data.tools.compact.forEach((item, idx) => {
+            compHtml += `
+              <div class="module3-item item ${idx%2===0?'draw':'chat'} astro-J7PV25F6" onclick="location.href='${item.url}'">
+                <div class="module3-left astro-J7PV25F6">
+                  <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
+                  <div class="btn astro-J7PV25F6"><span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
+                </div>
+                <div class="module3-right astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
+              </div>`;
+            if (idx < data.tools.compact.length - 1) compHtml += `<div class="module3-hr astro-J7PV25F6"></div>`;
+          });
+          compHtml += `</div></div>`;
+          compactContainer.innerHTML = compHtml;
 
-    <div class="width astro-J7PV25F6">
-      <div class="module3 astro-J7PV25F6">
-        <div class="module3-item item draw astro-J7PV25F6">
-          <div class="module3-left astro-J7PV25F6">
-            <div class="astro-J7PV25F6">
-              <div class="title astro-J7PV25F6">AI 绘图</div>
-              <div class="subtitle astro-J7PV25F6">快速拓展你的灵感边界</div>
-            </div>
-            <div class="btn astro-J7PV25F6">
-              <span class="astro-J7PV25F6">开始创作</span>
-              <div class="icon astro-J7PV25F6">
-                <i class="iconfont  icon-arrow-right astro-J7PV25F6"></i>
-              </div>
-            </div>
-          </div>
-          <div class="module3-right astro-J7PV25F6">
-            <img alt="" class="img astro-J7PV25F6" src="img/home4.png">
-          </div>
-        </div>
-        <div class="module3-hr astro-J7PV25F6"></div>
-        <div class="module3-item item chat astro-J7PV25F6">
-          <div class="module3-left astro-J7PV25F6">
-            <div class="astro-J7PV25F6">
-              <div class="title astro-J7PV25F6">超级问答</div>
-              <div class="subtitle astro-J7PV25F6">快速解答你的疑问答惑</div>
-            </div>
-            <div class="btn astro-J7PV25F6">
-              <span class="astro-J7PV25F6">开始问答</span>
-              <div class="icon astro-J7PV25F6">
-                <i class="iconfont  icon-arrow-right astro-J7PV25F6"></i>
-                
-              </div>
-            </div>
-          </div>
-          <div class="module3-right astro-J7PV25F6">
-            <img alt="" class="img astro-J7PV25F6" src="img/home5.png">
-          </div>
-        </div>
-        <div class="module3-hr astro-J7PV25F6"></div>
-        </div>
-        </div>
-	</div>
+          // Render Blog
+          const blogContainer = document.getElementById('blog-container');
+          data.articles.forEach(art => {
+            blogContainer.innerHTML += `
+              <a href="${art.url}" class="blog-card">
+                <div class="meta">${art.category} • ${art.date}</div>
+                <h3>${art.title}</h3>
+                <p>${art.excerpt}</p>
+                <div class="btn-read">阅读全文 →</div>
+              </a>`;
+          });
+        } catch (e) {
+          console.error('Failed to load dynamic content:', e);
+        }
+      }
+      loadContent();
+    </script>
+
   </div>
   <script type="text/javascript">
     ;(function () {

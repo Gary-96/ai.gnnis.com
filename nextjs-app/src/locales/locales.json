@@ -1,0 +1,140 @@
+{
+  "en": {
+    "site": {
+      "title": "JianHui AI - Your Intelligent Tool",
+      "keywords": "JianHui AI, Super Q&A, Creative Drawing",
+      "description": "The rise of the digital creation era: intelligent tools awaken new creative forces, doubling creation efficiency."
+    },
+    "hero": {
+      "title": "All Your Inspirations in One Place",
+      "subtitle": "Make your workflow smoother with JianHui AI Q&A and Drawing systems.",
+      "button": "Start Inspired"
+    },
+    "features": {
+      "inspiration_title": "One question, one drawing, quickly spark your inspiration.",
+      "inspiration_desc": "A professional-grade AI creative tool combining Super Q&A and Creative Drawing."
+    },
+    "cards": {
+      "painting": {
+        "title": "Inspirational Drawing",
+        "subtitle": "New innovations, new ideas, new perspectivas. Let AI expand your inspiration boundaries."
+      },
+      "blindbox": {
+        "title": "3D Blind Box Characters",
+        "subtitle": "Create your own exclusive blind box characters!"
+      },
+      "avatar": {
+        "title": "Exclusive Portrait Avatars",
+        "subtitle": "Create your own chibi-style avatars!"
+      },
+      "chat": {
+        "title": "Super Q&A",
+        "subtitle": "All the answers you're looking for are here."
+      }
+    },
+    "buttons": {
+      "start_creation": "Start Creating",
+      "start_qa": "Start Q&A"
+    },
+    "footer": {
+      "future_title": "The future is here, doubling creation efficiency.",
+      "future_desc": "The rise of the digital creation era: intelligent tools awaken new creative forces.",
+      "drawing_title": "AI Drawing",
+      "drawing_subtitle": "Quickly expand your inspiration boundaries.",
+      "chat_title": "Super Q&A",
+      "chat_subtitle": "Quickly answer your questions and doubts."
+    }
+  },
+  "zh": {
+    "site": {
+      "title": "简绘AI 你的智能化工具",
+      "keywords": "简绘AI,超级问答,创意绘画",
+      "description": "【简绘AI】数字化创造时代的崛起：智能化工具唤醒创造新力，创造效率提升提升。未来已来，创作效率翻倍提升。"
+    },
+    "hero": {
+      "title": "您所有的灵感都集中在一个地方",
+      "subtitle": "使用JianHui问答绘画系统，让您的工作流程更加顺畅。",
+      "button": "开启灵感"
+    },
+    "features": {
+      "inspiration_title": "一句提问，一张绘画快速激发你的灵感。",
+      "inspiration_desc": "面向专业领域的AI创意工具， 结合超级问答和创意绘画两款强大的工具。"
+    },
+    "cards": {
+      "painting": {
+        "title": "灵感绘图",
+        "subtitle": "新创新，新想法，新构思，新视角 让AI拓展你的灵感边界，体验不一样的世界吧！"
+      },
+      "blindbox": {
+        "title": "3D盲盒人物",
+        "subtitle": "制作你的专属盲盒人物吧！"
+      },
+      "avatar": {
+        "title": "专属人物头像",
+        "subtitle": "制作你自己的Q版头像吧！"
+      },
+      "chat": {
+        "title": "超级问答",
+        "subtitle": "你想问的答案都在这里"
+      }
+    },
+    "buttons": {
+      "start_creation": "开始创作",
+      "start_qa": "开始问答"
+    },
+    "footer": {
+      "future_title": "未来已来，创作效率翻倍提升。",
+      "future_desc": "数字化创造时代的崛起：智能化工具唤醒创造新力，创造效率提升提升。",
+      "drawing_title": "AI 绘图",
+      "drawing_subtitle": "快速拓展你的灵感边界",
+      "chat_title": "超级问答",
+      "chat_subtitle": "快速解答你的疑问答惑"
+    }
+  },
+  "ja": {
+    "site": {
+      "title": "JianHui AI - あなたの知能ツール",
+      "keywords": "JianHui AI, スーパーQ&A, クリエイティブ描画",
+      "description": "デジタル創造時代の到来：知能ツールが新たな創造力を呼び覚まし、創作効率を倍増させます。"
+    },
+    "hero": {
+      "title": "すべてのインスピレーションがここに集まる",
+      "subtitle": "JianHuiのQ&Aと描画システムを使用して、ワークフローをよりスムーズに。",
+      "button": "インスピレーションを開始"
+    },
+    "features": {
+      "inspiration_title": "一つの質問、一つの描画で素早くインスピレーションを刺激。",
+      "inspiration_desc": "プロフェッショナル向けのAIクリエイティブツール。スーパーQ&Aとクリエイティブ描画を統合。"
+    },
+    "cards": {
+      "painting": {
+        "title": "インスピレーション描画",
+        "subtitle": "新しいイノベーション、新しいアイデア、新しい視点。AIでインスピレーションの境界を広げましょう。"
+      },
+      "blindbox": {
+        "title": "3Dブラインドボックスキャラクター",
+        "subtitle": "自分だけの専属ブラインドボックスキャラクターを作ろう！"
+      },
+      "avatar": {
+        "title": "専属ポートレートアイコン",
+        "subtitle": "自分だけのQ版アイコン（ちびキャラ）を作ろう！"
+      },
+      "chat": {
+        "title": "スーパーQ&A",
+        "subtitle": "あなたが知りたい答えがすべてここにあります。"
+      }
+    },
+    "buttons": {
+      "start_creation": "制作を開始",
+      "start_qa": "Q&Aを開始"
+    },
+    "footer": {
+      "future_title": "未来はすでにここに。創作効率が倍増します。",
+      "future_desc": "デジタル創造時代の到来：知能ツールが新たな創造力を呼び覚まします。",
+      "drawing_title": "AI描画",
+      "drawing_subtitle": "インスピレーションの境界を素早く広げる。",
+      "chat_title": "スーパーQ&A",
+      "chat_subtitle": "疑問や悩みを素早く解決します。"
+    }
+  }
+}

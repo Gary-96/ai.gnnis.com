@@ -1,0 +1,84 @@
+{
+  "tools": {
+    "hero": [
+      {
+        "id": "inspiration-drawing",
+        "title": "灵感绘图",
+        "subtitle": "新创新，新想法，新构思，新视角 让AI拓展你的灵感边界，体验不一样的世界吧！",
+        "btnText": "开始创作",
+        "img": "img/home.png",
+        "url": "https://mr.baidu.com/r/1jaKY2tVXu8"
+      }
+    ],
+    "feature": [
+      {
+        "id": "blind-box",
+        "title": "3D盲盒人物",
+        "subtitle": "制作你的专属盲盒人物吧！",
+        "btnText": "开始创作",
+        "img": "img/home1.png",
+        "url": "https://mr.baidu.com/r/1jaKY2tVXu8"
+      },
+      {
+        "id": "avatar",
+        "title": "专属人物头像",
+        "subtitle": "制作你自己的Q版头像吧！",
+        "btnText": "开始创作",
+        "img": "img/home2.png",
+        "url": "https://mr.baidu.com/r/1jaKY2tVXu8"
+      },
+      {
+        "id": "super-qa",
+        "title": "超级问答",
+        "subtitle": "你想问的答案都在这里",
+        "btnText": "开始问答",
+        "img": "img/home3.png",
+        "url": "https://mr.baidu.com/r/1jaKY2tVXu8"
+      }
+    ],
+    "compact": [
+      {
+        "id": "ai-drawing",
+        "title": "AI 绘图",
+        "subtitle": "快速拓展你的灵感边界",
+        "btnText": "开始创作",
+        "img": "img/home4.png",
+        "url": "#"
+      },
+      {
+        "id": "ai-qa",
+        "title": "超级问答",
+        "subtitle": "快速解答你的疑问答惑",
+        "btnText": "开始问答",
+        "img": "img/home5.png",
+        "url": "#"
+      }
+    ]
+  },
+  "articles": [
+    {
+      "id": "art-1",
+      "category": "AI DRAWING",
+      "date": "APR 12, 2026",
+      "title": "生成式 AI 的未来：从提问词到艺术杰作",
+      "excerpt": "探索 JianHui AI 如何通过先进的神经元网络重塑创意产业，让每个人的灵感都能瞬间转化为视觉杰作。",
+      "url": "#"
+    },
+    {
+      "id": "art-2",
+      "category": "WORKFLOW",
+      "date": "APR 10, 2026",
+      "title": "专业设计师的 AI 工作流优化指南",
+      "excerpt": "5 个核心技巧教你如何将“超级问答”与“创意绘画”深度融入日常设计，实现效率的降本增效。",
+      "url": "#"
+    },
+    {
+      "id": "art-3",
+      "category": "3D CHARACTER",
+      "date": "APR 08, 2026",
+      "title": "3D 盲盒人物：虚拟社交时代的数字身份",
+      "excerpt": "为什么个性化的 3D 角色正在成为数字身份的新标准？深度解析 3D 建模 AI 的技术边界与应用场景。",
+      "url": "#"
+    }
+  ]
+}

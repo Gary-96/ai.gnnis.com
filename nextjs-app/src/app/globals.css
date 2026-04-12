@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   自定义 CSS 变量（对应原版的 CSS custom props）
+   light / dark 均已通过 .dark class 切换
+───────────────────────────────────────────── */
+:root {
+  /* Light 模式色板 */
+  --b-bg: #f5f5f5;
+  --b-bg1: #ffffff;
+  --b-text: #000000;
+  --b-text1: #4f4f4f;
+}
+
+.dark {
+  /* Dark 模式色板（网站默认） */
+  --b-bg: #000000;
+  --b-bg1: #1a1a1a;
+  --b-text: #ffffff;
+  --b-text1: #c9cacc;
+}
+
+/* ─────────────────────────────────────────────
+   全局基础样式
+───────────────────────────────────────────── */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* rem 单位基准：随视口宽度动态缩放（最小 10px） */
+  font-size: clamp(10px, calc(16px * (100vw / 1920px)), 16px);
+}
+
+/* 隐藏数字输入框箭头 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* ─────────────────────────────────────────────
+   动画：Canvas 粒子动效中用于箭头的 moveToLeft
+   （迁移到 Next.js 后保留，以防直接复用 canvas）
+───────────────────────────────────────────── */
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-0.625rem);
+  }
+}
+
+@layer utilities {
+  /* Hero 渐变按钮：对应原版 .top .btn */
+  .btn-hero-gradient {
+    background: linear-gradient(
+      42deg,
+      #e0ce80 0%,
+      #b5c34f 19%,
+      #3cc46d 56%,
+      #56c59f 76%
+    );
+  }
+}

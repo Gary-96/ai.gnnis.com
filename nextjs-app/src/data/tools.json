@@ -1,0 +1,41 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "tagline": "The world's leading language model by OpenAI.",
+    "description": "ChatGPT is an AI-powered language model developed by OpenAI, capable of generating human-like text based on the input it receives. It is used for a wide range of applications including coding assistance, content creation, and general inquiry.",
+    "category": "Conversational AI",
+    "url": "https://chat.openai.com",
+    "image": "https://ai.gnnis.com/img/tools/chatgpt.jpg",
+    "rating": "4.9",
+    "reviews": "15,240",
+    "price": "0",
+    "features": ["Natural language understanding", "Contextual conversations", "Multi-language support"]
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "tagline": "Create stunning generative art from text prompts.",
+    "description": "Midjourney is a research lab and an AI program that generates images from natural language descriptions, similar to DALL-E and Stable Diffusion. It's known for its high artistic quality.",
+    "category": "AI Image Generation",
+    "url": "https://www.midjourney.com",
+    "image": "https://ai.gnnis.com/img/tools/midjourney.jpg",
+    "rating": "4.8",
+    "reviews": "8,120",
+    "price": "10",
+    "features": ["High-fidelity images", "Discord integration", "Continuous upscaling"]
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "tagline": "Your AI pair programmer.",
+    "description": "GitHub Copilot uses the OpenAI Codex to suggest code and entire functions in real-time, right from your editor.",
+    "category": "Code Assistance",
+    "url": "https://github.com/features/copilot",
+    "image": "https://ai.gnnis.com/img/tools/copilot.jpg",
+    "rating": "4.7",
+    "reviews": "5,600",
+    "price": "19",
+    "features": ["Autocomplete lines and functions", "Convert comments to code", "Works in VS Code, Neovim, and JetBrains"]
+  }
+]

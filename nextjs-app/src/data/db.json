@@ -1,0 +1,96 @@
+{
+  "tools": {
+    "hero": [
+      {
+        "id": "inspiration-drawing",
+        "title": "灵感绘图",
+        "subtitle": "新创新，新想法，新构思，新视角\n让AI拓展你的灵感边界，体验不一样的世界吧！",
+        "buttonLabel": "开始创作",
+        "href": "https://mr.baidu.com/r/1jaKY2tVXu8",
+        "imageSrc": "/img/home.png",
+        "variant": "draw"
+      }
+    ],
+    "feature": [
+      {
+        "id": "blind-box",
+        "title": "3D盲盒人物",
+        "subtitle": "制作你的专属盲盒人物吧！",
+        "buttonLabel": "开始创作",
+        "href": "https://mr.baidu.com/r/1jaKY2tVXu8",
+        "imageSrc": "/img/home1.png",
+        "variant": "draw"
+      },
+      {
+        "id": "avatar",
+        "title": "专属人物头像",
+        "subtitle": "制作你自己的Q版头像吧！",
+        "buttonLabel": "开始创作",
+        "href": "https://mr.baidu.com/r/1jaKY2tVXu8",
+        "imageSrc": "/img/home2.png",
+        "variant": "draw"
+      },
+      {
+        "id": "super-qa",
+        "title": "超级问答",
+        "subtitle": "你想问的答案都在这里",
+        "buttonLabel": "开始问答",
+        "href": "https://mr.baidu.com/r/1jaKY2tVXu8",
+        "imageSrc": "/img/home3.png",
+        "variant": "chat"
+      }
+    ],
+    "compact": [
+      {
+        "id": "ai-drawing",
+        "title": "AI 绘图",
+        "subtitle": "快速拓展你的灵感边界",
+        "buttonLabel": "开始创作",
+        "href": "https://mr.baidu.com/r/1jaKY2tVXu8",
+        "imageSrc": "/img/home4.png",
+        "variant": "draw"
+      },
+      {
+        "id": "ai-qa",
+        "title": "超级问答",
+        "subtitle": "快速解答你的疑问答惑",
+        "buttonLabel": "开始问答",
+        "href": "https://mr.baidu.com/r/1jaKY2tVXu8",
+        "imageSrc": "/img/home5.png",
+        "variant": "chat"
+      }
+    ]
+  },
+  "articles": [
+    {
+      "id": "art-1",
+      "title": "深度解析：生成式 AI 如何重塑创意产业",
+      "summary": "从文本生成图像到 3D 建模，AI 正在以前所未有的速度降低创作门槛。",
+      "author": "简绘 AI 团队",
+      "date": "2026-04-12",
+      "readTime": "8 min",
+      "category": "深度洞察",
+      "coverImage": "/img/home.png"
+    },
+    {
+      "id": "art-2",
+      "title": "3D 盲盒人物制作指南：从灵感到现实",
+      "summary": "详细步骤教你如何通过 AI 快速构建属于你自己的 3D 角色模型。",
+      "author": "技术专家",
+      "date": "2026-04-10",
+      "readTime": "12 min",
+      "category": "教程指南",
+      "coverImage": "/img/home1.png"
+    },
+    {
+      "id": "art-3",
+      "title": "超级问答系统：让 AI 成为你的第二大脑",
+      "summary": "如何通过高效的 Prompt 技巧，让 AI 提供更精准、更有深度的答案。",
+      "author": "产品经理",
+      "date": "2026-04-08",
+      "readTime": "6 min",
+      "category": "效率工具",
+      "coverImage": "/img/home3.png"
+    }
+  ]
+}
