@@ -30,6 +30,16 @@
     <link rel="stylesheet" href="static/index.082d951a.css">
     <script type="module" src="static/hoisted.8051735c.js"></script>
     <style>
+/* Site Header (Navbar) */
+.site-header { position: sticky; top: 0; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: rgba(0,0,0,0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.site-logo { color: #fff; font-size: 1.25rem; font-weight: 700; text-decoration: none; letter-spacing: -0.02em; }
+.nav-links { display: flex; gap: 2.5rem; }
+.nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease; }
+.nav-links a:hover { color: #14b8a6; }
+.nav-actions { display: flex; gap: 1.5rem; align-items: center; }
+.lang-btn { background: rgba(20, 184, 166, 0.1); border: 1px solid rgba(20, 184, 166, 0.3); color: #14b8a6; padding: 0.3rem 0.8rem; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+.lang-btn:hover { background: #14b8a6; color: #fff; }
+@media (max-width: 768px) { .nav-links { display: none; } .site-header { padding: 1rem; } }
       .blog-section { padding: 5rem 1rem; max-width: 1200px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
       .blog-header { margin-bottom: 3rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem; }
       .blog-header h2 { font-size: 2.5rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
@@ -96,6 +106,18 @@
     </head>
   <body class="dark">
     <div id="page">
+<header class="site-header">
+  <a href="/" class="site-logo">ai.gnnis.com</a>
+  <nav class="nav-links">
+    <a href="#hero-container">AI Tools</a>
+    <a href="#prompt-container">Prompts</a>
+    <a href="#blog-container">Skills</a>
+  </nav>
+  <div class="nav-actions">
+    <svg style="color: rgba(255,255,255,0.7); cursor: pointer;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    <button class="lang-btn">En / 中</button>
+  </div>
+</header>
         <div class="astro-J7PV25F6">
     <canvas id="canvas" class="astro-SLVZHL3X" width="1903" height="881"> </canvas>
 <script lang="js">
@@ -376,29 +398,7 @@
   }
   frame()
 </script>
-    <div class="top astro-J7PV25F6">
-      <div class="width astro-J7PV25F6">
-        <div class="title astro-J7PV25F6">您所有的灵感都集中在一个地方</div>
-        <div class="subtitle astro-J7PV25F6">
-          使用JianHui问答绘画系统，让您的工作流程更加顺畅。
-        </div>
-        <div class="btn chat astro-J7PV25F6" onclick="location.href='https://mr.baidu.com/r/1jaKY2tVXu8'">
-          开启灵感
-        </div>
-      </div>
-    </div>
-    <div class="sub astro-J7PV25F6">
-      <div class="width astro-J7PV25F6">
-        <div class="text astro-J7PV25F6">一句提问，一张绘画快速激发你的灵感。</div>
-        <div class="text1 astro-J7PV25F6">
-          面向专业领域的AI创意工具， 结合
-          <span class="text1-bold chat astro-J7PV25F6">超级问答</span>
-          和
-          <span class="text1-bold draw astro-J7PV25F6"> 创意绘画</span>
-          两款强大的工具。
-        </div>
-      </div>
-    </div>
+    <!-- Top & Sub static blocks have been removed, content is now dynamically loaded. -->
 
     <main id="content-area" style="position: relative; z-index: 10;">
       <div id="hero-container"></div>
