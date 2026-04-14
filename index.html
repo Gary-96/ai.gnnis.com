@@ -1,42 +1,87 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <!-- 设定字符集 -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- 网页标题 -->
     <title>格尼斯AI 你的智能化工具</title>
-    <!-- 网站关键词 -->
     <meta name="keywords" content="格尼斯AI,超级问答,创意绘画">
-    <!-- 网站描述 -->
     <meta name="description" content="【格尼斯AI】数字化创造时代的崛起：智能化工具唤醒创造新力，创造效率提升提升。未来已来，创作效率翻倍提升。">
-    <!-- Open Graph 协议标签 -->
     <meta property="og:title" content="格尼斯AI-数字化创造时代的智能化工具">
     <meta property="og:type" content="website">
     <meta property="og:description" content="【格尼斯AI】数字化创造时代的崛起：智能化工具唤醒创造新力，创造效率提升提升。未来已来，创作效率翻倍提升。">
-    <!-- 预加载 -->
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" href="/favicon.ico">
     <meta name="theme-color" content="#14b8a6">
-    <meta name="generator" content="Astro v2.4.2">
     <link href="static/iconfont.css" rel="stylesheet">
     <link rel="stylesheet" href="static/index.082d951a.css">
-    <script type="module" src="static/hoisted.8051735c.js"></script>
     <style>
-/* Site Header (Navbar) */
-.site-header { position: sticky; top: 0; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: rgba(0,0,0,0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-.site-logo { color: #fff; font-size: 1.25rem; font-weight: 700; text-decoration: none; letter-spacing: -0.02em; }
-.nav-links { display: flex; gap: 2.5rem; }
-.nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease; }
-.nav-links a:hover { color: #14b8a6; }
-.nav-links a.active { color: #14b8a6; font-weight: 600; }
-.nav-actions { display: flex; gap: 1.5rem; align-items: center; }
-.lang-btn { background: rgba(20, 184, 166, 0.1); border: 1px solid rgba(20, 184, 166, 0.3); color: #14b8a6; padding: 0.3rem 0.8rem; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
-.lang-btn:hover { background: #14b8a6; color: #fff; }
-@media (max-width: 768px) { .nav-links { display: none; } .site-header { padding: 1rem; } }
-      
-      /* Standard Site Footer */
+      /* Site Header (Navbar) */
+      .site-header { position: sticky; top: 0; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: rgba(0,0,0,0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .site-logo { color: #fff; font-size: 1.25rem; font-weight: 700; text-decoration: none; letter-spacing: -0.02em; }
+      .nav-links { display: flex; gap: 2.5rem; }
+      .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease; }
+      .nav-links a:hover { color: #14b8a6; }
+      .nav-links a.active { color: #14b8a6; font-weight: 600; }
+      .nav-actions { display: flex; gap: 1.5rem; align-items: center; }
+      .lang-btn { background: rgba(20, 184, 166, 0.1); border: 1px solid rgba(20, 184, 166, 0.3); color: #14b8a6; padding: 0.3rem 0.8rem; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+      .lang-btn:hover { background: #14b8a6; color: #fff; }
+
+      @media (max-width: 768px) { .nav-links { display: none; } .site-header { padding: 1rem; } }
+
+      /* Blog Section */
+      .blog-section { padding: 5rem 1rem; max-width: 1200px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .blog-header { margin-bottom: 3rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem; }
+      .blog-header h2 { font-size: 2.5rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
+      .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 4rem; }
+      .blog-card { display: flex; flex-direction: column; text-decoration: none; transition: opacity 0.2s ease; }
+      .blog-card:hover { opacity: 0.8; }
+      .blog-card .meta { font-size: 0.75rem; color: #14b8a6; font-weight: 600; text-transform: uppercase; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+      .blog-card h3 { font-size: 1.5rem; line-height: 1.3; color: #fff; margin-bottom: 0.75rem; font-weight: 600; }
+      .blog-card p { font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+      .blog-card .btn-read { font-size: 0.875rem; color: #fff; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.2); align-self: flex-start; padding-bottom: 2px; }
+
+      /* Prompt Section */
+      .prompt-section { padding: 5rem 1rem; max-width: 1200px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .prompt-header { margin-bottom: 3rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem; }
+      .prompt-header h2 { font-size: 2.5rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
+      .prompt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+      .prompt-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden; }
+      .prompt-card:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.06); border-color: rgba(20, 184, 166, 0.3); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); }
+      .prompt-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #14b8a6, transparent); opacity: 0; transition: opacity 0.3s ease; }
+      .prompt-card:hover::before { opacity: 1; }
+      .prompt-title { font-size: 1.25rem; font-weight: 600; color: #fff; margin-bottom: 1rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+      .prompt-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+      .prompt-tag { font-size: 0.75rem; font-weight: 500; color: #14b8a6; background: rgba(20, 184, 166, 0.1); padding: 0.25rem 0.6rem; border-radius: 20px; border: 1px solid rgba(20, 184, 166, 0.2); }
+      .prompt-actions { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+      .prompt-content-snippet { font-size: 0.875rem; color: rgba(255,255,255,0.4); display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 1.5rem; line-height: 1.6; }
+      .copy-btn { background: rgba(255, 255, 255, 0.1); border: none; border-radius: 8px; padding: 0.5rem 1rem; color: #fff; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 0.5rem; z-index: 2; }
+      .copy-btn:hover { background: #14b8a6; color: #fff; }
+
+      /* Modal */
+      .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 1000; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; padding: 1rem; }
+      .modal-overlay.active { opacity: 1; pointer-events: auto; }
+      .modal-container { background: #111; border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; width: 100%; max-width: 600px; max-height: 90vh; overflow-y: auto; transform: scale(0.95) translateY(20px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 40px 80px rgba(0,0,0,0.5); display: flex; flex-direction: column; }
+      .modal-overlay.active .modal-container { transform: scale(1) translateY(0); }
+      .modal-header { padding: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: flex-start; }
+      .modal-title-text { font-size: 1.5rem; font-weight: 600; color: #fff; line-height: 1.3; margin-right: 1rem; margin: 0; }
+      .modal-close { background: none; border: none; color: rgba(255,255,255,0.5); font-size: 2rem; cursor: pointer; padding: 0; line-height: 1; transition: color 0.2s; align-self: flex-start; }
+      .modal-close:hover { color: #fff; }
+      .modal-body { padding: 2rem; overflow-y: auto; }
+      .modal-section-title { font-size: 0.875rem; color: #14b8a6; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 0.75rem; }
+      .modal-skills { font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.8); margin-bottom: 2rem; background: rgba(20, 184, 166, 0.05); padding: 1rem 1.25rem; border-radius: 12px; border-left: 3px solid #14b8a6; }
+      .modal-content-box { background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 1.25rem; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.6); white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .modal-footer { padding: 1.5rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: flex-end; }
+      .modal-btn-copy { background: #14b8a6; color: #fff; border: none; border-radius: 8px; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+
+      @media (max-width: 768px) {
+        .prompt-header h2 { font-size: 2rem; }
+        .prompt-grid { grid-template-columns: 1fr; }
+        .modal-header, .modal-body, .modal-footer { padding: 1.25rem; }
+        .modal-title-text { font-size: 1.25rem; }
+        .modal-skills, .modal-content-box { padding: 1rem; }
+      }
+
       .site-footer { padding: 4rem 1rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem; }
       .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
       .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.875rem; transition: color 0.2s ease; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
@@ -60,35 +105,65 @@
         </header>
 
         <div class="astro-J7PV25F6">
-            <canvas id="canvas" class="astro-SLVZHL3X"></canvas>
+            <canvas id="canvas" style="position: absolute; top:0; left:0; z-index:-1;"></canvas>
             <script>
-                // 3D Animation Script (Full preserved for continuity)
+                // 3D Rendering Script
                 function project3D(x, y, z, vars) {
                     var p, d; x -= vars.camX; y -= vars.camY - 8; z -= vars.camZ;
                     p = Math.atan2(x, z); d = Math.sqrt(x * x + z * z);
                     x = Math.sin(p - vars.yaw) * d; z = Math.cos(p - vars.yaw) * d;
                     p = Math.atan2(y, z); d = Math.sqrt(y * y + z * z);
                     y = Math.sin(p - vars.pitch) * d; z = Math.cos(p - vars.pitch) * d;
+                    var rx1 = -1000, ry1 = 1, rx2 = 1000, ry2 = 1, rx3 = 0, ry3 = 0, rx4 = x, ry4 = z;
+                    var uc = (ry4 - ry3) * (rx2 - rx1) - (rx4 - rx3) * (ry2 - ry1);
+                    var ua = ((rx4 - rx3) * (ry1 - ry3) - (ry4 - ry3) * (rx1 - rx3)) / uc;
+                    var ub = ((rx2 - rx1) * (ry1 - ry3) - (ry2 - ry1) * (rx1 - rx3)) / uc;
                     if (!z) z = 0.000000001;
-                    if (z > 0) return { x: vars.cx + (x / z) * vars.scale, y: vars.cy + (y / z) * vars.scale, d: x * x + y * y + z * z }; else return { d: -1 };
+                    if (ua > 0 && ua < 1 && ub > 0 && ub < 1) {
+                        return { x: vars.cx + (rx1 + ua * (rx2 - rx1)) * vars.scale, y: vars.cy + (y / z) * vars.scale, d: x * x + y * y + z * z };
+                    } else return { d: -1 };
                 }
                 function elevation(x, y, z) { var dist = Math.sqrt(x * x + y * y + z * z); if (dist && z / dist >= -1 && z / dist <= 1) return Math.acos(z / dist); return 0.00000001; }
                 function rgb(col) { col += 0.000001; var r = parseInt((0.5 + Math.sin(col) * 0.5) * 16), g = parseInt((0.5 + Math.cos(col) * 0.5) * 16), b = parseInt((0.5 - Math.sin(col) * 0.5) * 16); return '#' + r.toString(16) + g.toString(16) + b.toString(16); }
+                function interpolateColors(RGB1, RGB2, degree) { var w2 = degree, w1 = 1 - w2; return [w1 * RGB1[0] + w2 * RGB2[0], w1 * RGB1[1] + w2 * RGB2[1], w1 * RGB1[2] + w2 * RGB2[2]]; }
+                function rgbArray(col) { col += 0.000001; var r = parseInt((0.5 + Math.sin(col) * 0.5) * 256), g = parseInt((0.5 + Math.cos(col) * 0.5) * 256), b = parseInt((0.5 - Math.sin(col) * 0.5) * 256); return [r, g, b]; }
+                function colorString(arr) { var r = parseInt(arr[0]), g = parseInt(arr[1]), b = parseInt(arr[2]); return '#' + ('0' + r.toString(16)).slice(-2) + ('0' + g.toString(16)).slice(-2) + ('0' + b.toString(16)).slice(-2); }
+                function spawnParticle(vars) {
+                    var p, ls; pt = {}; p = Math.PI * 2 * Math.random(); ls = Math.sqrt(Math.random() * vars.distributionRadius);
+                    pt.x = Math.sin(p) * ls; pt.y = -vars.vortexHeight / 2; pt.vy = vars.initV / 20 + Math.random() * vars.initV; pt.z = Math.cos(p) * ls; pt.radius = 200 + 800 * Math.random(); pt.color = pt.radius / 1000 + vars.frameNo / 250; vars.points.push(pt);
+                }
+                function drawFloor(vars) {
+                    var x, y, z, d, point, a;
+                    for (var i = -25; i <= 25; i += 1) {
+                        for (var j = -25; j <= 25; j += 1) {
+                            x = i * 2; z = j * 2; y = vars.floor; d = Math.sqrt(x * x + z * z); point = project3D(x, y - (d * d) / 85, z, vars);
+                            if (point.d != -1) { size = 1 + 15000 / (1 + point.d); a = 0.15 - Math.pow(d / 50, 4) * 0.15; if (a > 0) { vars.ctx.fillStyle = colorString(interpolateColors(rgbArray(d / 26 - vars.frameNo / 40), [0, 128, 32], 0.5 + Math.sin(d / 6 - vars.frameNo / 8) / 2)); vars.ctx.globalAlpha = a; vars.ctx.fillRect(point.x - size / 2, point.y - size / 2, size, size); } }
+                        }
+                    }
+                    for (var i = -25; i <= 25; i += 1) {
+                        for (var j = -25; j <= 25; j += 1) {
+                            x = i * 2; z = j * 2; y = -vars.floor; d = Math.sqrt(x * x + z * z); point = project3D(x, y + (d * d) / 85, z, vars);
+                            if (point.d != -1) { size = 1 + 15000 / (1 + point.d); a = 0.15 - Math.pow(d / 50, 4) * 0.15; if (a > 0) { vars.ctx.fillStyle = colorString(interpolateColors(rgbArray(-d / 26 - vars.frameNo / 40), [32, 0, 128], 0.5 + Math.sin(-d / 6 - vars.frameNo / 8) / 2)); vars.ctx.globalAlpha = a; vars.ctx.fillRect(point.x - size / 2, point.y - size / 2, size, size); } }
+                        }
+                    }
+                }
+                function process(vars) {
+                    if (vars.points.length < vars.initParticles) for (var i = 0; i < 5; ++i) spawnParticle(vars);
+                    var p, d, t; p = Math.atan2(vars.camX, vars.camZ); d = Math.sqrt(vars.camX * vars.camX + vars.camZ * vars.camZ); d -= Math.sin(vars.frameNo / 80) / 25; t = Math.cos(vars.frameNo / 300) / 165; vars.camX = Math.sin(p + t) * d; vars.camZ = Math.cos(p + t) * d; vars.camY = -Math.sin(vars.frameNo / 220) * 15; vars.yaw = Math.PI + p + t; vars.pitch = elevation(vars.camX, vars.camZ, vars.camY) - Math.PI / 2;
+                    for (var i = 0; i < vars.points.length; ++i) { x = vars.points[i].x; y = vars.points[i].y; z = vars.points[i].z; d = Math.sqrt(x * x + z * z) / 1.0075; t = 0.1 / (1 + (d * d) / 5); p = Math.atan2(x, z) + t; vars.points[i].x = Math.sin(p) * d; vars.points[i].z = Math.cos(p) * d; vars.points[i].y += vars.points[i].vy * t * ((Math.sqrt(vars.distributionRadius) - d) * 2); if (vars.points[i].y > vars.vortexHeight / 2 || d < 0.25) { vars.points.splice(i, 1); spawnParticle(vars); } }
+                }
                 function frame(vars) {
                     if (vars === undefined) {
-                        vars = { canvas: document.querySelector('canvas'), points: [], frameNo: 0, camX: 0, camY: 0, camZ: -14, scale: 500, vortexHeight: 25, initParticles: 700, distributionRadius: 800, initV: 0.01 };
-                        vars.ctx = vars.canvas.getContext('2d');
-                        vars.canvas.width = document.body.clientWidth; vars.canvas.height = document.body.clientHeight;
-                        vars.cx = vars.canvas.width / 2; vars.cy = vars.canvas.height / 2;
+                        vars = { canvas: document.querySelector('#canvas'), points: [], frameNo: 0, camX: 0, camY: 0, camZ: -14, scale: 500, floor: 26.5, distributionRadius: 800, vortexHeight: 25, initParticles: 700, initV: 0.01 };
+                        vars.ctx = vars.canvas.getContext('2d'); vars.canvas.width = document.body.clientWidth; vars.canvas.height = document.body.clientHeight; vars.cx = vars.canvas.width / 2; vars.cy = vars.canvas.height / 2;
                         window.onresize = () => { vars.canvas.width = document.body.clientWidth; vars.canvas.height = document.body.clientHeight; vars.cx = vars.canvas.width / 2; vars.cy = vars.canvas.height / 2; };
+                        vars.pitch = elevation(vars.camX, vars.camZ, vars.camY) - Math.PI / 2; vars.yaw = 0;
                     }
-                    vars.frameNo++;
-                    vars.ctx.globalAlpha = 0.15; vars.ctx.fillStyle = '#000'; vars.ctx.fillRect(0, 0, vars.canvas.width, vars.canvas.height);
-                    if (vars.points.length < vars.initParticles) for (var i = 0; i < 5; ++i) vars.points.push({ x: (Math.random() - 0.5) * 20, y: -vars.vortexHeight / 2, z: (Math.random() - 0.5) * 20, vy: vars.initV + Math.random() * vars.initV, color: Math.random() * 10 });
+                    vars.frameNo++; vars.ctx.globalAlpha = 0.15; vars.ctx.fillStyle = '#000'; vars.ctx.fillRect(0, 0, vars.canvas.width, vars.canvas.height);
+                    process(vars); drawFloor(vars); vars.points.sort((a,b) => b.dist - a.dist);
                     for (var i = 0; i < vars.points.length; ++i) {
-                        var p = vars.points[i]; p.y += p.vy; if (p.y > vars.vortexHeight / 2) vars.points.splice(i, 1);
-                        var pt = project3D(p.x, p.y, p.z, vars);
-                        if (pt.d != -1) { vars.ctx.globalAlpha = 1; vars.ctx.fillStyle = rgb(p.color); vars.ctx.fillRect(pt.x, pt.y, 2, 2); }
+                        var pt = project3D(vars.points[i].x, vars.points[i].y, vars.points[i].z, vars);
+                        if (pt.d != -1) { vars.points[i].dist = pt.d; var size = 1 + vars.points[i].radius / (1 + pt.d); var distY = Math.abs(vars.points[i].y); var al = 0.8 - Math.pow(distY / (vars.vortexHeight / 2), 1000) * 0.8; vars.ctx.globalAlpha = al >= 0 && al <= 1 ? al : 0; vars.ctx.fillStyle = rgb(vars.points[i].color); if (pt.x > -1 && pt.x < vars.canvas.width && pt.y > -1 && pt.y < vars.canvas.height) vars.ctx.fillRect(pt.x - size / 2, pt.y - size / 2, size, size); }
                     }
                     requestAnimationFrame(() => frame(vars));
                 }
@@ -100,7 +175,35 @@
             <div id="hero-container"></div>
             <div id="feature-container"></div>
             <div id="compact-container"></div>
+            
+            <section class="prompt-section">
+                <div class="prompt-header"><h2>Prompt Library / 提示词库</h2></div>
+                <div id="prompt-container" class="prompt-grid"></div>
+            </section>
+
+            <section class="blog-section">
+                <div class="blog-header"><h2>Editor's Choice / 深度专栏</h2></div>
+                <div id="blog-container" class="blog-grid"></div>
+            </section>
         </main>
+
+        <div id="prompt-modal" class="modal-overlay" onclick="closePromptModal(event)">
+            <div class="modal-container" onclick="event.stopPropagation()">
+                <div class="modal-header">
+                    <h3 id="modal-title" class="modal-title-text"></h3>
+                    <button class="modal-close" onclick="closePromptModal(event)">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-section-title">使用技能说明</div>
+                    <div id="modal-skills" class="modal-skills"></div>
+                    <div class="modal-section-title">提示词内容</div>
+                    <div id="modal-content" class="modal-content-box"></div>
+                </div>
+                <div class="modal-footer">
+                    <button id="modal-copy-btn" class="modal-btn-copy" onclick="copyFromModal()">一键复制</button>
+                </div>
+            </div>
+        </div>
 
         <footer class="site-footer">
             <div class="footer-links">
@@ -114,6 +217,31 @@
     </div>
 
     <script>
+        let currentPromptIndex = -1;
+        function openPromptModal(index) {
+            const prompt = window.promptData[index];
+            currentPromptIndex = index;
+            document.getElementById('modal-title').textContent = prompt.title;
+            document.getElementById('modal-skills').textContent = prompt.skills;
+            document.getElementById('modal-content').textContent = prompt.content;
+            document.getElementById('prompt-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closePromptModal(e) {
+            document.getElementById('prompt-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function copyText(text, callback) {
+            navigator.clipboard.writeText(text).then(callback);
+        }
+        function copyFromModal() {
+            const text = window.promptData[currentPromptIndex].content;
+            copyText(text, () => {
+                const btn = document.getElementById('modal-copy-btn');
+                btn.textContent = '已复制!';
+                setTimeout(() => btn.textContent = '一键复制', 2000);
+            });
+        }
         async function loadContent() {
             try {
                 const res = await fetch('content.json');
@@ -185,6 +313,39 @@
                     });
                     compHtml += `</div></div>`;
                     compactContainer.innerHTML = compHtml;
+                }
+
+                // Render Prompts
+                const promptContainer = document.getElementById('prompt-container');
+                if (data.prompts && promptContainer) {
+                    window.promptData = data.prompts;
+                    data.prompts.forEach((prompt, index) => {
+                        const tags = prompt.models.map(m => `<span class="prompt-tag">${m}</span>`).join('');
+                        promptContainer.innerHTML += `
+                            <div class="prompt-card" onclick="openPromptModal(${index})">
+                                <div class="prompt-tags">${tags}</div>
+                                <div class="prompt-title">${prompt.title}</div>
+                                <div class="prompt-content-snippet">${prompt.content}</div>
+                                <div class="prompt-actions">
+                                    <button class="copy-btn" onclick="event.stopPropagation(); copyText(window.promptData[${index}].content, () => {})">复制</button>
+                                    <span style="font-size:13px; color:rgba(255,255,255,0.4);">阅读技能说明 &rarr;</span>
+                                </div>
+                            </div>`;
+                    });
+                }
+
+                // Render Articles
+                const blogContainer = document.getElementById('blog-container');
+                if (blogContainer && data.articles) {
+                    data.articles.forEach(art => {
+                        blogContainer.innerHTML += `
+                            <a href="${art.url}" class="blog-card">
+                                <div class="meta">${art.category} • ${art.date}</div>
+                                <h3>${art.title}</h3>
+                                <p>${art.excerpt}</p>
+                                <div class="btn-read">阅读全文 →</div>
+                            </a>`;
+                    });
                 }
             } catch (e) {
                 console.error('Failed to load dynamic content:', e);
