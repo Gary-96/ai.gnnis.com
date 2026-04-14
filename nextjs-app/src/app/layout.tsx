@@ -53,7 +53,7 @@ const jsonLd = {
 }
 
 import { LanguageProvider } from '../context/LanguageContext'
-import Header from '../components/Header'
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 export default function RootLayout({
@@ -79,7 +79,7 @@ export default function RootLayout({
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
-          <Header />
+          <Navbar />
           <div className="flex-grow">
             {children}
           </div>
