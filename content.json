@@ -1,114 +1,42 @@
 {
+  "tools": {
+    "hero": [{"title": "ChatGPT 超级问答", "subtitle": "全能型AI智能助手", "img": "img/home1.png", "url": "https://chatgpt.com", "btnText": "立即体验"}],
+    "feature": [{"title": "Midjourney 创意绘画", "subtitle": "输入文字，生成图像。", "img": "img/home2.png", "url": "https://midjourney.com", "btnText": "开始创作"}, {"title": "Notion AI", "subtitle": "重塑知识库体验", "img": "img/home3.png", "url": "https://notion.so", "btnText": "提升效率"}],
+    "compact": [{"title": "Suno 音乐生成", "subtitle": "一键生成专业级音乐", "img": "img/home4.png", "url": "https://suno.com", "btnText": "生成音乐"}]
+  },
   "prompts": [
     {
-      "id": "prompt-1",
-      "title": "高级商业计划书 (BP) 框架生成",
-      "models": ["GPT-4", "Claude 3.5"],
-      "skills": "通过明确设定角色（顶级VC合伙人）、目标受众和语调，能够输出极其专业且符合投资人审美的商业计划框架。建议在执行时，配合补充你项目的具体赛道和初步财务数据，效果将成倍提升。",
-      "content": "你现在是一位拥有20年经验的红杉资本高级合伙人兼顶尖商业战略顾问。请你帮我撰写一份针对[科技行业/具体细分赛道]的商业计划书框架。计划书需包括但不限于：执行摘要、市场与竞品分析、核心壁垒、商业模式、GTM（Go-to-Market）策略以及财务预测。请运用顶尖投资人的冷酷而敏锐的视角，突出项目的盈利潜力和风险护城河。语言要求极其专业、精炼、具有说服力。"
+      "title": "电影级极客科幻场景 - Cinematic AI Video B-roll Prompt",
+      "models": ["Runway Gen-2", "Pika 1.0"],
+      "skills": "核心技巧在于使用镜头语言描述词，如 'Cinematic lighting' 和 'Low-angle motion'。建议配合 --motion 5 提升画面流动性，并在结尾强调环境质感如 '8k resolution, photorealistic' 以获得最佳视觉冲击力。",
+      "content": "Cinematic low-angle tracking shot of a futuristic cyberpunk city at midnight, heavy neon reflections on wet pavement, volumetric fog, hyper-detailed architecture, 8k, photorealistic, high motion."
     },
     {
-      "id": "prompt-2",
-      "title": "小红书爆款文案生成器",
-      "models": ["GPT-4", "Kimi"],
-      "skills": "此提示词内置了小红书爆款结构分析，充分利用了表情符号、强情绪痛点和引导互动机制。适合美妆、穿搭、数码、知识分享等各个垂直领域。可以直接套用并修改括号内的参数。",
-      "content": "请作为一名拥有千万粉丝的小红书爆款操盘手，为我的产品/主题 [产品/主题名称] 写一篇小红书种草笔记。\n\n要求如下：\n1. 标题：采用“痛点+情绪价值+解决结果”的结构，限制在20字以内，必须极具吸引力并包含适当的诱导点击元素（如“千万别”、“终于”等）。\n2. 开篇：直击目标受众的核心痛点，制造共鸣。\n3. 正文逻辑：清晰分点（至少3点），多使用适当的 Emoji 增加阅读趣味性。\n4. 结尾：设置互动钩子（提问或引导评论及收藏）。\n5. 标签：生成5-8个高流量的网感 Hashtag。"
+      "title": "YouTube/TikTok 爆款 3D 角色动画指令 - Viral 3D Character Animation",
+      "models": ["Sora", "Luma Dream Machine"],
+      "skills": "重点描述角色的面部表情和肢体动态。为了保证物理效果真实，请加入描述交互的词汇，例如 'interacting with light'。同时使用 '--ar 9:16' 适配竖屏短视频平台，增加曝光率。",
+      "content": "A cute 3D fluffy monster dancing joyfully in a bright meadow, soft Pixar-style fur simulation, sunlight filtering through trees, expressive eyes, smooth 60fps movement, vertical orientation."
     },
     {
-      "id": "prompt-3",
-      "title": "前端代码极致重构与优化助手",
-      "models": ["Claude 3.5", "GPT-4o"],
-      "skills": "该提示词要求模型采用最新的前端标准（如 ES6+、React Hooks、Tailwind等）进行代码重构。不仅要求修复问题，还强制模型解释其优化思路，这对于开发者理解更深层次的性能优化极有帮助。",
-      "content": "请作为一名拥有超过10年经验的顶尖前端架构师，审阅并重构我下面提供的代码。\n\n任务要求：\n1. 分析代码中存在的性能瓶颈、可读性问题以及安全隐患。\n2. 使用最现代的开发实践（如ES6+语法、函数式编程、React最佳实践等）对其进行极致重构。\n3. 在重构的代码添加详细且符合规范的注释。\n4. 在代码块结束后，列出你所做的主要改动点及其背后的原因。\n\n待优化的代码：\n[在此处粘贴你的代码]"
+      "title": "专业级商业产品展示视频 - Professional E-commerce Product Promo",
+      "models": ["Runway Gen-3", "Kling AI"],
+      "skills": "产品视频讲究环境的纯净度。建议使用 'Minimalist studio setup' 作为背景描述词。通过指定光源如 'Soft rim lighting' 来突显产品轮廓，并使用 'Macro slow-motion' 展现细节特写。",
+      "content": "Macro slow-motion shot of luxury perfume bottle, water droplets slowly sliding down the glass, soft studio lighting, minimalist beige background, high-end commercial aesthetic, crisp details."
     },
     {
-      "id": "prompt-4",
-      "title": "高转化率英语电邮撰写",
-      "models": ["GPT-3.5", "GPT-4"],
-      "skills": "商业英语沟通非常注重语气的把握（Tone）。这个提示词设定了B2B销售/沟通场景，确保输出的内容既专业礼貌，又具有较强的转化目的（Call To Action）。",
-      "content": "你是一位专业的B2B海外销售总监，拥有顶尖的商务英语沟通和谈判能力。我需要向潜在客户发送一封[冷启动开发邮件 / 合作跟进邮件 / 报价回复邮件]。\n\n背景：[说明你方产品优势及对方公司背景]\n目的：[如：预约一个15分钟的Zoom会议 / 促使其查看附件的报价单]\n\n要求：\n1. 语言：地道、专业、自然的商务英语。\n2. 风格：热情但不过分推销（Pushy），突出互惠价值。\n3. 结构：吸引眼球的标题（Subject Line）、简短直接的开场白、核心价值主张（Bullet points）、明确且低门槛的 Call-To-Action。\n请给我提供两个不同标题的选项供我选择。"
+      "title": "日系高清动漫转场视频 - High-Quality Japanese Anime Style Prompt",
+      "models": ["AnimateDiff", "Pika Art"],
+      "skills": "关键在于锁定画风。使用 'Studio Ghibli style' 或 'Makoto Shinkai aesthetic' 能够快速建立调性。建议强调天气元素如 'Dynamic clouds' 和颜色饱和度，确保每一帧都能作为精美壁纸使用。",
+      "content": "A breathtaking Japanese anime landscape, summer sky with towering cumulus clouds, cherry blossom petals blowing in the wind, Makoto Shinkai aesthetic, vibrant colors, fluid hand-drawn animation style."
+    },
+    {
+      "title": "史诗级史前地球纪录片画面 - Epic Prehistoric Nature Documentary",
+      "models": ["Sora", "Stable Video Diffusion"],
+      "skills": "这类提示词需要强调摄影机视角，使用 'Wide-angle drone shot' 可以营造宏大感。在技能栏中，建议用户在描述物种时加入具体的生理行为，如 'hunting' 或 'grazing'，让 AI 生成的画面更具叙事性。",
+      "content": "Wide-angle drone shot over a prehistoric valley, herds of mammoths walking through a snowy mountain pass, realistic fur textures, National Geographic style, cinematic scale, high dynamic range."
     }
   ],
-  "tools": {
-    "hero": [
-      {
-        "id": "inspiration-drawing",
-        "title": "灵感绘图",
-        "subtitle": "新创新，新想法，新构思，新视角 让AI拓展你的灵感边界，体验不一样的世界吧！",
-        "btnText": "开始创作",
-        "img": "img/home.png",
-        "url": "https://mr.baidu.com/r/1jaKY2tVXu8"
-      }
-    ],
-    "feature": [
-      {
-        "id": "blind-box",
-        "title": "3D盲盒人物",
-        "subtitle": "制作你的专属盲盒人物吧！",
-        "btnText": "开始创作",
-        "img": "img/home1.png",
-        "url": "https://mr.baidu.com/r/1jaKY2tVXu8"
-      },
-      {
-        "id": "avatar",
-        "title": "专属人物头像",
-        "subtitle": "制作你自己的Q版头像吧！",
-        "btnText": "开始创作",
-        "img": "img/home2.png",
-        "url": "https://mr.baidu.com/r/1jaKY2tVXu8"
-      },
-      {
-        "id": "super-qa",
-        "title": "超级问答",
-        "subtitle": "你想问的答案都在这里",
-        "btnText": "开始问答",
-        "img": "img/home3.png",
-        "url": "https://mr.baidu.com/r/1jaKY2tVXu8"
-      }
-    ],
-    "compact": [
-      {
-        "id": "ai-drawing",
-        "title": "AI 绘图",
-        "subtitle": "快速拓展你的灵感边界",
-        "btnText": "开始创作",
-        "img": "img/home4.png",
-        "url": "#"
-      },
-      {
-        "id": "ai-qa",
-        "title": "超级问答",
-        "subtitle": "快速解答你的疑问答惑",
-        "btnText": "开始问答",
-        "img": "img/home5.png",
-        "url": "#"
-      }
-    ]
-  },
   "articles": [
-    {
-      "id": "art-1",
-      "category": "AI DRAWING",
-      "date": "APR 12, 2026",
-      "title": "生成式 AI 的未来：从提问词到艺术杰作",
-      "excerpt": "探索 GNNIS AI 如何通过先进的神经元网络重塑创意产业，让每个人的灵感都能瞬间转化为视觉杰作。",
-      "url": "#"
-    },
-    {
-      "id": "art-2",
-      "category": "WORKFLOW",
-      "date": "APR 10, 2026",
-      "title": "专业设计师的 AI 工作流优化指南",
-      "excerpt": "5 个核心技巧教你如何将“超级问答”与“创意绘画”深度融入日常设计，实现效率的降本增效。",
-      "url": "#"
-    },
-    {
-      "id": "art-3",
-      "category": "3D CHARACTER",
-      "date": "APR 08, 2026",
-      "title": "3D 盲盒人物：虚拟社交时代的数字身份",
-      "excerpt": "为什么个性化的 3D 角色正在成为数字身份的新标准？深度解析 3D 建模 AI 的技术边界与应用场景。",
-      "url": "#"
-    }
+    {"title": "独立开发者如何通过AI工具变现？", "category": "深度教程", "date": "2026-04-14", "excerpt": "在这个数字创造时代，利用简单的代码和提示词，个人开发者也能打造高流量网站...", "url": "#"}
   ]
 }
