@@ -41,6 +41,51 @@
       .blog-card p { font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
       .blog-card .btn-read { font-size: 0.875rem; color: #fff; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.2); align-self: flex-start; padding-bottom: 2px; }
       @media (max-width: 768px) { .blog-header h2 { font-size: 2rem; } .blog-grid { gap: 3rem; } }
+      /* Prompt Section */
+      .prompt-section { padding: 5rem 1rem; max-width: 1200px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .prompt-header { margin-bottom: 3rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem; }
+      .prompt-header h2 { font-size: 2.5rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
+      .prompt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+      
+      .prompt-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden; }
+      .prompt-card:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.06); border-color: rgba(20, 184, 166, 0.3); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); }
+      .prompt-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #14b8a6, transparent); opacity: 0; transition: opacity 0.3s ease; }
+      .prompt-card:hover::before { opacity: 1; }
+      
+      .prompt-title { font-size: 1.25rem; font-weight: 600; color: #fff; margin-bottom: 1rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+      .prompt-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+      .prompt-tag { font-size: 0.75rem; font-weight: 500; color: #14b8a6; background: rgba(20, 184, 166, 0.1); padding: 0.25rem 0.6rem; border-radius: 20px; border: 1px solid rgba(20, 184, 166, 0.2); }
+      
+      .prompt-actions { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+      .prompt-content-snippet { font-size: 0.875rem; color: rgba(255,255,255,0.4); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 1.5rem; line-height: 1.6; }
+      
+      .copy-btn { background: rgba(255, 255, 255, 0.1); border: none; border-radius: 8px; padding: 0.5rem 1rem; color: #fff; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 0.5rem; z-index: 2; }
+      .copy-btn:hover { background: #14b8a6; color: #fff; }
+      
+      /* Modal */
+      .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 1000; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; padding: 1rem; }
+      .modal-overlay.active { opacity: 1; pointer-events: auto; }
+      .modal-container { background: #111; border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; width: 100%; max-width: 600px; max-height: 90vh; overflow-y: auto; transform: scale(0.95) translateY(20px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 40px 80px rgba(0,0,0,0.5); display: flex; flex-direction: column; }
+      .modal-overlay.active .modal-container { transform: scale(1) translateY(0); }
+      .modal-header { padding: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: flex-start; }
+      .modal-title-text { font-size: 1.5rem; font-weight: 600; color: #fff; line-height: 1.3; margin-right: 1rem; margin: 0; }
+      .modal-close { background: none; border: none; color: rgba(255,255,255,0.5); font-size: 2rem; cursor: pointer; padding: 0; line-height: 1; transition: color 0.2s; align-self: flex-start; }
+      .modal-close:hover { color: #fff; }
+      .modal-body { padding: 2rem; overflow-y: auto; }
+      .modal-section-title { font-size: 0.875rem; color: #14b8a6; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 0.75rem; }
+      .modal-skills { font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.8); margin-bottom: 2rem; background: rgba(20, 184, 166, 0.05); padding: 1rem 1.25rem; border-radius: 12px; border-left: 3px solid #14b8a6; }
+      .modal-content-box { background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 1.25rem; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.6); white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+      .modal-footer { padding: 1.5rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: flex-end; }
+      .modal-btn-copy { background: #14b8a6; color: #fff; border: none; border-radius: 8px; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+      .modal-btn-copy:hover { background: #0f9687; transform: translateY(-1px); }
+      
+      @media (max-width: 768px) {
+        .prompt-header h2 { font-size: 2rem; }
+        .prompt-grid { grid-template-columns: 1fr; }
+        .modal-header, .modal-body, .modal-footer { padding: 1.25rem; }
+        .modal-title-text { font-size: 1.25rem; }
+        .modal-skills, .modal-content-box { padding: 1rem; }
+      }
     </style>
     </head>
   <body class="dark">
@@ -353,6 +398,15 @@
     <div id="feature-container"></div>
     <div id="compact-container"></div>
     
+    <section class="prompt-section">
+      <div class="prompt-header">
+        <h2>Prompt Library / 提示词库</h2>
+      </div>
+      <div id="prompt-container" class="prompt-grid">
+        <!-- Prompts will be injected here -->
+      </div>
+    </section>
+
     <section class="blog-section">
       <div class="blog-header">
         <h2>Editor's Choice / 深度专栏</h2>
@@ -362,7 +416,111 @@
       </div>
     </section>
 
+    <!-- Modal HTML -->
+    <div id="prompt-modal" class="modal-overlay" onclick="closePromptModal(event)">
+      <div class="modal-container" onclick="event.stopPropagation()">
+        <div class="modal-header">
+          <h3 id="modal-title" class="modal-title-text"></h3>
+          <button class="modal-close" onclick="closePromptModal(event)">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-section-title">使用技能说明</div>
+          <div id="modal-skills" class="modal-skills"></div>
+          <div class="modal-section-title">提示词内容</div>
+          <div id="modal-content" class="modal-content-box"></div>
+        </div>
+        <div class="modal-footer">
+          <button id="modal-copy-btn" class="modal-btn-copy" onclick="copyFromModal()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span id="modal-copy-text">一键复制</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script>
+      // Prompt modal logic
+      let currentPromptIndex = -1;
+
+      function openPromptModal(index) {
+        if(!window.promptData) return;
+        const prompt = window.promptData[index];
+        currentPromptIndex = index;
+        
+        document.getElementById('modal-title').textContent = prompt.title;
+        document.getElementById('modal-skills').textContent = prompt.skills;
+        document.getElementById('modal-content').textContent = prompt.content;
+        
+        const modal = document.getElementById('prompt-modal');
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // prevent scrolling
+      }
+
+      function closePromptModal(e) {
+        if(e) {
+          // If event is provided, verify it's a valid close target
+          if(e.target !== document.getElementById('prompt-modal') && 
+             e.target.className !== 'modal-close' && 
+             !e.target.closest('.modal-close')) {
+            return;
+          }
+        }
+        const modal = document.getElementById('prompt-modal');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => resetCopyButton(), 300);
+      }
+
+      function resetCopyButton() {
+        const btnText = document.getElementById('modal-copy-text');
+        btnText.textContent = '一键复制';
+      }
+
+      function copyText(text, callback) {
+        if(navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(callback);
+        } else {
+          const textArea = document.createElement("textarea");
+          textArea.value = text;
+          Object.assign(textArea.style, { position: 'fixed', top: '-9999px', opacity: 0 });
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          try { document.execCommand('copy'); callback(); } catch (err) { console.error('Fallback: Oops, unable to copy', err); callback(); }
+          document.body.removeChild(textArea);
+        }
+      }
+
+      function copyPromptText(event, index) {
+        event.stopPropagation();
+        if(!window.promptData) return;
+        const text = window.promptData[index].content;
+        const btn = event.currentTarget;
+        const orgHtml = btn.innerHTML;
+        
+        copyText(text, () => {
+          btn.innerHTML = '已复制!';
+          btn.style.background = '#14b8a6';
+          setTimeout(() => {
+            btn.innerHTML = orgHtml;
+            btn.style.background = '';
+          }, 2000);
+        });
+      }
+
+      function copyFromModal() {
+        if(currentPromptIndex === -1 || !window.promptData) return;
+        const text = window.promptData[currentPromptIndex].content;
+        const textSpan = document.getElementById('modal-copy-text');
+        
+        copyText(text, () => {
+          textSpan.textContent = '复制成功!';
+          setTimeout(() => {
+            textSpan.textContent = '一键复制';
+          }, 2000);
+        });
+      }
+
       async function loadContent() {
         try {
           const res = await fetch('content.json');
@@ -446,6 +604,28 @@
                 <div class="btn-read">阅读全文 →</div>
               </a>`;
           });
+
+          // Render Prompt Library
+          const promptContainer = document.getElementById('prompt-container');
+          if (data.prompts && promptContainer) {
+            window.promptData = data.prompts; // Save globally for modal
+            data.prompts.forEach((prompt, index) => {
+              const tagsHtml = prompt.models.map(m => `<span class="prompt-tag">${m}</span>`).join('');
+              promptContainer.innerHTML += `
+                <div class="prompt-card" onclick="openPromptModal(${index})">
+                  <div class="prompt-tags">${tagsHtml}</div>
+                  <div class="prompt-title">${prompt.title}</div>
+                  <div class="prompt-content-snippet">${prompt.content}</div>
+                  <div class="prompt-actions">
+                    <button class="copy-btn" onclick="copyPromptText(event, ${index})">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                      复制
+                    </button>
+                    <span style="font-size:13px; color:rgba(255,255,255,0.4); font-weight:500;">阅读技能说明 &rarr;</span>
+                  </div>
+                </div>`;
+            });
+          }
         } catch (e) {
           console.error('Failed to load dynamic content:', e);
         }
