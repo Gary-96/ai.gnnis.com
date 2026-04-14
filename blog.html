@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>深度专栏 | ai.gnnis.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" href="/favicon.ico">
+    <link href="static/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/index.082d951a.css">
+    <style>
+/* Site Header (Navbar) */
+.site-header { position: sticky; top: 0; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: rgba(0,0,0,0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.site-logo { color: #fff; font-size: 1.25rem; font-weight: 700; text-decoration: none; letter-spacing: -0.02em; }
+.nav-links { display: flex; gap: 2.5rem; }
+.nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease; }
+.nav-links a:hover { color: #14b8a6; }
+.nav-links a.active { color: #14b8a6; font-weight: 600; }
+.lang-btn { background: rgba(20, 184, 166, 0.1); border: 1px solid rgba(20, 184, 166, 0.3); color: #14b8a6; padding: 0.3rem 0.8rem; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
+
+      /* Blog Section */
+      .blog-section { padding: 5rem 1rem; max-width: 1200px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .blog-header { margin-bottom: 3rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem; }
+      .blog-header h2 { font-size: 2.5rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
+      .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 4rem; }
+      .blog-card { display: flex; flex-direction: column; text-decoration: none; transition: opacity 0.2s ease; }
+      .blog-card:hover { opacity: 0.8; }
+      .blog-card .meta { font-size: 0.75rem; color: #14b8a6; font-weight: 600; text-transform: uppercase; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
+      .blog-card h3 { font-size: 1.5rem; line-height: 1.3; color: #fff; margin-bottom: 0.75rem; font-weight: 600; }
+      .blog-card p { font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+      .blog-card .btn-read { font-size: 0.875rem; color: #fff; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.2); align-self: flex-start; padding-bottom: 2px; }
+
+      /* Standard Site Footer */
+      .site-footer { padding: 4rem 1rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem; }
+      .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+      .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.875rem; transition: color 0.2s ease; }
+      .footer-copy { color: rgba(255,255,255,0.3); font-size: 0.75rem; }
+    </style>
+</head>
+<body class="dark" style="background: #000;">
+    <div id="page">
+        <header class="site-header">
+            <a href="index.html" class="site-logo">ai.gnnis.com</a>
+            <nav class="nav-links">
+                <a href="index.html">AI Tools</a>
+                <a href="prompts.html">Prompts</a>
+                <a href="blog.html" class="active">Skills</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-btn">En / 中</button>
+            </div>
+        </header>
+
+        <div class="astro-J7PV25F6">
+            <canvas id="canvas"></canvas>
+            <script>
+                // 3D background logic would be here
+            </script>
+        </div>
+
+        <main id="content-area" style="position: relative; z-index: 10;">
+            <section class="blog-section">
+                <div class="blog-header">
+                    <h2>Editor's Choice / 深度专栏</h2>
+                </div>
+                <div id="blog-container" class="blog-grid"></div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-copy">© 2026 ai.gnnis.com. All rights reserved.</div>
+        </footer>
+    </div>
+
+    <script>
+        async function loadContent() {
+            const res = await fetch('content.json');
+            const data = await res.json();
+            const container = document.getElementById('blog-container');
+            data.articles.forEach(art => {
+                container.innerHTML += `
+                    <a href="${art.url}" class="blog-card">
+                        <div class="meta">${art.category} • ${art.date}</div>
+                        <h3>${art.title}</h3>
+                        <p>${art.excerpt}</p>
+                        <div class="btn-read">阅读全文 →</div>
+                    </a>`;
+            });
+        }
+        loadContent();
+    </script>
+</body>
+</html>

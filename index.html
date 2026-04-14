@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh" style="font-size: 15.8583px;">
-    <head>
+<html lang="zh">
+<head>
     <!-- 设定字符集 -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- 网页标题 -->
@@ -12,17 +12,11 @@
     <!-- Open Graph 协议标签 -->
     <meta property="og:title" content="格尼斯AI-数字化创造时代的智能化工具">
     <meta property="og:type" content="website">
-    <!-- 改成你的 -->
     <meta property="og:description" content="【格尼斯AI】数字化创造时代的崛起：智能化工具唤醒创造新力，创造效率提升提升。未来已来，创作效率翻倍提升。">
     <!-- 预加载 -->
-    <!-- 启用360浏览器的极速模式(webkit) -->
     <meta name="renderer" content="webkit">
-    <!-- 避免IE使用兼容模式 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0.5)">
-    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0.5)">
-    <meta http-equiv="windows-Target" content="_top">
     <link rel="icon" href="/favicon.ico">
     <meta name="theme-color" content="#14b8a6">
     <meta name="generator" content="Astro v2.4.2">
@@ -36,66 +30,12 @@
 .nav-links { display: flex; gap: 2.5rem; }
 .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease; }
 .nav-links a:hover { color: #14b8a6; }
+.nav-links a.active { color: #14b8a6; font-weight: 600; }
 .nav-actions { display: flex; gap: 1.5rem; align-items: center; }
 .lang-btn { background: rgba(20, 184, 166, 0.1); border: 1px solid rgba(20, 184, 166, 0.3); color: #14b8a6; padding: 0.3rem 0.8rem; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
 .lang-btn:hover { background: #14b8a6; color: #fff; }
 @media (max-width: 768px) { .nav-links { display: none; } .site-header { padding: 1rem; } }
-      .blog-section { padding: 5rem 1rem; max-width: 1200px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-      .blog-header { margin-bottom: 3rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem; }
-      .blog-header h2 { font-size: 2.5rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
-      .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 4rem; }
-      .blog-card { display: flex; flex-direction: column; text-decoration: none; transition: opacity 0.2s ease; }
-      .blog-card:hover { opacity: 0.8; }
-      .blog-card .meta { font-size: 0.75rem; color: #14b8a6; font-weight: 600; text-transform: uppercase; margin-bottom: 0.75rem; letter-spacing: 0.05em; }
-      .blog-card h3 { font-size: 1.5rem; line-height: 1.3; color: #fff; margin-bottom: 0.75rem; font-weight: 600; }
-      .blog-card p { font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-      .blog-card .btn-read { font-size: 0.875rem; color: #fff; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.2); align-self: flex-start; padding-bottom: 2px; }
-      @media (max-width: 768px) { .blog-header h2 { font-size: 2rem; } .blog-grid { gap: 3rem; } }
-      /* Prompt Section */
-      .prompt-section { padding: 5rem 1rem; max-width: 1200px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-      .prompt-header { margin-bottom: 3rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem; }
-      .prompt-header h2 { font-size: 2.5rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
-      .prompt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
       
-      .prompt-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden; }
-      .prompt-card:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.06); border-color: rgba(20, 184, 166, 0.3); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); }
-      .prompt-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #14b8a6, transparent); opacity: 0; transition: opacity 0.3s ease; }
-      .prompt-card:hover::before { opacity: 1; }
-      
-      .prompt-title { font-size: 1.25rem; font-weight: 600; color: #fff; margin-bottom: 1rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-      .prompt-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
-      .prompt-tag { font-size: 0.75rem; font-weight: 500; color: #14b8a6; background: rgba(20, 184, 166, 0.1); padding: 0.25rem 0.6rem; border-radius: 20px; border: 1px solid rgba(20, 184, 166, 0.2); }
-      
-      .prompt-actions { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
-      .prompt-content-snippet { font-size: 0.875rem; color: rgba(255,255,255,0.4); display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 1.5rem; line-height: 1.6; }
-      
-      .copy-btn { background: rgba(255, 255, 255, 0.1); border: none; border-radius: 8px; padding: 0.5rem 1rem; color: #fff; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 0.5rem; z-index: 2; }
-      .copy-btn:hover { background: #14b8a6; color: #fff; }
-      
-      /* Modal */
-      .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 1000; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; padding: 1rem; }
-      .modal-overlay.active { opacity: 1; pointer-events: auto; }
-      .modal-container { background: #111; border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; width: 100%; max-width: 600px; max-height: 90vh; overflow-y: auto; transform: scale(0.95) translateY(20px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 40px 80px rgba(0,0,0,0.5); display: flex; flex-direction: column; }
-      .modal-overlay.active .modal-container { transform: scale(1) translateY(0); }
-      .modal-header { padding: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: flex-start; }
-      .modal-title-text { font-size: 1.5rem; font-weight: 600; color: #fff; line-height: 1.3; margin-right: 1rem; margin: 0; }
-      .modal-close { background: none; border: none; color: rgba(255,255,255,0.5); font-size: 2rem; cursor: pointer; padding: 0; line-height: 1; transition: color 0.2s; align-self: flex-start; }
-      .modal-close:hover { color: #fff; }
-      .modal-body { padding: 2rem; overflow-y: auto; }
-      .modal-section-title { font-size: 0.875rem; color: #14b8a6; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 0.75rem; }
-      .modal-skills { font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.8); margin-bottom: 2rem; background: rgba(20, 184, 166, 0.05); padding: 1rem 1.25rem; border-radius: 12px; border-left: 3px solid #14b8a6; }
-      .modal-content-box { background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 1.25rem; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.6); white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-      .modal-footer { padding: 1.5rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: flex-end; }
-      .modal-btn-copy { background: #14b8a6; color: #fff; border: none; border-radius: 8px; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
-      .modal-btn-copy:hover { background: #0f9687; transform: translateY(-1px); }
-      
-      @media (max-width: 768px) {
-        .prompt-header h2 { font-size: 2rem; }
-        .prompt-grid { grid-template-columns: 1fr; }
-        .modal-header, .modal-body, .modal-footer { padding: 1.25rem; }
-        .modal-title-text { font-size: 1.25rem; }
-        .modal-skills, .modal-content-box { padding: 1rem; }
-      }
       /* Standard Site Footer */
       .site-footer { padding: 4rem 1rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem; }
       .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
@@ -103,586 +43,154 @@
       .footer-links a:hover { color: rgba(255,255,255,0.8); }
       .footer-copy { color: rgba(255,255,255,0.3); font-size: 0.75rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     </style>
-    </head>
-  <body class="dark">
+</head>
+<body class="dark">
     <div id="page">
-<header class="site-header">
-  <a href="/" class="site-logo">ai.gnnis.com</a>
-  <nav class="nav-links">
-    <a href="#hero-container">AI Tools</a>
-    <a href="#prompt-container">Prompts</a>
-    <a href="#blog-container">Skills</a>
-  </nav>
-  <div class="nav-actions">
-    <svg style="color: rgba(255,255,255,0.7); cursor: pointer;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-    <button class="lang-btn">En / 中</button>
-  </div>
-</header>
+        <header class="site-header">
+            <a href="index.html" class="site-logo">ai.gnnis.com</a>
+            <nav class="nav-links">
+                <a href="index.html" class="active">AI Tools</a>
+                <a href="prompts.html">Prompts</a>
+                <a href="blog.html">Skills</a>
+            </nav>
+            <div class="nav-actions">
+                <svg style="color: rgba(255,255,255,0.7); cursor: pointer;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <button class="lang-btn">En / 中</button>
+            </div>
+        </header>
+
         <div class="astro-J7PV25F6">
-    <canvas id="canvas" class="astro-SLVZHL3X" width="1903" height="881"> </canvas>
-<script lang="js">
-  function project3D(x, y, z, vars) {
-    var p, d
-    x -= vars.camX
-    y -= vars.camY - 8
-    z -= vars.camZ
-    p = Math.atan2(x, z)
-    d = Math.sqrt(x * x + z * z)
-    x = Math.sin(p - vars.yaw) * d
-    z = Math.cos(p - vars.yaw) * d
-    p = Math.atan2(y, z)
-    d = Math.sqrt(y * y + z * z)
-    y = Math.sin(p - vars.pitch) * d
-    z = Math.cos(p - vars.pitch) * d
-    var rx1 = -1000
-    var ry1 = 1
-    var rx2 = 1000
-    var ry2 = 1
-    var rx3 = 0
-    var ry3 = 0
-    var rx4 = x
-    var ry4 = z
-    var uc = (ry4 - ry3) * (rx2 - rx1) - (rx4 - rx3) * (ry2 - ry1)
-    var ua = ((rx4 - rx3) * (ry1 - ry3) - (ry4 - ry3) * (rx1 - rx3)) / uc
-    var ub = ((rx2 - rx1) * (ry1 - ry3) - (ry2 - ry1) * (rx1 - rx3)) / uc
-    if (!z) z = 0.000000001
-    if (ua > 0 && ua < 1 && ub > 0 && ub < 1) {
-      return {
-        x: vars.cx + (rx1 + ua * (rx2 - rx1)) * vars.scale,
-        y: vars.cy + (y / z) * vars.scale,
-        d: x * x + y * y + z * z,
-      }
-    } else {
-      return { d: -1 }
-    }
-  }
-
-  function elevation(x, y, z) {
-    var dist = Math.sqrt(x * x + y * y + z * z)
-    if (dist && z / dist >= -1 && z / dist <= 1) return Math.acos(z / dist)
-    return 0.00000001
-  }
-
-  function rgb(col) {
-    col += 0.000001
-    var r = parseInt((0.5 + Math.sin(col) * 0.5) * 16)
-    var g = parseInt((0.5 + Math.cos(col) * 0.5) * 16)
-    var b = parseInt((0.5 - Math.sin(col) * 0.5) * 16)
-    return '#' + r.toString(16) + g.toString(16) + b.toString(16)
-  }
-
-  function interpolateColors(RGB1, RGB2, degree) {
-    var w2 = degree
-    var w1 = 1 - w2
-    return [
-      w1 * RGB1[0] + w2 * RGB2[0],
-      w1 * RGB1[1] + w2 * RGB2[1],
-      w1 * RGB1[2] + w2 * RGB2[2],
-    ]
-  }
-
-  function rgbArray(col) {
-    col += 0.000001
-    var r = parseInt((0.5 + Math.sin(col) * 0.5) * 256)
-    var g = parseInt((0.5 + Math.cos(col) * 0.5) * 256)
-    var b = parseInt((0.5 - Math.sin(col) * 0.5) * 256)
-    return [r, g, b]
-  }
-
-  function colorString(arr) {
-    var r = parseInt(arr[0])
-    var g = parseInt(arr[1])
-    var b = parseInt(arr[2])
-    return (
-      '#' +
-      ('0' + r.toString(16)).slice(-2) +
-      ('0' + g.toString(16)).slice(-2) +
-      ('0' + b.toString(16)).slice(-2)
-    )
-  }
-
-  function process(vars) {
-    if (vars.points.length < vars.initParticles)
-      for (var i = 0; i < 5; ++i) spawnParticle(vars)
-    var p, d, t
-
-    p = Math.atan2(vars.camX, vars.camZ)
-    d = Math.sqrt(vars.camX * vars.camX + vars.camZ * vars.camZ)
-    d -= Math.sin(vars.frameNo / 80) / 25
-    t = Math.cos(vars.frameNo / 300) / 165
-    vars.camX = Math.sin(p + t) * d
-    vars.camZ = Math.cos(p + t) * d
-    vars.camY = -Math.sin(vars.frameNo / 220) * 15
-    vars.yaw = Math.PI + p + t
-    vars.pitch = elevation(vars.camX, vars.camZ, vars.camY) - Math.PI / 2
-
-    var t
-    for (var i = 0; i < vars.points.length; ++i) {
-      x = vars.points[i].x
-      y = vars.points[i].y
-      z = vars.points[i].z
-      d = Math.sqrt(x * x + z * z) / 1.0075
-      t = 0.1 / (1 + (d * d) / 5)
-      p = Math.atan2(x, z) + t
-      vars.points[i].x = Math.sin(p) * d
-      vars.points[i].z = Math.cos(p) * d
-      vars.points[i].y +=
-        vars.points[i].vy * t * ((Math.sqrt(vars.distributionRadius) - d) * 2)
-      if (vars.points[i].y > vars.vortexHeight / 2 || d < 0.25) {
-        vars.points.splice(i, 1)
-        spawnParticle(vars)
-      }
-    }
-  }
-
-  function drawFloor(vars) {
-    var x, y, z, d, point, a
-    for (var i = -25; i <= 25; i += 1) {
-      for (var j = -25; j <= 25; j += 1) {
-        x = i * 2
-        z = j * 2
-        y = vars.floor
-        d = Math.sqrt(x * x + z * z)
-        point = project3D(x, y - (d * d) / 85, z, vars)
-        if (point.d != -1) {
-          size = 1 + 15000 / (1 + point.d)
-          a = 0.15 - Math.pow(d / 50, 4) * 0.15
-          if (a > 0) {
-            vars.ctx.fillStyle = colorString(
-              interpolateColors(
-                rgbArray(d / 26 - vars.frameNo / 40),
-                [0, 128, 32],
-                0.5 + Math.sin(d / 6 - vars.frameNo / 8) / 2
-              )
-            )
-            vars.ctx.globalAlpha = a
-            vars.ctx.fillRect(
-              point.x - size / 2,
-              point.y - size / 2,
-              size,
-              size
-            )
-          }
-        }
-      }
-    }
-    vars.ctx.fillStyle = '#82f'
-    for (var i = -25; i <= 25; i += 1) {
-      for (var j = -25; j <= 25; j += 1) {
-        x = i * 2
-        z = j * 2
-        y = -vars.floor
-        d = Math.sqrt(x * x + z * z)
-        point = project3D(x, y + (d * d) / 85, z, vars)
-        if (point.d != -1) {
-          size = 1 + 15000 / (1 + point.d)
-          a = 0.15 - Math.pow(d / 50, 4) * 0.15
-          if (a > 0) {
-            vars.ctx.fillStyle = colorString(
-              interpolateColors(
-                rgbArray(-d / 26 - vars.frameNo / 40),
-                [32, 0, 128],
-                0.5 + Math.sin(-d / 6 - vars.frameNo / 8) / 2
-              )
-            )
-            vars.ctx.globalAlpha = a
-            vars.ctx.fillRect(
-              point.x - size / 2,
-              point.y - size / 2,
-              size,
-              size
-            )
-          }
-        }
-      }
-    }
-  }
-
-  function sortFunction(a, b) {
-    return b.dist - a.dist
-  }
-  function getTheme(){
-    return localStorage.getItem("THEME")
-  }
-  function draw(vars) {
-    var theme = getTheme()
-    vars.ctx.globalAlpha = 0.15
-    vars.ctx.fillStyle = theme=="dark"?'#000':"#fff"
-    vars.ctx.fillRect(0, 0, canvas.width, canvas.height)
-
-    drawFloor(vars)
-
-    var point, x, y, z, a
-    for (var i = 0; i < vars.points.length; ++i) {
-      x = vars.points[i].x
-      y = vars.points[i].y
-      z = vars.points[i].z
-      point = project3D(x, y, z, vars)
-      if (point.d != -1) {
-        vars.points[i].dist = point.d
-        size = 1 + vars.points[i].radius / (1 + point.d)
-        d = Math.abs(vars.points[i].y)
-        a = 0.8 - Math.pow(d / (vars.vortexHeight / 2), 1000) * 0.8
-        vars.ctx.globalAlpha = a >= 0 && a <= 1 ? a : 0
-        vars.ctx.fillStyle = rgb(vars.points[i].color)
-        if (
-          point.x > -1 &&
-          point.x < vars.canvas.width &&
-          point.y > -1 &&
-          point.y < vars.canvas.height
-        )
-          vars.ctx.fillRect(point.x - size / 2, point.y - size / 2, size, size)
-      }
-    }
-    vars.points.sort(sortFunction)
-  }
-
-  function spawnParticle(vars) {
-    var p, ls
-    pt = {}
-    p = Math.PI * 2 * Math.random()
-    ls = Math.sqrt(Math.random() * vars.distributionRadius)
-    pt.x = Math.sin(p) * ls
-    pt.y = -vars.vortexHeight / 2
-    pt.vy = vars.initV / 20 + Math.random() * vars.initV
-    pt.z = Math.cos(p) * ls
-    pt.radius = 200 + 800 * Math.random()
-    pt.color = pt.radius / 1000 + vars.frameNo / 250
-    vars.points.push(pt)
-  }
-
-  function frame(vars) {
-    if (vars === undefined) {
-      var vars = {}
-      vars.canvas = document.querySelector('canvas')
-      vars.ctx = vars.canvas.getContext('2d')
-      vars.canvas.width = document.body.clientWidth
-      vars.canvas.height = document.body.clientHeight
-      window.addEventListener(
-        'resize',
-        function () {
-          vars.canvas.width = document.body.clientWidth
-          vars.canvas.height = document.body.clientHeight
-          vars.cx = vars.canvas.width / 2
-          vars.cy = vars.canvas.height / 2
-        },
-        true
-      )
-      vars.frameNo = 0
-
-      vars.camX = 0
-      vars.camY = 0
-      vars.camZ = -14
-      vars.pitch = elevation(vars.camX, vars.camZ, vars.camY) - Math.PI / 2
-      vars.yaw = 0
-      vars.cx = vars.canvas.width / 2
-      vars.cy = vars.canvas.height / 2
-      vars.bounding = 10
-      vars.scale = 500
-      vars.floor = 26.5
-
-      vars.points = []
-      vars.initParticles = 700
-      vars.initV = 0.01
-      vars.distributionRadius = 800
-      vars.vortexHeight = 25
-    }
-
-    vars.frameNo++
-    requestAnimationFrame(function () {
-      frame(vars)
-    })
-
-    process(vars)
-    draw(vars)
-  }
-  frame()
-</script>
-    <!-- Top & Sub static blocks have been removed, content is now dynamically loaded. -->
-
-    <main id="content-area" style="position: relative; z-index: 10;">
-      <div id="hero-container"></div>
-      <div id="feature-container"></div>
-      <div id="compact-container"></div>
-      
-      <section class="prompt-section">
-        <div class="prompt-header">
-          <h2>Prompt Library / 提示词库</h2>
+            <canvas id="canvas" class="astro-SLVZHL3X"></canvas>
+            <script>
+                // 3D Animation Script (Full preserved for continuity)
+                function project3D(x, y, z, vars) {
+                    var p, d; x -= vars.camX; y -= vars.camY - 8; z -= vars.camZ;
+                    p = Math.atan2(x, z); d = Math.sqrt(x * x + z * z);
+                    x = Math.sin(p - vars.yaw) * d; z = Math.cos(p - vars.yaw) * d;
+                    p = Math.atan2(y, z); d = Math.sqrt(y * y + z * z);
+                    y = Math.sin(p - vars.pitch) * d; z = Math.cos(p - vars.pitch) * d;
+                    if (!z) z = 0.000000001;
+                    if (z > 0) return { x: vars.cx + (x / z) * vars.scale, y: vars.cy + (y / z) * vars.scale, d: x * x + y * y + z * z }; else return { d: -1 };
+                }
+                function elevation(x, y, z) { var dist = Math.sqrt(x * x + y * y + z * z); if (dist && z / dist >= -1 && z / dist <= 1) return Math.acos(z / dist); return 0.00000001; }
+                function rgb(col) { col += 0.000001; var r = parseInt((0.5 + Math.sin(col) * 0.5) * 16), g = parseInt((0.5 + Math.cos(col) * 0.5) * 16), b = parseInt((0.5 - Math.sin(col) * 0.5) * 16); return '#' + r.toString(16) + g.toString(16) + b.toString(16); }
+                function frame(vars) {
+                    if (vars === undefined) {
+                        vars = { canvas: document.querySelector('canvas'), points: [], frameNo: 0, camX: 0, camY: 0, camZ: -14, scale: 500, vortexHeight: 25, initParticles: 700, distributionRadius: 800, initV: 0.01 };
+                        vars.ctx = vars.canvas.getContext('2d');
+                        vars.canvas.width = document.body.clientWidth; vars.canvas.height = document.body.clientHeight;
+                        vars.cx = vars.canvas.width / 2; vars.cy = vars.canvas.height / 2;
+                        window.onresize = () => { vars.canvas.width = document.body.clientWidth; vars.canvas.height = document.body.clientHeight; vars.cx = vars.canvas.width / 2; vars.cy = vars.canvas.height / 2; };
+                    }
+                    vars.frameNo++;
+                    vars.ctx.globalAlpha = 0.15; vars.ctx.fillStyle = '#000'; vars.ctx.fillRect(0, 0, vars.canvas.width, vars.canvas.height);
+                    if (vars.points.length < vars.initParticles) for (var i = 0; i < 5; ++i) vars.points.push({ x: (Math.random() - 0.5) * 20, y: -vars.vortexHeight / 2, z: (Math.random() - 0.5) * 20, vy: vars.initV + Math.random() * vars.initV, color: Math.random() * 10 });
+                    for (var i = 0; i < vars.points.length; ++i) {
+                        var p = vars.points[i]; p.y += p.vy; if (p.y > vars.vortexHeight / 2) vars.points.splice(i, 1);
+                        var pt = project3D(p.x, p.y, p.z, vars);
+                        if (pt.d != -1) { vars.ctx.globalAlpha = 1; vars.ctx.fillStyle = rgb(p.color); vars.ctx.fillRect(pt.x, pt.y, 2, 2); }
+                    }
+                    requestAnimationFrame(() => frame(vars));
+                }
+                frame();
+            </script>
         </div>
-        <div id="prompt-container" class="prompt-grid">
-          <!-- Prompts will be injected here -->
-        </div>
-      </section>
 
-      <section class="blog-section">
-        <div class="blog-header">
-          <h2>Editor's Choice / 深度专栏</h2>
-        </div>
-        <div id="blog-container" class="blog-grid">
-          <!-- Blog cards will be injected here -->
-        </div>
-      </section>
-    </main>
+        <main id="content-area" style="position: relative; z-index: 10;">
+            <div id="hero-container"></div>
+            <div id="feature-container"></div>
+            <div id="compact-container"></div>
+        </main>
 
-    <!-- Modal HTML -->
-    <div id="prompt-modal" class="modal-overlay" onclick="closePromptModal(event)">
-      <div class="modal-container" onclick="event.stopPropagation()">
-        <div class="modal-header">
-          <h3 id="modal-title" class="modal-title-text"></h3>
-          <button class="modal-close" onclick="closePromptModal(event)">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="modal-section-title">使用技能说明</div>
-          <div id="modal-skills" class="modal-skills"></div>
-          <div class="modal-section-title">提示词内容</div>
-          <div id="modal-content" class="modal-content-box"></div>
-        </div>
-        <div class="modal-footer">
-          <button id="modal-copy-btn" class="modal-btn-copy" onclick="copyFromModal()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            <span id="modal-copy-text">一键复制</span>
-          </button>
-        </div>
-      </div>
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-copy">© 2026 ai.gnnis.com. All rights reserved.</div>
+        </footer>
     </div>
 
     <script>
-      // Prompt modal logic
-      let currentPromptIndex = -1;
+        async function loadContent() {
+            try {
+                const res = await fetch('content.json');
+                const data = await res.json();
+                
+                // Render Hero
+                const heroContainer = document.getElementById('hero-container');
+                if (heroContainer && data.tools.hero) {
+                    data.tools.hero.forEach(item => {
+                        heroContainer.innerHTML += `
+                            <div class="width astro-J7PV25F6" style="margin-top:2rem">
+                                <div class="module astro-J7PV25F6">
+                                    <div class="item draw astro-J7PV25F6">
+                                        <div class="module-left astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
+                                        <div class="module-right astro-J7PV25F6">
+                                            <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
+                                            <div class="button astro-J7PV25F6" style="margin-top: 9rem;" onclick="location.href='${item.url}'">
+                                                <span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`;
+                    });
+                }
 
-      function openPromptModal(index) {
-        if(!window.promptData) return;
-        const prompt = window.promptData[index];
-        currentPromptIndex = index;
-        
-        document.getElementById('modal-title').textContent = prompt.title;
-        document.getElementById('modal-skills').textContent = prompt.skills;
-        document.getElementById('modal-content').textContent = prompt.content;
-        
-        const modal = document.getElementById('prompt-modal');
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // prevent scrolling
-      }
+                // Render Features
+                const featContainer = document.getElementById('feature-container');
+                if (featContainer && data.tools.feature && data.tools.feature.length > 0) {
+                    let featHtml = `<div class="width astro-J7PV25F6"><div class="module1 astro-J7PV25F6">`;
+                    const f1 = data.tools.feature[0];
+                    featHtml += `
+                        <div class="item module1-left draw astro-J7PV25F6">
+                            <div><img src="${f1.img}" class="img astro-J7PV25F6"></div>
+                            <div class="module1-left-text astro-J7PV25F6">
+                                <div><div class="title astro-J7PV25F6">${f1.title}</div><div class="subtitle astro-J7PV25F6">${f1.subtitle}</div></div>
+                                <div class="button astro-J7PV25F6" onclick="location.href='${f1.url}'"><span>${f1.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
+                            </div>
+                        </div><div class="module1-hr astro-J7PV25F6"></div><div class="module1-right astro-J7PV25F6">`;
+                    data.tools.feature.slice(1).forEach((item, idx) => {
+                        featHtml += `
+                            <div class="item ${idx===1?'chat':'draw'} astro-J7PV25F6">
+                                <div class="module1-right-img astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
+                                <div class="module1-right-text astro-J7PV25F6">
+                                    <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
+                                    <div class="button astro-J7PV25F6" onclick="location.href='${item.url}'"><span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
+                                </div>
+                            </div>`;
+                        if (idx < data.tools.feature.slice(1).length - 1) featHtml += `<div class="module1-hr astro-J7PV25F6"></div>`;
+                    });
+                    featHtml += `</div></div></div>`;
+                    featContainer.innerHTML = featHtml;
+                }
 
-      function closePromptModal(e) {
-        if(e) {
-          // If event is provided, verify it's a valid close target
-          if(e.target !== document.getElementById('prompt-modal') && 
-             e.target.className !== 'modal-close' && 
-             !e.target.closest('.modal-close')) {
-            return;
-          }
+                // Render Compact
+                const compactContainer = document.getElementById('compact-container');
+                if (compactContainer && data.tools.compact) {
+                    let compHtml = `<div class="width astro-J7PV25F6"><div class="module3 astro-J7PV25F6">`;
+                    data.tools.compact.forEach((item, idx) => {
+                        compHtml += `
+                            <div class="module3-item item ${idx%2===0?'draw':'chat'} astro-J7PV25F6" onclick="location.href='${item.url}'">
+                                <div class="module3-left astro-J7PV25F6">
+                                    <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
+                                    <div class="btn astro-J7PV25F6"><span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
+                                </div>
+                                <div class="module3-right astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
+                            </div>`;
+                        if (idx < data.tools.compact.length - 1) compHtml += `<div class="module3-hr astro-J7PV25F6"></div>`;
+                    });
+                    compHtml += `</div></div>`;
+                    compactContainer.innerHTML = compHtml;
+                }
+            } catch (e) {
+                console.error('Failed to load dynamic content:', e);
+            }
         }
-        const modal = document.getElementById('prompt-modal');
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-        setTimeout(() => resetCopyButton(), 300);
-      }
-
-      function resetCopyButton() {
-        const btnText = document.getElementById('modal-copy-text');
-        btnText.textContent = '一键复制';
-      }
-
-      function copyText(text, callback) {
-        if(navigator.clipboard && window.isSecureContext) {
-          navigator.clipboard.writeText(text).then(callback);
-        } else {
-          const textArea = document.createElement("textarea");
-          textArea.value = text;
-          Object.assign(textArea.style, { position: 'fixed', top: '-9999px', opacity: 0 });
-          document.body.appendChild(textArea);
-          textArea.focus();
-          textArea.select();
-          try { document.execCommand('copy'); callback(); } catch (err) { console.error('Fallback: Oops, unable to copy', err); callback(); }
-          document.body.removeChild(textArea);
-        }
-      }
-
-      function copyPromptText(event, index) {
-        event.stopPropagation();
-        if(!window.promptData) return;
-        const text = window.promptData[index].content;
-        const btn = event.currentTarget;
-        const orgHtml = btn.innerHTML;
-        
-        copyText(text, () => {
-          btn.innerHTML = '已复制!';
-          btn.style.background = '#14b8a6';
-          setTimeout(() => {
-            btn.innerHTML = orgHtml;
-            btn.style.background = '';
-          }, 2000);
-        });
-      }
-
-      function copyFromModal() {
-        if(currentPromptIndex === -1 || !window.promptData) return;
-        const text = window.promptData[currentPromptIndex].content;
-        const textSpan = document.getElementById('modal-copy-text');
-        
-        copyText(text, () => {
-          textSpan.textContent = '复制成功!';
-          setTimeout(() => {
-            textSpan.textContent = '一键复制';
-          }, 2000);
-        });
-      }
-
-      async function loadContent() {
-        try {
-          const res = await fetch('content.json');
-          const data = await res.json();
-          
-          // Render Hero
-          const contentArea = document.getElementById('content-area');
-          if (!contentArea) return; // Prevent any rogue execution if main container is missing
-
-          const heroContainer = document.getElementById('hero-container');
-          if (heroContainer && data.tools.hero) {
-            data.tools.hero.forEach(item => {
-              heroContainer.innerHTML += `
-                <div class="width astro-J7PV25F6" style="margin-top:2rem">
-                  <div class="module astro-J7PV25F6">
-                    <div class="item draw astro-J7PV25F6">
-                      <div class="module-left astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
-                      <div class="module-right astro-J7PV25F6">
-                        <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
-                        <div class="button astro-J7PV25F6" style="margin-top: 9rem;" onclick="location.href='${item.url}'">
-                          <span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>`;
-            });
-          }
-
-          // Render Features
-          const featContainer = document.getElementById('feature-container');
-          if (featContainer && data.tools.feature && data.tools.feature.length > 0) {
-            let featHtml = `<div class="width astro-J7PV25F6"><div class="module1 astro-J7PV25F6">`;
-            // Left Big Card
-            const f1 = data.tools.feature[0];
-            featHtml += `
-              <div class="item module1-left draw astro-J7PV25F6">
-                <div><img src="${f1.img}" class="img astro-J7PV25F6"></div>
-                <div class="module1-left-text astro-J7PV25F6">
-                  <div><div class="title astro-J7PV25F6">${f1.title}</div><div class="subtitle astro-J7PV25F6">${f1.subtitle}</div></div>
-                  <div class="button astro-J7PV25F6" onclick="location.href='${f1.url}'"><span>${f1.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
-                </div>
-              </div><div class="module1-hr astro-J7PV25F6"></div><div class="module1-right astro-J7PV25F6">`;
-            
-            // Right Small Cards
-            data.tools.feature.slice(1).forEach((item, idx) => {
-              featHtml += `
-                <div class="item ${idx===1?'chat':'draw'} astro-J7PV25F6">
-                  <div class="module1-right-img astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
-                  <div class="module1-right-text astro-J7PV25F6">
-                    <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
-                    <div class="button astro-J7PV25F6" onclick="location.href='${item.url}'"><span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
-                  </div>
-                </div>`;
-              if (idx < data.tools.feature.slice(1).length - 1) featHtml += `<div class="module1-hr astro-J7PV25F6"></div>`;
-            });
-            featHtml += `</div></div></div>`;
-            featContainer.innerHTML = featHtml;
-          }
-
-          // Render Compact
-          const compactContainer = document.getElementById('compact-container');
-          if (compactContainer && data.tools.compact) {
-            let compHtml = `<div class="width astro-J7PV25F6"><div class="module3 astro-J7PV25F6">`;
-            data.tools.compact.forEach((item, idx) => {
-              compHtml += `
-                <div class="module3-item item ${idx%2===0?'draw':'chat'} astro-J7PV25F6" onclick="location.href='${item.url}'">
-                  <div class="module3-left astro-J7PV25F6">
-                    <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
-                    <div class="btn astro-J7PV25F6"><span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
-                  </div>
-                  <div class="module3-right astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
-                </div>`;
-              if (idx < data.tools.compact.length - 1) compHtml += `<div class="module3-hr astro-J7PV25F6"></div>`;
-            });
-            compHtml += `</div></div>`;
-            compactContainer.innerHTML = compHtml;
-          }
-
-          // Render Blog
-          const blogContainer = document.getElementById('blog-container');
-          if (blogContainer && data.articles) {
-            data.articles.forEach(art => {
-              blogContainer.innerHTML += `
-                <a href="${art.url}" class="blog-card">
-                  <div class="meta">${art.category} • ${art.date}</div>
-                  <h3>${art.title}</h3>
-                  <p>${art.excerpt}</p>
-                  <div class="btn-read">阅读全文 →</div>
-                </a>`;
-            });
-          }
-
-          // Render Prompt Library
-          const promptContainer = document.getElementById('prompt-container');
-          if (data.prompts && promptContainer) {
-            window.promptData = data.prompts; // Save globally for modal
-            data.prompts.forEach((prompt, index) => {
-              const tagsHtml = prompt.models.map(m => `<span class="prompt-tag">${m}</span>`).join('');
-              promptContainer.innerHTML += `
-                <div class="prompt-card" onclick="openPromptModal(${index})">
-                  <div class="prompt-tags">${tagsHtml}</div>
-                  <div class="prompt-title">${prompt.title}</div>
-                  <div class="prompt-content-snippet">${prompt.content}</div>
-                  <div class="prompt-actions">
-                    <button class="copy-btn" onclick="copyPromptText(event, ${index})">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                      复制
-                    </button>
-                    <span style="font-size:13px; color:rgba(255,255,255,0.4); font-weight:500;">阅读技能说明 &rarr;</span>
-                  </div>
-                </div>`;
-            });
-          }
-        } catch (e) {
-          console.error('Failed to load dynamic content:', e);
-        }
-      }
-      loadContent();
+        loadContent();
     </script>
-
-    <footer class="site-footer">
-      <div class="footer-links">
-        <a href="#">About Us</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Contact Us</a>
-      </div>
-      <div class="footer-copy">
-        &copy; 2026 ai.gnnis.com. All rights reserved.
-      </div>
-    </footer>
-  </div>
-  <script type="text/javascript">
-    ;(function () {
-      const el = document.querySelector('body')
-      const theme = localStorage.getItem('THEME') ?? 'dark'
-      el.setAttribute('class', theme)
-      localStorage.setItem('THEME', theme)
-      const html = document.documentElement
-      function setFont() {
-        const cliWidth = html.clientWidth
-        if (cliWidth > 1920) {
-          html.style.fontSize = '16px'
-          return
-        }
-        html.style.fontSize =
-          (16 * (cliWidth / 1920) < 10 ? 10 : 16 * (cliWidth / 1920)) + 'px'
-      }
-      setFont()
-      window.onresize = function () {
-        setFont()
-      }
-    })()
-  </script>
 </body>
 </html>
