@@ -54,6 +54,7 @@ const jsonLd = {
 
 import { LanguageProvider } from '../context/LanguageContext'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default function RootLayout({
   children,
@@ -70,6 +71,7 @@ export default function RootLayout({
           bg-black text-white
           antialiased
           pt-20
+          flex flex-col min-h-screen
         `}
       >
         <LanguageProvider>
@@ -78,7 +80,10 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
           <Header />
-          {children}
+          <div className="flex-grow">
+            {children}
+          </div>
+          <Footer />
         </LanguageProvider>
       </body>
     </html>
