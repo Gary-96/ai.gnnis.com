@@ -1,43 +1,63 @@
 import { Metadata } from 'next';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { getPromptsData } from '@/lib/data';
 
-// Dummy data for example purposes. In real app, fetch from JSON or DB via params.slug
-const getPromptData = (slug: string) => {
+// 生成静态路径
+export async function generateStaticParams() {
+  const prompts = await getPromptsData();
+  return prompts.map((prompt) => ({
+    slug: prompt.id,
+  }));
+}
+
+// 根据 slug 获取数据
+async function getPromptData(slug: string) {
+  const prompts = await getPromptsData();
+  const prompt = prompts.find(p => p.id === slug);
+  
+  if (!prompt) {
+    return {
+      title: 'Prompt Not Found',
+      tags: [],
+      markdown: 'The requested prompt could not be found.',
+    };
+  }
+
   return {
-    title: slug.includes('business') ? 'Advanced Business Plan Generator' : 'Sample Prompt',
-    tags: ['GPT-4', 'Claude 3.5'],
+    title: prompt.title,
+    tags: prompt.models,
     markdown: `
-# ${slug.includes('business') ? 'Advanced Business Plan Generator' : 'Sample Prompt'}
+# ${prompt.title}
 
-This is a detailed markdown description of the prompt. You can include:
-- Best use cases
-- Common parameters to tweak
-- Required input formats
+## 适用模型
+${prompt.models.map(m => `- **${m}**`).join('\n')}
 
-## The Prompt
+## 使用技巧
+${prompt.skills}
+
+## Prompt 内容
 
 \`\`\`text
-You are an expert...
-[Your detailed prompt template here]
+${prompt.content}
 \`\`\`
 
-## Why it works
-This prompt leverages specific persona constraints to limit the randomness and increase the professional tone.
-`,
-  };
-};
-
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const data = getPromptData(params.slug);
-  return {
-    title: `${data.title} | JianHui AI Prompts`,
-    description: `Learn how to use the ${data.title} prompt to maximize your AI's potential.`,
+---
+💡 **提示**: 点击右上角"复制"按钮可一键复制完整 Prompt，直接粘贴到对应 AI 工具中使用。
+    `,
   };
 }
 
-export default function PromptDetailPage({ params }: { params: { slug: string } }) {
-  const data = getPromptData(params.slug);
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const data = await getPromptData(params.slug);
+  return {
+    title: `${data.title} | 格尼斯AI Prompts`,
+    description: `学习如何使用 ${data.title} 提示词，最大化发挥AI潜力。`,
+  };
+}
+
+export default async function PromptDetailPage({ params }: { params: { slug: string } }) {
+  const data = await getPromptData(params.slug);
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-8 md:py-16 grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -53,32 +73,20 @@ export default function PromptDetailPage({ params }: { params: { slug: string } 
             ))}
           </div>
         </div>
-        
-        {/* AdSense Top Slot */}
-        <div className="w-full h-[90px] bg-black/40 border border-gray-800 rounded flex items-center justify-center mb-8 overflow-hidden relative">
-          <span className="text-xs text-gray-500">Google AdSense - Responsive Top</span>
-          {/* Include AdSense script and <ins> element here */}
-        </div>
 
         <div className="prose prose-invert prose-teal max-w-none prose-pre:bg-black/50 prose-pre:border prose-pre:border-white/10">
+          {/* @ts-expect-error React 18 type compatibility issue with react-markdown */}
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {data.markdown}
           </ReactMarkdown>
-        </div>
-
-        {/* AdSense Bottom Slot */}
-        <div className="w-full h-[250px] bg-black/40 border border-gray-800 rounded flex items-center justify-center mt-12 overflow-hidden relative">
-          <span className="text-xs text-gray-500">Google AdSense - Bottom Rectangle</span>
-          {/* Include AdSense script and <ins> element here */}
         </div>
       </article>
 
       {/* Sidebar Area */}
       <aside className="lg:col-span-1 flex flex-col gap-6">
-        {/* AdSense Sidebar Slot */}
-        <div className="w-full h-[600px] bg-black/40 border border-gray-800 rounded-2xl flex items-center justify-center overflow-hidden lg:sticky lg:top-24">
-          <span className="text-xs text-gray-500">Google AdSense - Sidebar Skyscraper</span>
-          {/* Include AdSense script and <ins> element here */}
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 lg:sticky lg:top-24">
+          <h3 className="text-lg font-semibold text-white mb-4">相关 Prompts</h3>
+          <p className="text-white/40 text-sm">更多推荐内容...</p>
         </div>
       </aside>
     </main>

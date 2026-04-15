@@ -21,23 +21,23 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-bold tracking-tight text-white">
-              JianHui<span className="text-teal-500">AI</span>
+              GNNIS<span className="text-teal-500">AI</span>
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">AI Tools</Link>
-            <Link href="/prompt/sample" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Prompts</Link>
-            <Link href="#" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Skills</Link>
+            <Link href="/" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">AI Tools</Link>
+            <Link href="/prompts" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Prompts</Link>
+            <Link href="/skills" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Skills</Link>
           </div>
 
           {/* Right side icons & language switch */}
           <div className="hidden md:flex items-center space-x-6">
             {/* Search Icon */}
-            <button className="text-gray-400 hover:text-white transition-colors" aria-label="Search">
+            <Link href="/search" className="text-gray-400 hover:text-white transition-colors" aria-label="Search">
               <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
-            </button>
+            </Link>
             {/* Language Switch Placeholder */}
             <div className="flex items-center">
               <button className="text-xs border border-gray-600 rounded-md px-2 py-1 text-gray-300 hover:bg-gray-800 transition-colors">
@@ -64,9 +64,9 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/10 shadow-2xl">
           <div className="px-4 pt-2 pb-6 space-y-1 sm:px-3">
-            <Link href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-colors">AI Tools</Link>
-            <Link href="/prompt/sample" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-colors">Prompts</Link>
-            <Link href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-colors">Skills</Link>
+            <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-colors">AI Tools</Link>
+            <Link href="/prompts" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-colors">Prompts</Link>
+            <Link href="/skills" className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-colors">Skills</Link>
             
             <div className="pt-4 mt-4 border-t border-gray-800 flex items-center justify-between px-3">
                <button className="flex items-center text-gray-400 hover:text-white transition-colors">

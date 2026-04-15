@@ -23,7 +23,7 @@ const Header = () => {
             JH
           </div>
           <span className="text-xl font-bold text-white tracking-tight">
-            JianHui <span className="text-teal-400">AI</span>
+            GNNIS <span className="text-teal-400">AI</span>
           </span>
         </Link>
 

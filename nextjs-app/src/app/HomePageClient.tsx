@@ -5,6 +5,7 @@ import SaaSHero from '@/components/SaaSHero';
 import CardSection from '@/components/CardSection';
 import ArticleSection from '@/components/ArticleSection';
 import AdSidebar from '@/components/AdSidebar';
+import ParticleBackground from '@/components/ParticleBackground';
 
 interface HomePageClientProps {
   initialData: {
@@ -25,6 +26,9 @@ export default function HomePageClient({ initialData }: HomePageClientProps) {
 
   return (
     <div className="relative min-h-screen bg-black text-white selection:bg-teal-500/30">
+      {/* 3D Particle Background */}
+      <ParticleBackground />
+      
       {/* SaaS Hero Section */}
       <SaaSHero />
 
@@ -65,7 +69,7 @@ export default function HomePageClient({ initialData }: HomePageClientProps) {
       {/* Footer */}
       <footer className="border-t border-white/5 py-12 text-center">
         <p className="text-sm text-white/20">
-          © {new Date().getFullYear()} JianHui AI. All rights reserved.
+          © {new Date().getFullYear()} GNNIS AI. All rights reserved.
         </p>
       </footer>
     </div>

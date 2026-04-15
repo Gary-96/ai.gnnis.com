@@ -10,30 +10,30 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'JianHui AI | Best AI Tools Directory & Free AI Web Services',
+  title: 'GNNIS AI | Best AI Tools Directory & Free AI Web Services',
   description:
-    'Explore the best AI tools directory with JianHui AI. Access free AI web services for creative drawing, super Q&A, and 3D character generation. Boost your workflow today.',
+    'Explore the best AI tools directory with GNNIS AI. Access free AI web services for creative drawing, super Q&A, and 3D character generation. Boost your workflow today.',
   keywords: [
     'Best AI Tools Directory',
     'Free AI Web Services',
-    'JianHui AI',
+    'GNNIS AI',
     'AI tools',
     'AI drawing',
     'AI Q&A',
     '3D AI Character',
   ],
   openGraph: {
-    title: 'JianHui AI | Best AI Tools Directory & Free AI Web Services',
+    title: 'GNNIS AI | Best AI Tools Directory & Free AI Web Services',
     description:
-      'Explore the best AI tools directory with JianHui AI. Access free AI web services for creative drawing, super Q&A, and 3D character generation.',
+      'Explore the best AI tools directory with GNNIS AI. Access free AI web services for creative drawing, super Q&A, and 3D character generation.',
     url: 'https://ai.gnnis.com',
-    siteName: 'JianHui AI',
+    siteName: 'GNNIS AI',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JianHui AI | Best AI Tools Directory',
+    title: 'GNNIS AI | Best AI Tools Directory',
     description: 'The ultimate AI tools directory for creators. Discover free AI web services today.',
   },
   themeColor: '#14b8a6',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'JianHui AI',
+  name: 'GNNIS AI',
   url: 'https://ai.gnnis.com',
   description: 'Best AI Tools Directory & Free AI Web Services. Explore tools for drawing, Q&A, and 3D characters.',
   potentialAction: {

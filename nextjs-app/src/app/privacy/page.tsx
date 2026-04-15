@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | JianHui AI',
-  description: 'Privacy Policy for JianHui AI. Read how we secure your data and respect your privacy.',
+  title: 'Privacy Policy | GNNIS AI',
+  description: 'Privacy Policy for GNNIS AI. Read how we secure your data and respect your privacy.',
 };
 
 export default function PrivacyPage() {
@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <div className="prose prose-invert lg:prose-lg max-w-none">
         <p className="mb-6 text-sm text-gray-400">Last Updated: April 2026</p>
         <p className="mb-6">
-          JianHui AI ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by JianHui AI.
+          GNNIS AI ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by GNNIS AI.
         </p>
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-white">1. Information We Collect</h2>
         <p className="mb-6">

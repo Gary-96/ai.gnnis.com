@@ -1,17 +1,17 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us | JianHui AI',
-  description: 'Learn more about JianHui AI, our mission, and our vision for the future of AI tools and creativity.',
+  title: 'About Us | GNNIS AI',
+  description: 'Learn more about GNNIS AI, our mission, and our vision for the future of AI tools and creativity.',
 };
 
 export default function AboutPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-16 text-gray-200">
-      <h1 className="text-4xl font-bold mb-8 text-white">About JianHui AI</h1>
+      <h1 className="text-4xl font-bold mb-8 text-white">About GNNIS AI</h1>
       <div className="prose prose-invert lg:prose-lg">
         <p className="mb-6">
-          Welcome to JianHui AI, the ultimate platform designed to empower creators, developers, and visionaries by providing instant access to cutting-edge Artificial Intelligence tools and services.
+          Welcome to GNNIS AI, the ultimate platform designed to empower creators, developers, and visionaries by providing instant access to cutting-edge Artificial Intelligence tools and services.
         </p>
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-white">Our Mission</h2>
         <p className="mb-6">

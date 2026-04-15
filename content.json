@@ -1,42 +1,136 @@
 {
   "tools": {
-    "hero": [{"title": "ChatGPT 超级问答", "subtitle": "全能型AI智能助手", "img": "img/home1.png", "url": "https://chatgpt.com", "btnText": "立即体验"}],
-    "feature": [{"title": "Midjourney 创意绘画", "subtitle": "输入文字，生成图像。", "img": "img/home2.png", "url": "https://midjourney.com", "btnText": "开始创作"}, {"title": "Notion AI", "subtitle": "重塑知识库体验", "img": "img/home3.png", "url": "https://notion.so", "btnText": "提升效率"}],
-    "compact": [{"title": "Suno 音乐生成", "subtitle": "一键生成专业级音乐", "img": "img/home4.png", "url": "https://suno.com", "btnText": "生成音乐"}]
+    "hero": [
+      {"id": "chatgpt", "title": "ChatGPT 超级问答", "subtitle": "全能型AI智能助手", "img": "img/home1.png", "url": "https://chatgpt.com", "btnText": "立即体验"},
+      {"id": "claude", "title": "Claude AI", "subtitle": "安全可靠的AI助手", "img": "img/home1.png", "url": "https://claude.ai", "btnText": "开始对话"}
+    ],
+    "feature": [
+      {"id": "midjourney", "title": "Midjourney 创意绘画", "subtitle": "输入文字，生成图像。", "img": "img/home2.png", "url": "https://midjourney.com", "btnText": "开始创作"}, 
+      {"id": "notion", "title": "Notion AI", "subtitle": "重塑知识库体验", "img": "img/home3.png", "url": "https://notion.so", "btnText": "提升效率"},
+      {"id": "cursor", "title": "Cursor AI 编辑器", "subtitle": "AI驱动的代码编辑器", "img": "img/home3.png", "url": "https://cursor.sh", "btnText": "下载使用"}
+    ],
+    "compact": [
+      {"id": "suno", "title": "Suno 音乐生成", "subtitle": "一键生成专业级音乐", "img": "img/home4.png", "url": "https://suno.com", "btnText": "生成音乐"},
+      {"id": "runway", "title": "Runway Gen-3", "subtitle": "视频生成与编辑", "img": "img/home4.png", "url": "https://runwayml.com", "btnText": "创作视频"},
+      {"id": "elevenlabs", "title": "ElevenLabs", "subtitle": "AI语音克隆与合成", "img": "img/home4.png", "url": "https://elevenlabs.io", "btnText": "体验语音"}
+    ]
   },
   "prompts": [
     {
+      "id": "prompt-0",
       "title": "电影级极客科幻场景 - Cinematic AI Video B-roll Prompt",
       "models": ["Runway Gen-2", "Pika 1.0"],
-      "skills": "核心技巧在于使用镜头语言描述词，如 'Cinematic lighting' 和 'Low-angle motion'。建议配合 --motion 5 提升画面流动性，并在结尾强调环境质感如 '8k resolution, photorealistic' 以获得最佳视觉冲击力。",
-      "content": "Cinematic low-angle tracking shot of a futuristic cyberpunk city at midnight, heavy neon reflections on wet pavement, volumetric fog, hyper-detailed architecture, 8k, photorealistic, high motion."
+      "skills": "核心技巧在于使用镜头语言描述词，如 Cinematic lighting 和 Low-angle motion。建议配合 --motion 5 提升画面流动性。",
+      "content": "Cinematic low-angle tracking shot of a futuristic cyberpunk city at midnight, heavy neon reflections on wet pavement, volumetric fog, hyper-detailed architecture, 8k, photorealistic, high motion.",
+      "category": "视频生成"
     },
     {
-      "title": "YouTube/TikTok 爆款 3D 角色动画指令 - Viral 3D Character Animation",
+      "id": "prompt-1",
+      "title": "YouTube/TikTok 爆款 3D 角色动画指令",
       "models": ["Sora", "Luma Dream Machine"],
-      "skills": "重点描述角色的面部表情和肢体动态。为了保证物理效果真实，请加入描述交互的词汇，例如 'interacting with light'。同时使用 '--ar 9:16' 适配竖屏短视频平台，增加曝光率。",
-      "content": "A cute 3D fluffy monster dancing joyfully in a bright meadow, soft Pixar-style fur simulation, sunlight filtering through trees, expressive eyes, smooth 60fps movement, vertical orientation."
+      "skills": "重点描述角色的面部表情和肢体动态。使用 --ar 9:16 适配竖屏短视频平台。",
+      "content": "A cute 3D fluffy monster dancing joyfully in a bright meadow, soft Pixar-style fur simulation, sunlight filtering through trees, expressive eyes, smooth 60fps movement.",
+      "category": "视频生成"
     },
     {
-      "title": "专业级商业产品展示视频 - Professional E-commerce Product Promo",
+      "id": "prompt-2",
+      "title": "专业级商业产品展示视频",
       "models": ["Runway Gen-3", "Kling AI"],
-      "skills": "产品视频讲究环境的纯净度。建议使用 'Minimalist studio setup' 作为背景描述词。通过指定光源如 'Soft rim lighting' 来突显产品轮廓，并使用 'Macro slow-motion' 展现细节特写。",
-      "content": "Macro slow-motion shot of luxury perfume bottle, water droplets slowly sliding down the glass, soft studio lighting, minimalist beige background, high-end commercial aesthetic, crisp details."
+      "skills": "产品视频讲究环境的纯净度。建议使用 Minimalist studio setup 作为背景描述词。",
+      "content": "Macro slow-motion shot of luxury perfume bottle, water droplets slowly sliding down the glass, soft studio lighting, minimalist beige background, high-end commercial aesthetic.",
+      "category": "商业应用"
     },
     {
-      "title": "日系高清动漫转场视频 - High-Quality Japanese Anime Style Prompt",
+      "id": "prompt-3",
+      "title": "日系高清动漫转场视频",
       "models": ["AnimateDiff", "Pika Art"],
-      "skills": "关键在于锁定画风。使用 'Studio Ghibli style' 或 'Makoto Shinkai aesthetic' 能够快速建立调性。建议强调天气元素如 'Dynamic clouds' 和颜色饱和度，确保每一帧都能作为精美壁纸使用。",
-      "content": "A breathtaking Japanese anime landscape, summer sky with towering cumulus clouds, cherry blossom petals blowing in the wind, Makoto Shinkai aesthetic, vibrant colors, fluid hand-drawn animation style."
+      "skills": "关键在于锁定画风。使用 Studio Ghibli style 或 Makoto Shinkai aesthetic 快速建立调性。",
+      "content": "A breathtaking Japanese anime landscape, summer sky with towering cumulus clouds, cherry blossom petals blowing in the wind, Makoto Shinkai aesthetic, vibrant colors.",
+      "category": "视频生成"
     },
     {
-      "title": "史诗级史前地球纪录片画面 - Epic Prehistoric Nature Documentary",
+      "id": "prompt-4",
+      "title": "史诗级史前地球纪录片画面",
       "models": ["Sora", "Stable Video Diffusion"],
-      "skills": "这类提示词需要强调摄影机视角，使用 'Wide-angle drone shot' 可以营造宏大感。在技能栏中，建议用户在描述物种时加入具体的生理行为，如 'hunting' 或 'grazing'，让 AI 生成的画面更具叙事性。",
-      "content": "Wide-angle drone shot over a prehistoric valley, herds of mammoths walking through a snowy mountain pass, realistic fur textures, National Geographic style, cinematic scale, high dynamic range."
+      "skills": "使用 Wide-angle drone shot 可以营造宏大感。",
+      "content": "Wide-angle drone shot over a prehistoric valley, herds of mammoths walking through a snowy mountain pass, realistic fur textures, National Geographic style.",
+      "category": "视频生成"
+    },
+    {
+      "id": "prompt-5",
+      "title": "Midjourney 极简风格品牌 Logo 设计",
+      "models": ["Midjourney V6", "DALL-E 3"],
+      "skills": "品牌设计讲究简洁识别度。使用 minimal logo design 和 flat design 风格词。",
+      "content": "Minimalist logo design for a tech startup, abstract geometric shape representing connection and innovation, clean lines, single color gradient from teal to purple.",
+      "category": "图像生成"
+    },
+    {
+      "id": "prompt-6",
+      "title": "ChatGPT 高效文案写作指令模板",
+      "models": ["ChatGPT-4", "Claude 3.5"],
+      "skills": "文案写作的秘诀在于明确受众和语气。使用 persona: [目标用户] 和 tone: [语气] 参数。",
+      "content": "Write a compelling product description for [产品名]. Target audience: [目标用户]. Key benefits: [核心卖点]. Tone: professional yet friendly. Format: headline + 3 bullet points + call-to-action.",
+      "category": "文案写作"
+    },
+    {
+      "id": "prompt-7",
+      "title": "Stable Diffusion 超写实人像摄影",
+      "models": ["Stable Diffusion XL", "Midjourney V6"],
+      "skills": "人像生成要避免恐怖谷效应。使用 photorealistic 和 8k portrait 风格词。",
+      "content": "Photorealistic portrait of a young professional woman, soft natural lighting from window, shallow depth of field, shot on Sony A7IV, 85mm f1.8 lens, subtle smile.",
+      "category": "图像生成"
     }
   ],
   "articles": [
-    {"title": "独立开发者如何通过AI工具变现？", "category": "深度教程", "date": "2026-04-14", "excerpt": "在这个数字创造时代，利用简单的代码和提示词，个人开发者也能打造高流量网站...", "url": "#"}
+    {
+      "id": "article-0",
+      "title": "独立开发者如何通过AI工具变现？",
+      "category": "深度教程",
+      "date": "2026-04-14",
+      "excerpt": "在这个数字创造时代，利用简单的代码和提示词，个人开发者也能打造高流量网站...",
+      "content": "## 为什么独立开发者需要AI工具\n\n在2026年，AI工具已经从新奇事物变成了生产力必备品。\n\n### 变现路径一：AI驱动的内容站\n\n像格尼斯AI这样的内容站，通过整合AI工具介绍、Prompt分享、技能教程，可以吸引精准流量。\n\n### 变现路径二：AI生成数字产品\n\n利用Midjourney生成插画素材、ChatGPT编写电子书、Suno创作音乐。",
+      "author": "格尼斯AI团队",
+      "readTime": "8 min"
+    },
+    {
+      "id": "article-1",
+      "title": "Midjourney V6 完整使用指南：从入门到精通",
+      "category": "工具教程",
+      "date": "2026-04-13",
+      "excerpt": "详解Midjourney V6的所有新特性、参数设置、风格词用法...",
+      "content": "## Midjourney V6 核心升级\n\nV6版本相比V5有质的飞跃：\n\n- **更高分辨率**：默认输出2048x2048\n- **更精准理解**：复杂Prompt也能准确呈现",
+      "author": "格尼斯AI团队",
+      "readTime": "12 min"
+    },
+    {
+      "id": "article-2",
+      "title": "Runway Gen-3 视频生成实战：10个商业案例",
+      "category": "案例解析",
+      "date": "2026-04-12",
+      "excerpt": "用Runway Gen-3为品牌制作宣传片的完整流程...",
+      "content": "## Runway Gen-3 的商业价值\n\n视频内容需求爆发，但传统制作成本高昂。",
+      "author": "格尼斯AI团队",
+      "readTime": "10 min"
+    },
+    {
+      "id": "article-3",
+      "title": "ChatGPT 高效写作完全手册：30个实用Prompt",
+      "category": "深度教程",
+      "date": "2026-04-11",
+      "excerpt": "覆盖文案、博客、邮件、报告等场景的ChatGPT写作指令...",
+      "content": "## 写作Prompt设计原则\n\n好的写作Prompt包含三个要素：角色定义、任务描述、输出格式。",
+      "author": "格尼斯AI团队",
+      "readTime": "15 min"
+    },
+    {
+      "id": "article-4",
+      "title": "Sora vs Runway vs Pika：2026视频生成工具横评",
+      "category": "深度评测",
+      "date": "2026-04-10",
+      "excerpt": "从画面质量、时长、成本、易用性多维度对比...",
+      "content": "## 测试环境与标准\n\n我们在相同Prompt下测试三大平台的输出质量。",
+      "author": "格尼斯AI团队",
+      "readTime": "8 min"
+    }
   ]
 }

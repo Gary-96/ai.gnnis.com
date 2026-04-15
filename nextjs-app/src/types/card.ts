@@ -25,3 +25,20 @@ export interface CardData {
   /** 卡片布局尺寸 */
   size: CardSize
 }
+
+/**
+ * Prompt 数据类型
+ */
+export interface PromptData {
+  id: string
+  /** Prompt 标题 */
+  title: string
+  /** 适用模型列表 */
+  models: string[]
+  /** 技能要点 */
+  skills: string
+  /** Prompt 内容 */
+  content: string
+  /** 分类标签 */
+  category: string
+}

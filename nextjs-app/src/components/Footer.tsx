@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Brand / Logo Area */}
         <div className="flex flex-col flex-1">
           <Link href="/" className="text-xl font-bold text-white mb-4 tracking-tight">
-            JianHui<span className="text-teal-500">AI</span>
+            GNNIS<span className="text-teal-500">AI</span>
           </Link>
           <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
             数字化创造时代的崛起：智能化工具唤醒创造新力，提升您的创作效率。
