@@ -41,15 +41,37 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'GNNIS AI',
-  url: 'https://ai.gnnis.com',
-  description: 'Best AI Tools Directory & Free AI Web Services. Explore tools for drawing, Q&A, and 3D characters.',
-  potentialAction: {
-    '@type': 'SearchAction',
-    'target': 'https://ai.gnnis.com/?q={search_term_string}',
-    'query-input': 'required name=search_term_string',
-  },
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://ai.gnnis.com/#organization',
+      name: 'GNNIS AI',
+      url: 'https://ai.gnnis.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://ai.gnnis.com/favicon.ico',
+      },
+      sameAs: [
+        'https://twitter.com/gnnisai',
+        'https://github.com/Gary-96/ai.gnnis.com',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://ai.gnnis.com/#website',
+      url: 'https://ai.gnnis.com',
+      name: 'GNNIS AI',
+      description: 'Best AI Tools Directory & Free AI Web Services. Explore tools for drawing, Q&A, and 3D characters.',
+      publisher: {
+        '@id': 'https://ai.gnnis.com/#organization',
+      },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://ai.gnnis.com/search?q={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ],
 }
 
 import { LanguageProvider } from '../context/LanguageContext'
@@ -78,6 +100,12 @@ export default function RootLayout({
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+          {/* Umami Analytics - 隐私友好的访问统计 */}
+          <script
+            defer
+            src="https://cloud.umami.is/script.js"
+            data-website-id="bf13dded-f7f0-42a3-9c68-b1f7241af4e6"
           />
           <Navbar />
           <div className="flex-grow">

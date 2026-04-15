@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 
 // 搜索结果卡片组件
@@ -38,58 +38,70 @@ const hotSearches = [
   '视频生成', 'Midjourney', 'ChatGPT', 'Logo设计', '文案写作', 'Runway'
 ];
 
-// 模拟搜索数据
-const searchData = {
-  tools: [
-    { id: 'chatgpt', title: 'ChatGPT 超级问答', subtitle: '全能型AI智能助手', href: 'https://chatgpt.com' },
-    { id: 'claude', title: 'Claude AI', subtitle: '安全可靠的AI助手', href: 'https://claude.ai' },
-    { id: 'midjourney', title: 'Midjourney 创意绘画', subtitle: '输入文字，生成图像', href: 'https://midjourney.com' },
-    { id: 'suno', title: 'Suno 音乐生成', subtitle: '一键生成专业级音乐', href: 'https://suno.com' },
-    { id: 'runway', title: 'Runway Gen-3', subtitle: '视频生成与编辑', href: 'https://runwayml.com' },
-  ],
-  prompts: [
-    { id: 'prompt-0', title: '电影级极客科幻场景', skills: '核心技巧在于使用镜头语言描述词，如 Cinematic lighting 和 Low-angle motion', href: '/prompt/prompt-0', category: '视频生成' },
-    { id: 'prompt-1', title: 'YouTube/TikTok 爆款 3D 角色动画', skills: '重点描述角色的面部表情和肢体动态，使用 --ar 9:16 适配竖屏', href: '/prompt/prompt-1', category: '视频生成' },
-    { id: 'prompt-5', title: 'Midjourney 极简风格品牌 Logo 设计', skills: '品牌设计讲究简洁识别度，使用 minimal logo design 风格词', href: '/prompt/prompt-5', category: '图像生成' },
-    { id: 'prompt-6', title: 'ChatGPT 高效文案写作指令模板', skills: '文案写作的秘诀在于明确受众和语气，使用 persona 和 tone 参数', href: '/prompt/prompt-6', category: '文案写作' },
-  ],
-  articles: [
-    { id: 'article-0', title: '独立开发者如何通过AI工具变现？', excerpt: '在这个数字创造时代，利用简单的代码和提示词，个人开发者也能打造高流量网站...', href: '/article/article-0' },
-    { id: 'article-1', title: 'Midjourney V6 完整使用指南：从入门到精通', excerpt: '详解Midjourney V6的所有新特性、参数设置、风格词用法...', href: '/article/article-1' },
-    { id: 'article-2', title: 'Runway Gen-3 视频生成实战：10个商业案例', excerpt: '用Runway Gen-3为品牌制作宣传片的完整流程...', href: '/article/article-2' },
-    { id: 'article-3', title: 'ChatGPT 高效写作完全手册：30个实用Prompt', excerpt: '覆盖文案、博客、邮件、报告等场景的ChatGPT写作指令...', href: '/article/article-3' },
-  ]
-};
+interface SearchData {
+  tools: Array<{id: string; title: string; subtitle: string; url?: string}>;
+  prompts: Array<{id: string; title: string; skills: string; category: string; content?: string}>;
+  articles: Array<{id: string; title: string; excerpt: string; content?: string; category?: string}>;
+}
 
 export default function SearchPage() {
   const [searchInput, setSearchInput] = useState('');
+  const [data, setData] = useState<SearchData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  // 加载content.json
+  useEffect(() => {
+    fetch('/content.json')
+      .then(res => res.json())
+      .then(json => {
+        // 展平tools
+        const allTools = [
+          ...(json.tools?.hero || []),
+          ...(json.tools?.feature || []),
+          ...(json.tools?.compact || [])
+        ];
+        setData({
+          tools: allTools,
+          prompts: json.prompts || [],
+          articles: json.articles || []
+        });
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Failed to load content:', err);
+        setLoading(false);
+      });
+  }, []);
   
   // 搜索逻辑
   const searchResults = useMemo(() => {
-    if (!searchInput.trim()) {
+    if (!data || !searchInput.trim()) {
       return { tools: [], prompts: [], articles: [] };
     }
     
     const lowerQuery = searchInput.toLowerCase();
     
-    const tools = searchData.tools.filter(t => 
+    const tools = data.tools.filter(t => 
       t.title.toLowerCase().includes(lowerQuery) || 
       t.subtitle.toLowerCase().includes(lowerQuery)
-    );
+    ).slice(0, 5);
     
-    const prompts = searchData.prompts.filter(p => 
+    const prompts = data.prompts.filter(p => 
       p.title.toLowerCase().includes(lowerQuery) ||
       p.skills.toLowerCase().includes(lowerQuery) ||
-      p.category.toLowerCase().includes(lowerQuery)
-    );
+      p.category.toLowerCase().includes(lowerQuery) ||
+      (p.content && p.content.toLowerCase().includes(lowerQuery))
+    ).slice(0, 5);
     
-    const articles = searchData.articles.filter(a => 
+    const articles = data.articles.filter(a => 
       a.title.toLowerCase().includes(lowerQuery) ||
-      a.excerpt.toLowerCase().includes(lowerQuery)
-    );
+      a.excerpt.toLowerCase().includes(lowerQuery) ||
+      (a.content && a.content.toLowerCase().includes(lowerQuery)) ||
+      (a.category && a.category.toLowerCase().includes(lowerQuery))
+    ).slice(0, 5);
     
     return { tools, prompts, articles };
-  }, [searchInput]);
+  }, [data, searchInput]);
 
   const totalResults = searchResults.tools.length + searchResults.prompts.length + searchResults.articles.length;
 
@@ -122,10 +134,16 @@ export default function SearchPage() {
               placeholder="输入关键词搜索..."
               className="w-full px-6 py-4 pl-12 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-white/40 focus:outline-none focus:border-teal-500/50 focus:ring-2 focus:ring-teal-500/20 transition-all"
               autoFocus
+              disabled={loading}
             />
             <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
+            {loading && (
+              <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                <div className="w-5 h-5 border-2 border-teal-400 border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -182,7 +200,7 @@ export default function SearchPage() {
                           type="工具"
                           title={tool.title}
                           excerpt={tool.subtitle}
-                          href={tool.href}
+                          href={tool.url || '#'}
                         />
                       ))}
                     </div>
@@ -203,7 +221,7 @@ export default function SearchPage() {
                           type="Prompt"
                           title={prompt.title}
                           excerpt={prompt.skills.slice(0, 80) + '...'}
-                          href={prompt.href}
+                          href={`/prompt/${prompt.id}`}
                         />
                       ))}
                     </div>
@@ -224,7 +242,7 @@ export default function SearchPage() {
                           type="文章"
                           title={article.title}
                           excerpt={article.excerpt}
-                          href={article.href}
+                          href={`/article/${article.id}`}
                         />
                       ))}
                     </div>
