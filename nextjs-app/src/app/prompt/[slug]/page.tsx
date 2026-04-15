@@ -8,7 +8,7 @@ const getPromptData = (slug: string) => {
     title: slug.includes('business') ? 'Advanced Business Plan Generator' : 'Sample Prompt',
     tags: ['GPT-4', 'Claude 3.5'],
     markdown: `
-# \${slug.includes('business') ? 'Advanced Business Plan Generator' : 'Sample Prompt'}
+# ${slug.includes('business') ? 'Advanced Business Plan Generator' : 'Sample Prompt'}
 
 This is a detailed markdown description of the prompt. You can include:
 - Best use cases
@@ -31,8 +31,8 @@ This prompt leverages specific persona constraints to limit the randomness and i
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const data = getPromptData(params.slug);
   return {
-    title: \`\${data.title} | JianHui AI Prompts\`,
-    description: \`Learn how to use the \${data.title} prompt to maximize your AI's potential.\`,
+    title: `${data.title} | JianHui AI Prompts`,
+    description: `Learn how to use the ${data.title} prompt to maximize your AI's potential.`,
   };
 }
 

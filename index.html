@@ -76,11 +76,11 @@
                 function rgbArray(col) { col += 0.000001; var r = parseInt((0.5 + Math.sin(col) * 0.5) * 256), g = parseInt((0.5 + Math.cos(col) * 0.5) * 256), b = parseInt((0.5 - Math.sin(col) * 0.5) * 256); return [r, g, b]; }
                 function colorString(arr) { var r = parseInt(arr[0]), g = parseInt(arr[1]), b = parseInt(arr[2]); return '#' + ('0' + r.toString(16)).slice(-2) + ('0' + g.toString(16)).slice(-2) + ('0' + b.toString(16)).slice(-2); }
                 function spawnParticle(vars) {
-                    var p, ls; pt = {}; p = Math.PI * 2 * Math.random(); ls = Math.sqrt(Math.random() * vars.distributionRadius);
+                    var p, ls, pt; pt = {}; p = Math.PI * 2 * Math.random(); ls = Math.sqrt(Math.random() * vars.distributionRadius);
                     pt.x = Math.sin(p) * ls; pt.y = -vars.vortexHeight / 2; pt.vy = vars.initV / 20 + Math.random() * vars.initV; pt.z = Math.cos(p) * ls; pt.radius = 200 + 800 * Math.random(); pt.color = pt.radius / 1000 + vars.frameNo / 250; vars.points.push(pt);
                 }
                 function drawFloor(vars) {
-                    var x, y, z, d, point, a;
+                    var x, y, z, d, point, a, size;
                     for (var i = -25; i <= 25; i += 1) {
                         for (var j = -25; j <= 25; j += 1) {
                             x = i * 2; z = j * 2; y = vars.floor; d = Math.sqrt(x * x + z * z); point = project3D(x, y - (d * d) / 85, z, vars);
@@ -97,7 +97,7 @@
                 function process(vars) {
                     if (vars.points.length < vars.initParticles) for (var i = 0; i < 5; ++i) spawnParticle(vars);
                     var p, d, t; p = Math.atan2(vars.camX, vars.camZ); d = Math.sqrt(vars.camX * vars.camX + vars.camZ * vars.camZ); d -= Math.sin(vars.frameNo / 80) / 25; t = Math.cos(vars.frameNo / 300) / 165; vars.camX = Math.sin(p + t) * d; vars.camZ = Math.cos(p + t) * d; vars.camY = -Math.sin(vars.frameNo / 220) * 15; vars.yaw = Math.PI + p + t; vars.pitch = elevation(vars.camX, vars.camZ, vars.camY) - Math.PI / 2;
-                    for (var i = 0; i < vars.points.length; ++i) { x = vars.points[i].x; y = vars.points[i].y; z = vars.points[i].z; d = Math.sqrt(x * x + z * z) / 1.0075; t = 0.1 / (1 + (d * d) / 5); p = Math.atan2(x, z) + t; vars.points[i].x = Math.sin(p) * d; vars.points[i].z = Math.cos(p) * d; vars.points[i].y += vars.points[i].vy * t * ((Math.sqrt(vars.distributionRadius) - d) * 2); if (vars.points[i].y > vars.vortexHeight / 2 || d < 0.25) { vars.points.splice(i, 1); spawnParticle(vars); } }
+                    for (var i = 0; i < vars.points.length; ++i) { var x = vars.points[i].x, y = vars.points[i].y, z = vars.points[i].z; d = Math.sqrt(x * x + z * z) / 1.0075; t = 0.1 / (1 + (d * d) / 5); p = Math.atan2(x, z) + t; vars.points[i].x = Math.sin(p) * d; vars.points[i].z = Math.cos(p) * d; vars.points[i].y += vars.points[i].vy * t * ((Math.sqrt(vars.distributionRadius) - d) * 2); if (vars.points[i].y > vars.vortexHeight / 2 || d < 0.25) { vars.points.splice(i, 1); spawnParticle(vars); } }
                 }
                 function frame(vars) {
                     if (vars === undefined) {

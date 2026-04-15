@@ -8,7 +8,7 @@ def load_content():
     if os.path.exists(CONTENT_FILE):
         with open(CONTENT_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
-    return {"tools": {"hero": [], "feature": [], "compact": []}, "articles": []}
+    return {"tools": {"hero": [], "feature": [], "compact": []}, "articles": [], "prompts": []}
 
 def save_content(data):
     with open(CONTENT_FILE, 'w', encoding='utf-8') as f:
