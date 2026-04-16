@@ -1,25 +1,49 @@
 {
   "tools": {
     "hero": [
-      {"id": "chatgpt", "title": "ChatGPT 超级问答", "subtitle": "全能型AI智能助手", "img": "img/home1.png", "url": "https://chatgpt.com", "btnText": "立即体验"},
-      {"id": "claude", "title": "Claude AI", "subtitle": "安全可靠的AI助手", "img": "img/home1.png", "url": "https://claude.ai", "btnText": "开始对话"}
+      {"id": "chatgpt", "title": "ChatGPT 超级问答", "subtitle": "全能型AI智能助手，支持写作、编程、分析", "img": "img/home1.png", "url": "https://chatgpt.com", "btnText": "立即体验"},
+      {"id": "claude", "title": "Claude AI", "subtitle": "Anthropic出品，长文理解与安全对话首选", "img": "img/home1.png", "url": "https://claude.ai", "btnText": "开始对话"},
+      {"id": "gemini", "title": "Google Gemini", "subtitle": "Google最强多模态AI，图文音视频全支持", "img": "img/home1.png", "url": "https://gemini.google.com", "btnText": "立即使用"},
+      {"id": "grok", "title": "Grok AI", "subtitle": "xAI出品，实时联网，幽默风格AI助手", "img": "img/home1.png", "url": "https://grok.x.ai", "btnText": "体验Grok"}
     ],
     "feature": [
-      {"id": "midjourney", "title": "Midjourney 创意绘画", "subtitle": "输入文字，生成图像。", "img": "img/home2.png", "url": "https://midjourney.com", "btnText": "开始创作"}, 
-      {"id": "notion", "title": "Notion AI", "subtitle": "重塑知识库体验", "img": "img/home3.png", "url": "https://notion.so", "btnText": "提升效率"},
-      {"id": "cursor", "title": "Cursor AI 编辑器", "subtitle": "AI驱动的代码编辑器", "img": "img/home3.png", "url": "https://cursor.sh", "btnText": "下载使用"}
+      {"id": "midjourney", "title": "Midjourney 创意绘画", "subtitle": "全球最受欢迎的AI绘画工具，艺术级图像生成", "img": "img/home2.png", "url": "https://midjourney.com", "btnText": "开始创作"},
+      {"id": "notion", "title": "Notion AI", "subtitle": "AI加持的知识库，笔记、文档、项目管理一体化", "img": "img/home3.png", "url": "https://notion.so", "btnText": "提升效率"},
+      {"id": "cursor", "title": "Cursor AI 编辑器", "subtitle": "AI原生代码编辑器，编程效率提升10倍", "img": "img/home3.png", "url": "https://cursor.sh", "btnText": "下载使用"},
+      {"id": "perplexity", "title": "Perplexity AI", "subtitle": "AI驱动的搜索引擎，实时联网给出引用答案", "img": "img/home2.png", "url": "https://perplexity.ai", "btnText": "开始搜索"},
+      {"id": "runway", "title": "Runway Gen-3", "subtitle": "专业级AI视频生成与编辑，商业创作首选", "img": "img/home2.png", "url": "https://runwayml.com", "btnText": "创作视频"},
+      {"id": "stable-diffusion", "title": "Stable Diffusion", "subtitle": "开源图像生成模型，本地部署完全免费", "img": "img/home3.png", "url": "https://stability.ai", "btnText": "了解更多"}
     ],
     "compact": [
-      {"id": "suno", "title": "Suno 音乐生成", "subtitle": "一键生成专业级音乐", "img": "img/home4.png", "url": "https://suno.com", "btnText": "生成音乐"},
-      {"id": "runway", "title": "Runway Gen-3", "subtitle": "视频生成与编辑", "img": "img/home4.png", "url": "https://runwayml.com", "btnText": "创作视频"},
-      {"id": "elevenlabs", "title": "ElevenLabs", "subtitle": "AI语音克隆与合成", "img": "img/home4.png", "url": "https://elevenlabs.io", "btnText": "体验语音"}
+      {"id": "suno", "title": "Suno 音乐生成", "subtitle": "一键生成专业级音乐，支持多种风格", "img": "img/home4.png", "url": "https://suno.com", "btnText": "生成音乐"},
+      {"id": "elevenlabs", "title": "ElevenLabs", "subtitle": "AI语音克隆与合成，声音以假乱真", "img": "img/home4.png", "url": "https://elevenlabs.io", "btnText": "体验语音"},
+      {"id": "kling", "title": "可灵 Kling AI", "subtitle": "快手出品，国产顶级AI视频生成工具", "img": "img/home4.png", "url": "https://klingai.com", "btnText": "生成视频"},
+      {"id": "pika", "title": "Pika Labs", "subtitle": "简单易用的AI视频生成，适合新手入门", "img": "img/home4.png", "url": "https://pika.art", "btnText": "开始创作"},
+      {"id": "luma", "title": "Luma Dream Machine", "subtitle": "高质量AI视频生成，物理效果逼真", "img": "img/home4.png", "url": "https://lumalabs.ai", "btnText": "体验生成"},
+      {"id": "heygen", "title": "HeyGen 数字人", "subtitle": "AI数字人视频生成，一键制作口播视频", "img": "img/home4.png", "url": "https://heygen.com", "btnText": "制作视频"},
+      {"id": "descript", "title": "Descript", "subtitle": "AI视频剪辑，像编辑文档一样剪视频", "img": "img/home4.png", "url": "https://descript.com", "btnText": "开始剪辑"},
+      {"id": "udio", "title": "Udio 音乐创作", "subtitle": "高质量AI音乐生成，媲美专业制作", "img": "img/home4.png", "url": "https://udio.com", "btnText": "创作音乐"},
+      {"id": "ideogram", "title": "Ideogram AI", "subtitle": "擅长文字排版的AI绘画工具，Logo设计利器", "img": "img/home4.png", "url": "https://ideogram.ai", "btnText": "开始设计"},
+      {"id": "adobe-firefly", "title": "Adobe Firefly", "subtitle": "Adobe出品，商业安全的AI图像生成工具", "img": "img/home4.png", "url": "https://firefly.adobe.com", "btnText": "免费体验"},
+      {"id": "canva-ai", "title": "Canva AI", "subtitle": "设计师必备，AI加持的在线设计平台", "img": "img/home4.png", "url": "https://canva.com", "btnText": "开始设计"},
+      {"id": "gamma", "title": "Gamma AI", "subtitle": "AI一键生成PPT和演示文稿，告别手动排版", "img": "img/home4.png", "url": "https://gamma.app", "btnText": "生成PPT"},
+      {"id": "copy-ai", "title": "Copy.ai", "subtitle": "AI营销文案生成，广告语、邮件、社媒一键搞定", "img": "img/home4.png", "url": "https://copy.ai", "btnText": "写文案"},
+      {"id": "jasper", "title": "Jasper AI", "subtitle": "企业级AI写作助手，品牌语气一致性保障", "img": "img/home4.png", "url": "https://jasper.ai", "btnText": "了解更多"},
+      {"id": "github-copilot", "title": "GitHub Copilot", "subtitle": "程序员AI副驾驶，代码补全与生成神器", "img": "img/home4.png", "url": "https://github.com/features/copilot", "btnText": "开始编程"},
+      {"id": "v0", "title": "v0 by Vercel", "subtitle": "AI生成前端UI组件，设计稿秒变代码", "img": "img/home4.png", "url": "https://v0.dev", "btnText": "生成UI"},
+      {"id": "bolt", "title": "Bolt.new", "subtitle": "AI全栈开发工具，自然语言构建完整应用", "img": "img/home4.png", "url": "https://bolt.new", "btnText": "开始构建"},
+      {"id": "lovable", "title": "Lovable", "subtitle": "AI驱动的应用开发平台，无需编程基础", "img": "img/home4.png", "url": "https://lovable.dev", "btnText": "立即体验"},
+      {"id": "windsurf", "title": "Windsurf IDE", "subtitle": "Codeium出品的AI编程环境，深度代码理解", "img": "img/home4.png", "url": "https://codeium.com/windsurf", "btnText": "下载使用"},
+      {"id": "claude-artifacts", "title": "Claude Artifacts", "subtitle": "Claude实时预览功能，代码即时运行可视化", "img": "img/home4.png", "url": "https://claude.ai", "btnText": "立即体验"},
+      {"id": "napkin-ai", "title": "Napkin AI", "subtitle": "文字一键转信息图，可视化表达更高效", "img": "img/home4.png", "url": "https://napkin.ai", "btnText": "生成图表"},
+      {"id": "krea", "title": "Krea AI", "subtitle": "实时AI图像生成，边画边出图的创作体验", "img": "img/home4.png", "url": "https://krea.ai", "btnText": "开始创作"}
     ]
   },
   "prompts": [
     {
       "id": "prompt-0",
-      "title": "电影级极客科幻场景 - Cinematic AI Video B-roll Prompt",
-      "models": ["Runway Gen-2", "Pika 1.0"],
+      "title": "电影级极客科幻场景 - Cinematic AI Video B-roll",
+      "models": ["Runway Gen-3", "Pika 1.0"],
       "skills": "核心技巧在于使用镜头语言描述词，如 Cinematic lighting 和 Low-angle motion。建议配合 --motion 5 提升画面流动性。",
       "content": "Cinematic low-angle tracking shot of a futuristic cyberpunk city at midnight, heavy neon reflections on wet pavement, volumetric fog, hyper-detailed architecture, 8k, photorealistic, high motion.",
       "category": "视频生成"
@@ -52,7 +76,7 @@
       "id": "prompt-4",
       "title": "史诗级史前地球纪录片画面",
       "models": ["Sora", "Stable Video Diffusion"],
-      "skills": "使用 Wide-angle drone shot 可以营造宏大感。",
+      "skills": "使用 Wide-angle drone shot 可以营造宏大感。配合 National Geographic style 提升纪录片质感。",
       "content": "Wide-angle drone shot over a prehistoric valley, herds of mammoths walking through a snowy mountain pass, realistic fur textures, National Geographic style.",
       "category": "视频生成"
     },
@@ -60,35 +84,131 @@
       "id": "prompt-5",
       "title": "Midjourney 极简风格品牌 Logo 设计",
       "models": ["Midjourney V6", "DALL-E 3"],
-      "skills": "品牌设计讲究简洁识别度。使用 minimal logo design 和 flat design 风格词。",
-      "content": "Minimalist logo design for a tech startup, abstract geometric shape representing connection and innovation, clean lines, single color gradient from teal to purple.",
+      "skills": "品牌设计讲究简洁识别度。使用 minimal logo design 和 flat design 风格词，加 --no text 避免乱码文字。",
+      "content": "Minimalist logo design for a tech startup, abstract geometric shape representing connection and innovation, clean lines, single color gradient from teal to purple, white background, vector style.",
       "category": "图像生成"
     },
     {
       "id": "prompt-6",
       "title": "ChatGPT 高效文案写作指令模板",
-      "models": ["ChatGPT-4", "Claude 3.5"],
-      "skills": "文案写作的秘诀在于明确受众和语气。使用 persona: [目标用户] 和 tone: [语气] 参数。",
-      "content": "Write a compelling product description for [产品名]. Target audience: [目标用户]. Key benefits: [核心卖点]. Tone: professional yet friendly. Format: headline + 3 bullet points + call-to-action.",
+      "models": ["ChatGPT-4o", "Claude 3.5"],
+      "skills": "文案写作的秘诀在于明确受众和语气。使用 persona: [目标用户] 和 tone: [语气] 参数，输出格式越具体越好。",
+      "content": "Write a compelling product description for [产品名]. Target audience: [目标用户]. Key benefits: [核心卖点]. Tone: professional yet friendly. Format: headline + 3 bullet points + call-to-action. Length: under 150 words.",
       "category": "文案写作"
     },
     {
       "id": "prompt-7",
       "title": "Stable Diffusion 超写实人像摄影",
       "models": ["Stable Diffusion XL", "Midjourney V6"],
-      "skills": "人像生成要避免恐怖谷效应。使用 photorealistic 和 8k portrait 风格词。",
-      "content": "Photorealistic portrait of a young professional woman, soft natural lighting from window, shallow depth of field, shot on Sony A7IV, 85mm f1.8 lens, subtle smile.",
+      "skills": "人像生成要避免恐怖谷效应。使用 photorealistic 和 8k portrait 风格词，加 --style raw 减少AI感。",
+      "content": "Photorealistic portrait of a young professional woman, soft natural lighting from window, shallow depth of field, shot on Sony A7IV, 85mm f1.8 lens, subtle smile, skin texture detail, 8k.",
       "category": "图像生成"
+    },
+    {
+      "id": "prompt-8",
+      "title": "AI 爆款小红书种草文案生成器",
+      "models": ["ChatGPT-4o", "Claude 3.5"],
+      "skills": "小红书文案要有情绪价值。开头用疑问句或感叹句抓眼球，中间用数字增加可信度，结尾引导互动。",
+      "content": "你是一位小红书爆款文案专家。请为以下产品写一篇种草笔记：\n产品：[产品名称]\n核心卖点：[1-3个卖点]\n目标用户：[用户画像]\n\n要求：\n1. 标题含emoji，制造悬念或共鸣\n2. 正文分3段：痛点引入→产品介绍→使用体验\n3. 结尾加3-5个相关话题标签\n4. 语气真实自然，像真实用户分享",
+      "category": "文案写作"
+    },
+    {
+      "id": "prompt-9",
+      "title": "Midjourney 赛博朋克城市夜景",
+      "models": ["Midjourney V6", "Stable Diffusion XL"],
+      "skills": "赛博朋克风格的核心是霓虹灯与黑暗的对比。使用 neon lights, rain-soaked streets, high contrast 三件套。",
+      "content": "Cyberpunk cityscape at night, towering skyscrapers with holographic advertisements, rain-soaked streets reflecting neon lights, flying vehicles in the distance, dense fog, ultra-detailed, cinematic composition, --ar 16:9 --v 6",
+      "category": "图像生成"
+    },
+    {
+      "id": "prompt-10",
+      "title": "AI 商业计划书一键生成",
+      "models": ["ChatGPT-4o", "Claude 3.5 Sonnet"],
+      "skills": "商业计划书要有逻辑框架。让AI先输出目录，再逐章展开，避免一次性生成导致内容空洞。",
+      "content": "你是一位资深创业顾问。请为以下项目生成一份完整的商业计划书大纲：\n\n项目名称：[项目名]\n行业：[所属行业]\n目标市场：[目标用户群]\n核心产品/服务：[简述]\n\n请包含：执行摘要、市场分析、竞争分析、商业模式、营销策略、财务预测、团队介绍、融资需求。每个章节给出3-5个关键要点。",
+      "category": "商业应用"
+    },
+    {
+      "id": "prompt-11",
+      "title": "ElevenLabs 情感化有声书旁白",
+      "models": ["ElevenLabs", "OpenAI TTS"],
+      "skills": "有声书旁白要有节奏感。在关键情节前加 [pause] 标记，用 [emphasis] 突出重要词汇，提升听觉体验。",
+      "content": "Voice style: Warm, storytelling narrator with subtle emotional depth. Pacing: Moderate, with natural pauses at punctuation. Emphasis: Highlight key emotional words. Tone: Engaging and immersive, like a professional audiobook narrator. Apply to the following text: [在此粘贴你的文本内容]",
+      "category": "音频生成"
+    },
+    {
+      "id": "prompt-12",
+      "title": "Suno 中国风古典音乐生成",
+      "models": ["Suno V3.5", "Udio"],
+      "skills": "中国风音乐要指定乐器。使用 erhu, guqin, pipa 等具体乐器名，比 Chinese style 更精准。",
+      "content": "Traditional Chinese instrumental music, featuring erhu and guqin, pentatonic scale melody, peaceful and meditative atmosphere, bamboo forest ambiance, slow tempo 60 BPM, high quality recording, no vocals.",
+      "category": "音频生成"
+    },
+    {
+      "id": "prompt-13",
+      "title": "DALL-E 3 产品包装设计",
+      "models": ["DALL-E 3", "Midjourney V6"],
+      "skills": "包装设计要指定视角和材质。使用 product mockup, studio lighting, isolated on white 确保干净的展示效果。",
+      "content": "Professional product packaging design mockup for [产品类型], minimalist design with [主色调] color scheme, premium matte finish, elegant typography, studio lighting, isolated on white background, photorealistic render, 4k.",
+      "category": "图像生成"
+    },
+    {
+      "id": "prompt-14",
+      "title": "Claude 代码审查与优化助手",
+      "models": ["Claude 3.5 Sonnet", "ChatGPT-4o"],
+      "skills": "代码审查要分层次。先让AI找Bug，再优化性能，最后改善可读性，三步走比一次性要求效果好得多。",
+      "content": "你是一位资深软件工程师，请对以下代码进行全面审查：\n\n```\n[粘贴你的代码]\n```\n\n请按以下顺序分析：\n1. **Bug检查**：找出潜在的错误和边界情况\n2. **性能优化**：识别性能瓶颈并给出改进方案\n3. **代码质量**：命名规范、注释、可读性建议\n4. **安全隐患**：SQL注入、XSS等安全问题\n\n每个问题给出具体的修改建议和示例代码。",
+      "category": "编程开发"
+    },
+    {
+      "id": "prompt-15",
+      "title": "Runway 产品广告片分镜脚本",
+      "models": ["Runway Gen-3", "Kling AI"],
+      "skills": "广告片要有节奏感。每个镜头控制在3-5秒，用 cut to 和 dissolve 指定转场方式，配合音乐节拍。",
+      "content": "Shot 1 (3s): Extreme close-up of product, slow rotation, dramatic lighting, dark background. Cut to — Shot 2 (4s): Product in use, lifestyle setting, natural light, happy user expression. Dissolve to — Shot 3 (3s): Product logo reveal, clean white background, subtle particle effect, brand color accent.",
+      "category": "商业应用"
+    },
+    {
+      "id": "prompt-16",
+      "title": "ChatGPT 竞品分析报告生成器",
+      "models": ["ChatGPT-4o", "Perplexity AI"],
+      "skills": "竞品分析要有框架。用波特五力模型或SWOT分析，让AI按固定框架输出，结果更专业可用。",
+      "content": "你是一位市场分析师。请对[公司/产品名]进行竞品分析：\n\n分析框架：\n1. **市场定位**：目标用户、价格区间、核心价值主张\n2. **产品功能对比**：列出5-8个核心功能维度打分（1-10分）\n3. **SWOT分析**：优势、劣势、机会、威胁\n4. **差异化建议**：基于分析给出3个可执行的差异化方向\n\n竞品列表：[列出3-5个竞品]",
+      "category": "商业应用"
+    },
+    {
+      "id": "prompt-17",
+      "title": "Midjourney 极简主义室内设计",
+      "models": ["Midjourney V6", "DALL-E 3"],
+      "skills": "室内设计要指定风格、材质和光线。Japandi（日式+北欧）风格词组合效果极佳，加 golden hour lighting 提升质感。",
+      "content": "Japandi style living room interior, minimalist furniture with natural wood textures, neutral color palette of beige and warm white, large floor-to-ceiling windows, golden hour sunlight, indoor plants, cozy atmosphere, architectural photography, --ar 16:9 --v 6",
+      "category": "图像生成"
+    },
+    {
+      "id": "prompt-18",
+      "title": "AI 面试准备教练",
+      "models": ["ChatGPT-4o", "Claude 3.5"],
+      "skills": "面试准备要针对性强。提供具体的岗位JD和公司背景，AI给出的建议会更精准，比泛泛而谈有用10倍。",
+      "content": "你是一位资深HR和职业教练。我即将参加[公司名]的[职位名]面试。\n\n公司背景：[简述公司]\n岗位要求：[粘贴JD关键要求]\n我的背景：[简述你的经历]\n\n请帮我：\n1. 预测5个最可能被问到的问题\n2. 为每个问题提供STAR法则答题框架\n3. 给出3个我应该主动问面试官的问题\n4. 指出我背景中需要重点包装的亮点",
+      "category": "文案写作"
+    },
+    {
+      "id": "prompt-19",
+      "title": "HeyGen 数字人口播视频脚本",
+      "models": ["HeyGen", "Synthesia"],
+      "skills": "数字人口播脚本要口语化。避免长句和复杂词汇，每句话不超过20字，加入停顿标记[pause]让节奏自然。",
+      "content": "请将以下内容改写为适合AI数字人口播的视频脚本：\n\n原始内容：[粘贴你的内容]\n\n改写要求：\n1. 每句话不超过20字，口语化表达\n2. 开头15秒必须有钩子（问题/惊喜数据/共鸣场景）\n3. 在需要停顿的地方标注[pause 1s]或[pause 2s]\n4. 结尾加明确的行动号召\n5. 总时长控制在60-90秒（约150-200字）",
+      "category": "商业应用"
     }
   ],
   "articles": [
     {
       "id": "article-0",
-      "title": "独立开发者如何通过AI工具变现？",
+      "title": "独立开发者如何通过AI工具变现？完整路径拆解",
       "category": "深度教程",
       "date": "2026-04-14",
-      "excerpt": "在这个数字创造时代，利用简单的代码和提示词，个人开发者也能打造高流量网站...",
-      "content": "## 为什么独立开发者需要AI工具\n\n在2026年，AI工具已经从新奇事物变成了生产力必备品。\n\n### 变现路径一：AI驱动的内容站\n\n像格尼斯AI这样的内容站，通过整合AI工具介绍、Prompt分享、技能教程，可以吸引精准流量。\n\n### 变现路径二：AI生成数字产品\n\n利用Midjourney生成插画素材、ChatGPT编写电子书、Suno创作音乐。",
+      "excerpt": "在这个数字创造时代，利用简单的代码和提示词，个人开发者也能打造高流量网站。本文拆解3条可落地的AI变现路径。",
+      "content": "## 为什么独立开发者需要AI工具\n\n在2026年，AI工具已经从新奇事物变成了生产力必备品。一个人、一台电脑、几个AI工具，就能做出以前需要10人团队才能完成的产品。\n\n### 变现路径一：AI驱动的内容站\n\n像格尼斯AI这样的内容站，通过整合AI工具介绍、Prompt分享、技能教程，可以吸引精准流量。核心逻辑是：**用AI生产内容 → 内容带来流量 → 流量转化为广告/联盟收入**。\n\n关键数据：一个月访问量达到1万UV的AI工具站，Google AdSense月收入约$200-500。\n\n### 变现路径二：AI生成数字产品\n\n利用Midjourney生成插画素材、ChatGPT编写电子书、Suno创作音乐，在Gumroad、Etsy等平台销售。\n\n**实操步骤：**\n1. 选定一个细分市场（如「商务PPT模板」）\n2. 用AI批量生成20-50个产品\n3. 上架到数字产品平台\n4. 用社媒引流\n\n### 变现路径三：AI工具SaaS\n\n将AI能力包装成垂直SaaS，比如「餐厅菜单AI生成器」、「律师合同AI审查工具」。这类产品开发成本低，但垂直场景的付费意愿强。\n\n## 最重要的一点\n\n不要等到「准备好了」再开始。AI工具降低了试错成本，先做出来，再迭代优化。",
       "author": "格尼斯AI团队",
       "readTime": "8 min"
     },
@@ -97,38 +217,88 @@
       "title": "Midjourney V6 完整使用指南：从入门到精通",
       "category": "工具教程",
       "date": "2026-04-13",
-      "excerpt": "详解Midjourney V6的所有新特性、参数设置、风格词用法...",
-      "content": "## Midjourney V6 核心升级\n\nV6版本相比V5有质的飞跃：\n\n- **更高分辨率**：默认输出2048x2048\n- **更精准理解**：复杂Prompt也能准确呈现",
+      "excerpt": "详解Midjourney V6的所有新特性、参数设置、风格词用法，附20个实战Prompt案例。",
+      "content": "## Midjourney V6 核心升级\n\nV6版本相比V5有质的飞跃：\n\n- **更高分辨率**：默认输出2048x2048，细节更丰富\n- **更精准理解**：复杂Prompt也能准确呈现，不再「自由发挥」\n- **文字渲染**：V6终于能在图片中生成可读文字（虽然还不完美）\n- **真实感提升**：人物皮肤、材质质感大幅改善\n\n## 核心参数速查\n\n| 参数 | 作用 | 推荐值 |\n|------|------|--------|\n| --ar | 画面比例 | 16:9 / 9:16 / 1:1 |\n| --v | 版本 | 6 |\n| --style | 风格 | raw（写实）/ cute（可爱）|\n| --q | 质量 | 1（标准）/ 2（高质量）|\n| --no | 排除元素 | text, watermark |\n\n## 5个必学风格词组合\n\n1. **商业摄影**：`professional photography, studio lighting, white background, product shot`\n2. **电影感**：`cinematic, anamorphic lens, film grain, dramatic lighting`\n3. **极简设计**：`minimalist, clean lines, negative space, Swiss design`\n4. **赛博朋克**：`cyberpunk, neon lights, rain-soaked, holographic`\n5. **自然纪录片**：`National Geographic, wildlife photography, golden hour, telephoto lens`\n\n## 新手最常犯的3个错误\n\n1. Prompt太短：V6理解能力强，描述越详细效果越好\n2. 不用--no参数：不想要的元素一定要排除\n3. 忽略比例：先想好用途，再设置--ar参数",
       "author": "格尼斯AI团队",
       "readTime": "12 min"
     },
     {
       "id": "article-2",
-      "title": "Runway Gen-3 视频生成实战：10个商业案例",
+      "title": "Runway Gen-3 视频生成实战：10个商业案例拆解",
       "category": "案例解析",
       "date": "2026-04-12",
-      "excerpt": "用Runway Gen-3为品牌制作宣传片的完整流程...",
-      "content": "## Runway Gen-3 的商业价值\n\n视频内容需求爆发，但传统制作成本高昂。",
+      "excerpt": "用Runway Gen-3为品牌制作宣传片的完整流程，附10个真实商业案例和对应Prompt。",
+      "content": "## Runway Gen-3 的商业价值\n\n视频内容需求爆发，但传统制作成本高昂。一条30秒品牌视频，传统制作费用5-20万，而用Runway Gen-3，成本可以压缩到几百元。\n\n## 10个商业应用场景\n\n### 1. 产品展示视频\n适合：电商、美妆、3C产品\nPrompt核心词：`macro shot, slow motion, studio lighting, product hero shot`\n\n### 2. 品牌故事片\n适合：初创公司、品牌升级\nPrompt核心词：`cinematic, emotional, warm color grading, documentary style`\n\n### 3. 社媒短视频素材\n适合：抖音、Instagram Reels\nPrompt核心词：`vertical format, dynamic, trendy, eye-catching`\n\n### 4. 房产展示\n适合：地产中介、装修公司\nPrompt核心词：`architectural visualization, golden hour, interior design, luxury`\n\n### 5. 餐饮食品\n适合：餐厅、食品品牌\nPrompt核心词：`food photography, steam, close-up, appetizing, warm lighting`\n\n## 制作流程\n\n1. **脚本先行**：先写分镜脚本，每个镜头3-5秒\n2. **Prompt优化**：每个镜头单独生成，再剪辑拼接\n3. **后期处理**：用Descript或CapCut添加字幕和音乐\n4. **质量把控**：生成3-5个版本，选最好的",
       "author": "格尼斯AI团队",
       "readTime": "10 min"
     },
     {
       "id": "article-3",
-      "title": "ChatGPT 高效写作完全手册：30个实用Prompt",
+      "title": "ChatGPT 高效写作完全手册：30个实用Prompt模板",
       "category": "深度教程",
       "date": "2026-04-11",
-      "excerpt": "覆盖文案、博客、邮件、报告等场景的ChatGPT写作指令...",
-      "content": "## 写作Prompt设计原则\n\n好的写作Prompt包含三个要素：角色定义、任务描述、输出格式。",
+      "excerpt": "覆盖文案、博客、邮件、报告等场景的ChatGPT写作指令，每个模板都经过实战验证。",
+      "content": "## 写作Prompt设计原则\n\n好的写作Prompt包含三个要素：**角色定义 + 任务描述 + 输出格式**。\n\n❌ 差的Prompt：「帮我写一篇关于AI的文章」\n✅ 好的Prompt：「你是一位科技媒体编辑，请为非技术背景的读者写一篇800字的AI入门文章，结构：引言→3个核心概念→实际应用案例→结语，语气轻松易懂」\n\n## 10个高频写作场景模板\n\n### 1. 博客文章\n```\n你是[领域]专家，请写一篇[字数]字的博客文章，主题：[主题]。\n目标读者：[读者画像]。结构：[H2标题列表]。语气：[专业/轻松/权威]。\n```\n\n### 2. 产品描述\n```\n为[产品名]写一段[字数]字的产品描述。核心功能：[功能列表]。\n目标用户：[用户画像]。突出：[差异化卖点]。结尾加购买引导。\n```\n\n### 3. 邮件营销\n```\n写一封[类型]营销邮件。主题行要有紧迫感。正文：问题引入→解决方案→社会证明→CTA。\n字数控制在200字以内。\n```\n\n## 提升输出质量的3个技巧\n\n1. **分步骤要求**：先让AI列大纲，确认后再展开写\n2. **给例子**：「参考这个风格：[示例]」比描述风格更有效\n3. **迭代优化**：「第3段太平淡，用数据和案例重写」",
       "author": "格尼斯AI团队",
       "readTime": "15 min"
     },
     {
       "id": "article-4",
-      "title": "Sora vs Runway vs Pika：2026视频生成工具横评",
+      "title": "Sora vs Runway vs Pika vs 可灵：2026视频生成工具终极横评",
       "category": "深度评测",
       "date": "2026-04-10",
-      "excerpt": "从画面质量、时长、成本、易用性多维度对比...",
-      "content": "## 测试环境与标准\n\n我们在相同Prompt下测试三大平台的输出质量。",
+      "excerpt": "从画面质量、时长、成本、易用性4个维度对比2026年主流AI视频生成工具，附真实测试数据。",
+      "content": "## 测试标准\n\n我们用相同的5个Prompt在4个平台分别生成视频，从以下维度打分（满分10分）：\n- 画面质量\n- 动作流畅度\n- Prompt理解准确度\n- 生成速度\n- 性价比\n\n## 综合评分\n\n| 工具 | 画质 | 流畅度 | 理解度 | 速度 | 性价比 | 总分 |\n|------|------|--------|--------|------|--------|------|\n| Sora | 9.5 | 9.0 | 8.5 | 6.0 | 6.0 | 7.8 |\n| Runway Gen-3 | 8.5 | 8.5 | 9.0 | 8.0 | 7.5 | 8.3 |\n| 可灵 Kling | 8.0 | 8.0 | 8.5 | 9.0 | 9.0 | 8.5 |\n| Pika 2.0 | 7.5 | 7.5 | 8.0 | 9.5 | 9.5 | 8.4 |\n\n## 结论\n\n- **最佳画质**：Sora，但价格贵、速度慢\n- **最佳综合**：可灵 Kling AI，国产之光，性价比最高\n- **最适合商业**：Runway Gen-3，功能最完整\n- **最适合新手**：Pika 2.0，上手最快\n\n## 我的推荐\n\n预算有限选可灵，追求极致画质选Sora，做商业项目选Runway。",
+      "author": "格尼斯AI团队",
+      "readTime": "8 min"
+    },
+    {
+      "id": "article-5",
+      "title": "2026年最值得关注的10个AI编程工具",
+      "category": "工具推荐",
+      "date": "2026-04-09",
+      "excerpt": "从Cursor到Bolt.new，盘点2026年改变开发者工作方式的10个AI编程神器，附使用场景对比。",
+      "content": "## AI编程工具的三个层次\n\n**第一层：代码补全**（GitHub Copilot、Cursor）\n在你写代码时实时提示，提升效率30-50%。\n\n**第二层：对话式编程**（ChatGPT、Claude）\n描述需求，AI生成完整函数或模块，适合解决具体问题。\n\n**第三层：全栈生成**（Bolt.new、Lovable、v0）\n用自然语言描述整个应用，AI直接生成可运行的完整项目。\n\n## 10个必知工具\n\n### 1. Cursor\n目前最强的AI代码编辑器。支持整个代码库的上下文理解，可以直接修改多个文件。**适合：专业开发者日常使用**\n\n### 2. GitHub Copilot\n微软/GitHub出品，与VS Code深度集成。企业采购率最高的AI编程工具。**适合：企业开发团队**\n\n### 3. Bolt.new\n输入需求，直接生成完整的React/Next.js应用，可在浏览器内预览和部署。**适合：快速原型验证**\n\n### 4. v0 by Vercel\n专注前端UI生成，输入描述或截图，输出Tailwind+shadcn组件代码。**适合：前端开发和设计师**\n\n### 5. Lovable\n面向非技术创业者，用对话方式构建完整SaaS应用。**适合：非技术背景的创业者**\n\n## 选择建议\n\n- 有编程基础 → Cursor + GitHub Copilot\n- 快速验证想法 → Bolt.new\n- 做前端UI → v0\n- 零基础创业 → Lovable",
+      "author": "格尼斯AI团队",
+      "readTime": "10 min"
+    },
+    {
+      "id": "article-6",
+      "title": "用AI做副业：5个月从0到月入$3000的真实经历",
+      "category": "案例解析",
+      "date": "2026-04-08",
+      "excerpt": "一个普通上班族如何利用下班时间，用AI工具搭建被动收入体系，附完整时间线和收入数据。",
+      "content": "## 背景\n\n我是一名普通的产品经理，没有编程基础，2025年10月开始尝试用AI做副业。\n\n## 时间线\n\n**第1个月（2025年10月）：探索期**\n- 尝试了Midjourney卖图、ChatGPT写文章\n- 收入：$0（全在摸索）\n- 关键学习：AI生成的内容需要人工打磨才有价值\n\n**第2个月（2025年11月）：找到方向**\n- 发现「AI工具教程」内容在YouTube和小红书有需求\n- 开始做Midjourney教程视频\n- 收入：$120（YouTube广告）\n\n**第3个月（2025年12月）：加速**\n- 用HeyGen做数字人口播，产量从每周1个提升到每周5个\n- 开始接AI工具推广合作\n- 收入：$680\n\n**第4个月（2026年1月）：突破**\n- 推出付费Prompt合集（$29/份），首月卖出47份\n- 收入：$1,850\n\n**第5个月（2026年2月）：稳定**\n- 收入：$3,200\n- 来源：YouTube广告$800 + 工具推广$1,200 + 数字产品$1,200\n\n## 核心经验\n\n1. **选对平台**：YouTube长视频 > 短视频，广告收益更稳定\n2. **AI是工具不是替代**：AI生产内容，人工负责选题和质量把控\n3. **多元收入**：不要只靠一个渠道，广告+推广+产品三条腿走路",
+      "author": "格尼斯AI团队",
+      "readTime": "12 min"
+    },
+    {
+      "id": "article-7",
+      "title": "Stable Diffusion 本地部署完全指南：免费无限生图",
+      "category": "工具教程",
+      "date": "2026-04-07",
+      "excerpt": "手把手教你在本地电脑部署Stable Diffusion，彻底告别付费订阅，附显卡配置建议和常见问题解答。",
+      "content": "## 为什么要本地部署\n\n- **完全免费**：不限生成次数，不用担心额度\n- **隐私安全**：图片不上传云端\n- **完全可控**：可以安装任意模型和插件\n- **速度快**：本地GPU比云端API响应更快\n\n## 硬件要求\n\n| 配置 | 显卡 | 效果 |\n|------|------|------|\n| 入门 | RTX 3060 12GB | 可用，速度慢 |\n| 推荐 | RTX 4070 12GB | 流畅，性价比高 |\n| 专业 | RTX 4090 24GB | 最佳，可跑大模型 |\n\n## 安装步骤（Windows）\n\n1. **安装Python 3.10**：从python.org下载\n2. **安装Git**：从git-scm.com下载\n3. **克隆WebUI**：\n```bash\ngit clone https://github.com/AUTOMATIC1111/stable-diffusion-webui\ncd stable-diffusion-webui\n```\n4. **下载模型**：推荐从Civitai下载，放入`models/Stable-diffusion/`\n5. **启动**：双击`webui-user.bat`\n\n## 推荐模型\n\n- **写实人像**：Realistic Vision V6\n- **动漫风格**：Anything V5\n- **通用高质量**：DreamShaper XL\n- **商业设计**：SDXL Base 1.0\n\n## 常见问题\n\n**Q：显存不足怎么办？**\nA：在启动参数加 `--medvram` 或 `--lowvram`\n\n**Q：生成速度太慢？**\nA：安装xformers加速库，速度可提升30-50%",
+      "author": "格尼斯AI团队",
+      "readTime": "15 min"
+    },
+    {
+      "id": "article-8",
+      "title": "AI写作工具对比：ChatGPT vs Claude vs Gemini，谁更适合你？",
+      "category": "深度评测",
+      "date": "2026-04-06",
+      "excerpt": "从写作质量、长文处理、中文能力、价格4个维度深度对比三大AI写作工具，帮你做出最优选择。",
+      "content": "## 测试方法\n\n我们用10个不同类型的写作任务测试三款工具，包括：新闻稿、营销文案、技术文档、创意写作、中文写作等。\n\n## 综合对比\n\n| 维度 | ChatGPT-4o | Claude 3.5 | Gemini 1.5 Pro |\n|------|-----------|------------|----------------|\n| 创意写作 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |\n| 技术文档 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |\n| 中文写作 | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |\n| 长文处理 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |\n| 价格 | $20/月 | $20/月 | 免费/付费 |\n\n## 各自最强场景\n\n**ChatGPT-4o 最强**：\n- 多模态任务（图片理解+写作）\n- 代码+文档结合的任务\n- 需要联网搜索的写作\n\n**Claude 3.5 最强**：\n- 长篇内容创作（小说、报告）\n- 需要精确遵循格式的写作\n- 代码注释和技术文档\n\n**Gemini 1.5 Pro 最强**：\n- 超长文档处理（100万token上下文）\n- Google Workspace集成场景\n- 免费用户的最佳选择\n\n## 我的建议\n\n**日常写作**：ChatGPT-4o（最全能）\n**专业长文**：Claude 3.5（最精准）\n**预算有限**：Gemini（免费版够用）",
+      "author": "格尼斯AI团队",
+      "readTime": "10 min"
+    },
+    {
+      "id": "article-9",
+      "title": "Prompt工程入门：让AI输出质量提升10倍的5个核心技巧",
+      "category": "深度教程",
+      "date": "2026-04-05",
+      "excerpt": "掌握这5个Prompt技巧，无论用ChatGPT、Claude还是Gemini，都能获得更精准、更高质量的输出。",
+      "content": "## 什么是Prompt工程\n\nPrompt工程就是「如何跟AI说话」的学问。同样的需求，不同的表达方式，输出质量可以差10倍。\n\n## 5个核心技巧\n\n### 技巧1：角色扮演（Role Prompting）\n\n给AI一个具体的角色，它会调用对应的知识库和表达风格。\n\n❌ 「帮我写一份营销方案」\n✅ 「你是一位有10年经验的数字营销总监，专注于B2B SaaS行业，请为...」\n\n### 技巧2：少样本示例（Few-shot）\n\n给AI看1-3个你想要的输出样例，比描述风格更有效。\n\n「请按照以下格式输出：\n示例输入：[xxx]\n示例输出：[xxx]\n\n现在处理：[你的实际输入]」\n\n### 技巧3：思维链（Chain of Thought）\n\n让AI先思考再回答，复杂问题准确率提升40%+。\n\n「请一步步思考这个问题，先列出你的分析过程，再给出最终答案。」\n\n### 技巧4：输出格式约束\n\n明确指定输出格式，避免AI自由发挥。\n\n「请用以下格式输出：\n**标题**：xxx\n**核心观点**：3条，每条不超过20字\n**详细说明**：每条观点展开100字\n**行动建议**：3个可执行步骤」\n\n### 技巧5：迭代优化\n\n把AI当成协作者，不断迭代。\n\n「第2段太学术化，用更口语的方式重写，加入一个真实案例」\n\n## 实战练习\n\n用这5个技巧重写你最近用过的一个Prompt，对比前后输出质量的差异。",
       "author": "格尼斯AI团队",
       "readTime": "8 min"
     }

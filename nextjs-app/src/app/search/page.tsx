@@ -49,6 +49,13 @@ export default function SearchPage() {
   const [data, setData] = useState<SearchData | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // 从URL参数初始化搜索词
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q) setSearchInput(decodeURIComponent(q));
+  }, []);
+
   // 加载content.json
   useEffect(() => {
     fetch('/content.json')
