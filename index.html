@@ -29,6 +29,55 @@
 
       @media (max-width: 768px) { .nav-links { display: none; } .site-header { padding: 1rem; } }
 
+      /* Skeleton Loading */
+      .skeleton { background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 8px; }
+      @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+      .skeleton-hero { height: 400px; }
+      .skeleton-card { height: 200px; margin-bottom: 1rem; }
+      
+      /* Animation Toggle */
+      .anim-toggle { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9998; background: rgba(20, 184, 166, 0.2); border: 1px solid rgba(20, 184, 166, 0.4); color: #14b8a6; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; font-size: 0.8rem; font-weight: 500; transition: all 0.2s; }
+      .anim-toggle:hover { background: #14b8a6; color: #fff; }
+      .anim-toggle.disabled { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.5); }
+
+      /* Hero Section */
+      .hero-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem; position: relative; z-index: 10; }
+      .hero-content { max-width: 800px; }
+      .hero-badge { display: inline-block; padding: 0.5rem 1rem; background: rgba(20, 184, 166, 0.1); border: 1px solid rgba(20, 184, 166, 0.3); color: #14b8a6; font-size: 0.875rem; font-weight: 600; border-radius: 20px; margin-bottom: 1.5rem; }
+      .hero-title { font-size: 3.5rem; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+      .hero-title span { color: #14b8a6; }
+      .hero-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+      .hero-stats { display: flex; justify-content: center; gap: 3rem; margin-bottom: 3rem; }
+      .stat-item { text-align: center; }
+      .stat-number { font-size: 2.5rem; font-weight: 700; color: #14b8a6; display: block; }
+      .stat-label { font-size: 0.875rem; color: rgba(255,255,255,0.5); }
+      .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+      .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: #14b8a6; color: #000; font-weight: 600; border-radius: 8px; text-decoration: none; transition: all 0.2s; }
+      .btn-primary:hover { background: #0d9488; transform: translateY(-2px); }
+      .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-weight: 500; border-radius: 8px; text-decoration: none; transition: all 0.2s; }
+      .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); }
+
+      .scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite; }
+      @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-10px); } }
+      .scroll-indicator i { color: rgba(255,255,255,0.5); font-size: 1.5rem; }
+
+      /* Feature Preview Section */
+      .feature-preview { padding: 6rem 1rem; max-width: 1200px; margin: 0 auto; position: relative; z-index: 10; }
+      .feature-preview h2 { font-size: 2rem; font-weight: 700; color: #fff; text-align: center; margin-bottom: 3rem; }
+      .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+      .feature-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem; text-align: center; transition: all 0.3s ease; }
+      .feature-card:hover { transform: translateY(-4px); border-color: rgba(20, 184, 166, 0.3); }
+      .feature-card .icon { font-size: 3rem; margin-bottom: 1rem; }
+      .feature-card h3 { font-size: 1.25rem; font-weight: 600; color: #fff; margin-bottom: 0.75rem; }
+      .feature-card p { font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+      @media (max-width: 768px) { 
+        .hero-title { font-size: 2.5rem; }
+        .hero-stats { gap: 2rem; }
+        .stat-number { font-size: 2rem; }
+        .feature-preview { padding: 4rem 1rem; }
+      }
+
       .site-footer { padding: 4rem 1rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem; }
       .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
       .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.875rem; transition: color 0.2s ease; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
@@ -36,18 +85,19 @@
       .footer-copy { color: rgba(255,255,255,0.3); font-size: 0.75rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     </style>
 </head>
-<body class="dark">
+<body class="dark" style="background: #000;">
     <div id="page">
         <header class="site-header">
             <a href="index.html" class="site-logo">ai.gnnis.com</a>
             <nav class="nav-links">
-                <a href="index.html" class="active">AI Tools</a>
+                <a href="index.html" class="active">首页</a>
+                <a href="ai-tools.html">AI Tools</a>
                 <a href="prompts.html">Prompts</a>
                 <a href="blog.html">Skills</a>
             </nav>
             <div class="nav-actions">
-                <svg style="color: rgba(255,255,255,0.7); cursor: pointer;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <button class="lang-btn">En / 中</button>
+                <svg id="search-btn" role="button" tabindex="0" aria-label="搜索工具" style="color: rgba(255,255,255,0.7); cursor: pointer;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <button class="lang-btn" id="lang-btn" title="点击切换语言">En / 中</button>
             </div>
         </header>
 
@@ -118,101 +168,160 @@
             </script>
         </div>
 
-        <main id="content-area" style="position: relative; z-index: 10; padding-top: 2rem;">
-            <div id="hero-container"></div>
-            <div id="feature-container"></div>
-            <div id="compact-container"></div>
+        <main id="content-area" style="position: relative; z-index: 10;">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <span class="hero-badge">🚀 数字化创造时代</span>
+                    <h1 class="hero-title">格尼斯 <span>AI</span></h1>
+                    <p class="hero-subtitle">智能化工具唤醒创造新力。精选全球优质 AI 工具，助你提升工作效率，释放无限创意。</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="stat-tools">40+</span>
+                            <span class="stat-label">AI 工具</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="stat-prompts">20+</span>
+                            <span class="stat-label">精选 Prompt</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="stat-articles">10+</span>
+                            <span class="stat-label">深度文章</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="ai-tools.html" class="btn-primary">
+                            <i class="iconfont icon-arrow-right"></i>
+                            浏览 AI 工具
+                        </a>
+                        <a href="prompts.html" class="btn-secondary">
+                            探索 Prompts
+                        </a>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <i class="iconfont icon-arrow-down"></i>
+                </div>
+            </section>
+
+            <!-- Feature Preview -->
+            <section class="feature-preview">
+                <h2>探索 AI 的无限可能</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">🤖</div>
+                        <h3>AI 写作</h3>
+                        <p>ChatGPT、Claude、Gemini 等顶级 AI 助手，助你高效完成文案、报告、代码等创作任务。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🎨</div>
+                        <h3>AI 绘画</h3>
+                        <p>Midjourney、Stable Diffusion、DALL-E 等图像生成工具，将创意变为视觉艺术。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🎬</div>
+                        <h3>AI 视频</h3>
+                        <p>Runway、可灵、Pika 等视频生成工具，让视频创作前所未有的简单高效。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🎵</div>
+                        <h3>AI 音频</h3>
+                        <p>Suno、ElevenLabs、Udio 等音频工具，一键生成专业级音乐和语音。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">💻</div>
+                        <h3>AI 编程</h3>
+                        <p>Cursor、GitHub Copilot、Bolt 等编程助手，让代码编写效率提升 10 倍。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">📚</div>
+                        <h3>精选教程</h3>
+                        <p>深度文章和 Prompt 技巧分享，从入门到精通，掌握 AI 工具的最佳实践。</p>
+                    </div>
+                </div>
+            </section>
         </main>
+        <button class="anim-toggle" id="anim-toggle" title="点击关闭/开启背景动画">✨ 动画</button>
 
         <footer class="site-footer">
             <div class="footer-links">
-                <a href="#">About Us</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
+                <a href="about.html">About Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
             </div>
             <div class="footer-copy">© 2026 ai.gnnis.com. All rights reserved.</div>
         </footer>
     </div>
 
     <script>
-        async function loadContent() {
+        // 语言切换功能
+        let currentLang = 'zh';
+        document.getElementById('lang-btn').addEventListener('click', function() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            this.textContent = currentLang === 'zh' ? 'En / 中' : '中 / En';
+        });
+
+        // 搜索功能
+        document.getElementById('search-btn').addEventListener('click', function() {
+            window.location.href = 'ai-tools.html';
+        });
+        document.getElementById('search-btn').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') this.click();
+        });
+
+        // 动画开关
+        let animationEnabled = true;
+        document.getElementById('anim-toggle').addEventListener('click', function() {
+            animationEnabled = !animationEnabled;
+            const canvas = document.getElementById('canvas');
+            if (animationEnabled) {
+                canvas.style.display = 'block';
+                this.classList.remove('disabled');
+                this.innerHTML = '✨ 动画';
+            } else {
+                canvas.style.display = 'none';
+                this.classList.add('disabled');
+                this.innerHTML = '⏸️ 动画';
+            }
+        });
+
+        // 动态更新统计数据
+        async function updateStats() {
             try {
                 const res = await fetch('content.json');
                 const data = await res.json();
                 
-                // Render Hero
-                const heroContainer = document.getElementById('hero-container');
-                if (heroContainer && data.tools.hero) {
-                    data.tools.hero.forEach(item => {
-                        heroContainer.innerHTML += `
-                            <div class="width astro-J7PV25F6" style="margin-top:2rem">
-                                <div class="module astro-J7PV25F6">
-                                    <div class="item draw astro-J7PV25F6">
-                                        <div class="module-left astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
-                                        <div class="module-right astro-J7PV25F6">
-                                            <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
-                                            <div class="button astro-J7PV25F6" style="margin-top: 9rem;" onclick="location.href='${item.url}'">
-                                                <span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>`;
-                    });
-                }
-
-                // Render Features
-                const featContainer = document.getElementById('feature-container');
-                if (featContainer && data.tools.feature && data.tools.feature.length > 0) {
-                    let featHtml = `<div class="width astro-J7PV25F6"><div class="module1 astro-J7PV25F6">`;
-                    const f1 = data.tools.feature[0];
-                    featHtml += `
-                        <div class="item module1-left draw astro-J7PV25F6">
-                            <div><img src="${f1.img}" class="img astro-J7PV25F6"></div>
-                            <div class="module1-left-text astro-J7PV25F6">
-                                <div><div class="title astro-J7PV25F6">${f1.title}</div><div class="subtitle astro-J7PV25F6">${f1.subtitle}</div></div>
-                                <div class="button astro-J7PV25F6" onclick="location.href='${f1.url}'"><span>${f1.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
-                            </div>
-                        </div><div class="module1-hr astro-J7PV25F6"></div><div class="module1-right astro-J7PV25F6">`;
-                    data.tools.feature.slice(1).forEach((item, idx) => {
-                        featHtml += `
-                            <div class="item ${idx===1?'chat':'draw'} astro-J7PV25F6">
-                                <div class="module1-right-img astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
-                                <div class="module1-right-text astro-J7PV25F6">
-                                    <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
-                                    <div class="button astro-J7PV25F6" onclick="location.href='${item.url}'"><span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
-                                </div>
-                            </div>`;
-                        if (idx < data.tools.feature.slice(1).length - 1) featHtml += `<div class="module1-hr astro-J7PV25F6"></div>`;
-                    });
-                    featHtml += `</div></div></div>`;
-                    featContainer.innerHTML = featHtml;
-                }
-
-                // Render Compact
-                const compactContainer = document.getElementById('compact-container');
-                if (compactContainer && data.tools.compact) {
-                    let compHtml = `<div class="width astro-J7PV25F6"><div class="module3 astro-J7PV25F6">`;
-                    data.tools.compact.forEach((item, idx) => {
-                        compHtml += `
-                            <div class="module3-item item ${idx%2===0?'draw':'chat'} astro-J7PV25F6" onclick="location.href='${item.url}'">
-                                <div class="module3-left astro-J7PV25F6">
-                                    <div><div class="title astro-J7PV25F6">${item.title}</div><div class="subtitle astro-J7PV25F6">${item.subtitle}</div></div>
-                                    <div class="btn astro-J7PV25F6"><span>${item.btnText}</span><div class="icon astro-J7PV25F6"><i class="iconfont icon-arrow-right astro-J7PV25F6"></i></div></div>
-                                </div>
-                                <div class="module3-right astro-J7PV25F6"><img src="${item.img}" class="img astro-J7PV25F6"></div>
-                            </div>`;
-                        if (idx < data.tools.compact.length - 1) compHtml += `<div class="module3-hr astro-J7PV25F6"></div>`;
-                    });
-                    compHtml += `</div></div>`;
-                    compactContainer.innerHTML = compHtml;
-                }
+                const toolsCount = (data.tools?.hero?.length || 0) + (data.tools?.feature?.length || 0) + (data.tools?.compact?.length || 0);
+                const promptsCount = data.prompts?.length || 0;
+                const articlesCount = data.articles?.length || 0;
+                
+                document.getElementById('stat-tools').textContent = toolsCount + '+';
+                document.getElementById('stat-prompts').textContent = promptsCount + '+';
+                document.getElementById('stat-articles').textContent = articlesCount + '+';
             } catch (e) {
-                console.error('Failed to load dynamic content:', e);
+                console.error('Failed to load stats:', e);
             }
         }
-        loadContent();
+        updateStats();
+
+        // SEO: 添加结构化数据
+        const jsonLd = {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: '格尼斯AI',
+            url: 'https://ai.gnnis.com',
+            description: '数字化创造时代的崛起：智能化工具唤醒创造新力，创造效率提升提升。',
+            potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://ai.gnnis.com/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string'
+            }
+        };
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(jsonLd);
+        document.head.appendChild(script);
     </script>
 </body>
 </html>

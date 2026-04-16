@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ArticleCard from './cards/ArticleCard';
 import { ArticleSkeleton } from './skeletons/Skeleton';
 
@@ -31,9 +32,9 @@ export default function ArticleSection({
             洞察 AI 行业趋势，掌握前沿技术动态。
           </p>
         </div>
-        <button className="text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium">
+        <Link href="/skills" className="text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium">
           查看全部文章 →
-        </button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

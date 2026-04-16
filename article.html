@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>文章详情 | ai.gnnis.com</title>
+    <meta name="description" content="格尼斯AI深度文章，探讨AI工具使用技巧与行业洞察。">
+    <link rel="icon" href="/favicon.ico">
+    <link href="static/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/index.082d951a.css">
+    <style>
+        .site-header { position: sticky; top: 0; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: rgba(0,0,0,0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .site-logo { color: #fff; font-size: 1.25rem; font-weight: 700; text-decoration: none; letter-spacing: -0.02em; }
+        .nav-links { display: flex; gap: 2.5rem; }
+        .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease; }
+        .nav-links a:hover { color: #14b8a6; }
+        .nav-links a.active { color: #14b8a6; font-weight: 600; }
+        .nav-actions { display: flex; gap: 1.5rem; align-items: center; }
+        @media (max-width: 768px) { .nav-links { display: none; } .site-header { padding: 1rem; } }
+
+        /* Skeleton Loading */
+        .skeleton { background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 8px; }
+        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+        .article-section { padding: 3rem 1rem; max-width: 800px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        
+        /* Breadcrumb */
+        .breadcrumb { margin-bottom: 2rem; font-size: 0.875rem; color: rgba(255,255,255,0.4); }
+        .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: #14b8a6; }
+        .breadcrumb span { margin: 0 0.5rem; }
+        
+        /* Article Header */
+        .article-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .article-category { display: inline-block; padding: 0.25rem 0.75rem; background: rgba(20, 184, 166, 0.1); border: 1px solid rgba(20, 184, 166, 0.3); color: #14b8a6; font-size: 0.75rem; font-weight: 600; border-radius: 20px; margin-bottom: 1rem; }
+        .article-title { font-size: 2rem; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 1rem; }
+        .article-meta { display: flex; gap: 1rem; color: rgba(255,255,255,0.5); font-size: 0.875rem; flex-wrap: wrap; }
+        .article-meta span { display: flex; align-items: center; gap: 0.25rem; }
+        
+        /* Article Content - Markdown Styles */
+        .article-content { color: rgba(255,255,255,0.8); line-height: 1.8; }
+        .article-content h2 { font-size: 1.5rem; font-weight: 600; color: #fff; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; color: #fff; margin: 2rem 0 0.75rem; }
+        .article-content p { margin-bottom: 1.25rem; }
+        .article-content ul, .article-content ol { margin: 1rem 0 1.5rem 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+        .article-content strong { color: #fff; font-weight: 600; }
+        .article-content code { background: rgba(255,255,255,0.1); padding: 0.2rem 0.4rem; border-radius: 4px; font-family: 'SF Mono', Monaco, monospace; font-size: 0.9em; color: #14b8a6; }
+        .article-content pre { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem; overflow-x: auto; margin: 1.5rem 0; }
+        .article-content pre code { background: none; padding: 0; color: rgba(255,255,255,0.9); }
+        .article-content blockquote { border-left: 3px solid #14b8a6; padding-left: 1rem; margin: 1.5rem 0; color: rgba(255,255,255,0.7); font-style: italic; }
+        .article-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        .article-content th, .article-content td { padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); text-align: left; }
+        .article-content th { background: rgba(255,255,255,0.05); color: #fff; font-weight: 600; }
+        .article-content td { color: rgba(255,255,255,0.7); }
+        .article-content a { color: #14b8a6; text-decoration: none; }
+        .article-content a:hover { text-decoration: underline; }
+        
+        /* Article Footer */
+        .article-footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: #14b8a6; text-decoration: none; font-weight: 500; transition: all 0.2s; }
+        .back-link:hover { gap: 0.75rem; }
+        
+        /* Error State */
+        .error-state { text-align: center; padding: 4rem 2rem; }
+        .error-state h2 { font-size: 1.5rem; color: #fff; margin-bottom: 1rem; }
+        .error-state p { color: rgba(255,255,255,0.6); margin-bottom: 2rem; }
+
+        .site-footer { padding: 4rem 1rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; margin-top: 5rem; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.875rem; transition: color 0.2s ease; }
+        .footer-links a:hover { color: rgba(255,255,255,0.8); }
+        .footer-copy { color: rgba(255,255,255,0.3); font-size: 0.75rem; }
+    </style>
+</head>
+<body class="dark" style="background: #000;">
+    <div id="page">
+        <header class="site-header">
+            <a href="index.html" class="site-logo">ai.gnnis.com</a>
+            <nav class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="ai-tools.html">AI Tools</a>
+                <a href="prompts.html">Prompts</a>
+                <a href="blog.html" class="active">Skills</a>
+            </nav>
+            <div class="nav-actions"></div>
+        </header>
+
+        <main id="content-area" style="position: relative; z-index: 10; background: #000; min-height: 80vh;">
+            <section class="article-section">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb">
+                    <a href="index.html">首页</a>
+                    <span>/</span>
+                    <a href="blog.html">技能专栏</a>
+                    <span>/</span>
+                    <span id="breadcrumb-title">文章详情</span>
+                </nav>
+
+                <!-- Loading State -->
+                <div id="loading-state">
+                    <div class="skeleton" style="width: 100px; height: 24px; margin-bottom: 1rem;"></div>
+                    <div class="skeleton" style="width: 100%; height: 48px; margin-bottom: 1.5rem;"></div>
+                    <div class="skeleton" style="width: 60%; height: 20px; margin-bottom: 3rem;"></div>
+                    <div class="skeleton" style="width: 100%; height: 200px; margin-bottom: 1rem;"></div>
+                    <div class="skeleton" style="width: 100%; height: 200px; margin-bottom: 1rem;"></div>
+                </div>
+
+                <!-- Article Content -->
+                <article id="article-content" style="display: none;">
+                    <header class="article-header">
+                        <span class="article-category" id="article-category">分类</span>
+                        <h1 class="article-title" id="article-title">文章标题</h1>
+                        <div class="article-meta">
+                            <span>📅 <span id="article-date">日期</span></span>
+                            <span>👤 <span id="article-author">作者</span></span>
+                            <span>⏱️ <span id="article-readtime">阅读时间</span></span>
+                        </div>
+                    </header>
+                    <div class="article-content" id="article-body">
+                        <!-- 文章内容将在这里渲染 -->
+                    </div>
+                    <footer class="article-footer">
+                        <a href="blog.html" class="back-link">
+                            <i class="iconfont icon-arrow-left"></i>
+                            返回技能专栏
+                        </a>
+                    </footer>
+                </article>
+
+                <!-- Error State -->
+                <div id="error-state" class="error-state" style="display: none;">
+                    <h2>😕 文章未找到</h2>
+                    <p>您访问的文章可能已被删除或移动。</p>
+                    <a href="blog.html" class="back-link">
+                        <i class="iconfont icon-arrow-left"></i>
+                        返回技能专栏
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-copy">© 2026 ai.gnnis.com. All rights reserved.</div>
+        </footer>
+    </div>
+
+    <script>
+        // 从 URL 获取文章 ID
+        function getArticleId() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id');
+        }
+
+        // 简单的 Markdown 转 HTML
+        function markdownToHtml(markdown) {
+            if (!markdown) return '';
+            
+            let html = markdown
+                // 转义 HTML
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                // 代码块
+                .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
+                // 行内代码
+                .replace(/`([^`]+)`/g, '<code>$1</code>')
+                // 标题
+                .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+                .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+                .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+                // 加粗
+                .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+                .replace(/__([^_]+)__/g, '<strong>$1</strong>')
+                // 斜体
+                .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+                .replace(/_([^_]+)_/g, '<em>$1</em>')
+                // 删除线
+                .replace(/~~([^~]+)~~/g, '<del>$1</del>')
+                // 引用
+                .replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>')
+                // 无序列表
+                .replace(/^\- (.*$)/gim, '<li>$1</li>')
+                .replace(/^\* (.*$)/gim, '<li>$1</li>')
+                // 有序列表
+                .replace(/^\d+\. (.*$)/gim, '<li>$1</li>')
+                // 链接
+                .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+                // 分隔线
+                .replace(/^---$/gim, '<hr>')
+                // 段落
+                .replace(/\n\n/g, '</p><p>');
+            
+            // 包裹列表
+            html = html.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+            
+            // 包裹段落
+            html = '<p>' + html + '</p>';
+            
+            // 清理空段落
+            html = html.replace(/<p><\/p>/g, '');
+            
+            return html;
+        }
+
+        // 加载文章
+        async function loadArticle() {
+            const articleId = getArticleId();
+            
+            if (!articleId) {
+                showError();
+                return;
+            }
+
+            try {
+                const res = await fetch('content.json');
+                const data = await res.json();
+                
+                const article = data.articles.find(a => a.id === articleId);
+                
+                if (!article) {
+                    showError();
+                    return;
+                }
+
+                // 更新页面标题
+                document.title = article.title + ' | ai.gnnis.com';
+                
+                // 填充文章内容
+                document.getElementById('breadcrumb-title').textContent = article.title;
+                document.getElementById('article-category').textContent = article.category;
+                document.getElementById('article-title').textContent = article.title;
+                document.getElementById('article-date').textContent = article.date;
+                document.getElementById('article-author').textContent = article.author;
+                document.getElementById('article-readtime').textContent = article.readTime;
+                document.getElementById('article-body').innerHTML = markdownToHtml(article.content);
+
+                // 隐藏加载状态，显示内容
+                document.getElementById('loading-state').style.display = 'none';
+                document.getElementById('article-content').style.display = 'block';
+
+            } catch (e) {
+                console.error('Failed to load article:', e);
+                showError();
+            }
+        }
+
+        function showError() {
+            document.getElementById('loading-state').style.display = 'none';
+            document.getElementById('error-state').style.display = 'block';
+        }
+
+        // 页面加载时执行
+        loadArticle();
+    </script>
+</body>
+</html>

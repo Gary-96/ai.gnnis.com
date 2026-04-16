@@ -16,7 +16,7 @@ interface ArticleData {
 export default function ArticleCard({ article }: { article: ArticleData }) {
   return (
     <Link 
-      href={`/articles/${article.id}`}
+      href={`/article/${article.id}`}
       className="group block bg-[#1a1a1a] rounded-3xl overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-300 hover:translate-y-[-4px]"
     >
       <div className="relative aspect-video w-full">
