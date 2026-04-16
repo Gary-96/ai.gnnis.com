@@ -139,15 +139,20 @@ export default function AIAssistantPage() {
             <span style={{ fontWeight: 600, fontSize: 15, letterSpacing: '-0.01em' }}>GNNIS AI</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-            {['产品', '定价', '文档', '博客'].map((item, i) => (
-              <a key={i} href="#" style={{
+            {[
+              { label: '产品', href: '/' },
+              { label: '定价', href: '/ai-assistant#pricing' },
+              { label: '文档', href: '/contact' },
+              { label: '博客', href: '/skills' },
+            ].map((item, i) => (
+              <a key={i} href={item.href} style={{
                 padding: '6px 12px', fontSize: 13, color: i === 0 ? '#fff' : '#A1A1AA',
                 textDecoration: 'none', borderRadius: 6,
                 transition: 'all 0.15s',
               }}
               onMouseEnter={e => (e.target as HTMLElement).style.background = '#1A1A1A'}
               onMouseLeave={e => (e.target as HTMLElement).style.background = 'transparent'}
-              >{item}</a>
+              >{item.label}</a>
             ))}
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -455,11 +460,18 @@ export default function AIAssistantPage() {
             <span style={{ fontSize: 12, color: '#52525B' }}>© 2026</span>
           </div>
           <div style={{ display: 'flex', gap: 24 }}>
-            {['关于', '文档', '定价', '博客', '隐私', '条款'].map((link, i) => (
-              <a key={i} href="#" style={{ fontSize: 12, color: '#52525B', textDecoration: 'none', transition: 'color 0.15s' }}
+            {[
+              { label: '关于', href: '/about' },
+              { label: '文档', href: '/contact' },
+              { label: '定价', href: '/ai-assistant#pricing' },
+              { label: '博客', href: '/skills' },
+              { label: '隐私', href: '/privacy' },
+              { label: '条款', href: '/terms' },
+            ].map((link, i) => (
+              <a key={i} href={link.href} style={{ fontSize: 12, color: '#52525B', textDecoration: 'none', transition: 'color 0.15s' }}
               onMouseEnter={e => (e.target as HTMLElement).style.color = '#A1A1AA'}
               onMouseLeave={e => (e.target as HTMLElement).style.color = '#52525B'}
-              >{link}</a>
+              >{link.label}</a>
             ))}
           </div>
         </div>

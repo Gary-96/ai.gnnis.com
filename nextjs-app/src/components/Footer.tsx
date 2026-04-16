@@ -24,7 +24,7 @@ export default function Footer() {
             <Link href="/about" className="text-sm text-gray-400 hover:text-teal-400 transition-colors">
               About Us
             </Link>
-            <Link href="#" className="text-sm text-gray-400 hover:text-teal-400 transition-colors">
+            <Link href="/contact" className="text-sm text-gray-400 hover:text-teal-400 transition-colors">
               Contact
             </Link>
           </div>
@@ -35,7 +35,7 @@ export default function Footer() {
             <Link href="/privacy" className="text-sm text-gray-400 hover:text-teal-400 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm text-gray-400 hover:text-teal-400 transition-colors">
+            <Link href="/terms" className="text-sm text-gray-400 hover:text-teal-400 transition-colors">
               Terms of Service
             </Link>
           </div>
@@ -47,8 +47,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-white/5 flex flex-col items-center sm:flex-row sm:justify-between text-xs text-gray-500 gap-4">
         <p>&copy; 2026 ai.gnnis.com. All rights reserved.</p>
         <div className="flex space-x-4">
-          <a href="#" className="hover:text-white transition-colors" aria-label="Twitter">Twitter</a>
-          <a href="#" className="hover:text-white transition-colors" aria-label="GitHub">GitHub</a>
+          <a href="https://twitter.com/gnnisai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Twitter">Twitter</a>
+          <a href="https://github.com/Gary-96/ai.gnnis.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="GitHub">GitHub</a>
         </div>
       </div>
     </footer>
