@@ -1,49 +1,276 @@
 {
   "tools": {
     "hero": [
-      {"id": "chatgpt", "title": "ChatGPT 超级问答", "subtitle": "全能型AI智能助手，支持写作、编程、分析", "img": "img/home1.png", "url": "https://chatgpt.com", "btnText": "立即体验"},
-      {"id": "claude", "title": "Claude AI", "subtitle": "Anthropic出品，长文理解与安全对话首选", "img": "img/home1.png", "url": "https://claude.ai", "btnText": "开始对话"},
-      {"id": "gemini", "title": "Google Gemini", "subtitle": "Google最强多模态AI，图文音视频全支持", "img": "img/home1.png", "url": "https://gemini.google.com", "btnText": "立即使用"},
-      {"id": "grok", "title": "Grok AI", "subtitle": "xAI出品，实时联网，幽默风格AI助手", "img": "img/home1.png", "url": "https://grok.x.ai", "btnText": "体验Grok"}
+      {
+        "id": "chatgpt",
+        "title": "ChatGPT 超级问答",
+        "subtitle": "全能型AI智能助手，支持写作、编程、分析",
+        "img": "img/home1.png",
+        "url": "https://chatgpt.com",
+        "btnText": "立即体验"
+      },
+      {
+        "id": "claude",
+        "title": "Claude AI",
+        "subtitle": "Anthropic出品，长文理解与安全对话首选",
+        "img": "img/home1.png",
+        "url": "https://claude.ai",
+        "btnText": "开始对话"
+      },
+      {
+        "id": "gemini",
+        "title": "Google Gemini",
+        "subtitle": "Google最强多模态AI，图文音视频全支持",
+        "img": "img/home1.png",
+        "url": "https://gemini.google.com",
+        "btnText": "立即使用"
+      },
+      {
+        "id": "grok",
+        "title": "Grok AI",
+        "subtitle": "xAI出品，实时联网，幽默风格AI助手",
+        "img": "img/home1.png",
+        "url": "https://grok.x.ai",
+        "btnText": "体验Grok"
+      }
     ],
     "feature": [
-      {"id": "midjourney", "title": "Midjourney 创意绘画", "subtitle": "全球最受欢迎的AI绘画工具，艺术级图像生成", "img": "img/home2.png", "url": "https://midjourney.com", "btnText": "开始创作"},
-      {"id": "notion", "title": "Notion AI", "subtitle": "AI加持的知识库，笔记、文档、项目管理一体化", "img": "img/home3.png", "url": "https://notion.so", "btnText": "提升效率"},
-      {"id": "cursor", "title": "Cursor AI 编辑器", "subtitle": "AI原生代码编辑器，编程效率提升10倍", "img": "img/home3.png", "url": "https://cursor.sh", "btnText": "下载使用"},
-      {"id": "perplexity", "title": "Perplexity AI", "subtitle": "AI驱动的搜索引擎，实时联网给出引用答案", "img": "img/home2.png", "url": "https://perplexity.ai", "btnText": "开始搜索"},
-      {"id": "runway", "title": "Runway Gen-3", "subtitle": "专业级AI视频生成与编辑，商业创作首选", "img": "img/home2.png", "url": "https://runwayml.com", "btnText": "创作视频"},
-      {"id": "stable-diffusion", "title": "Stable Diffusion", "subtitle": "开源图像生成模型，本地部署完全免费", "img": "img/home3.png", "url": "https://stability.ai", "btnText": "了解更多"}
+      {
+        "id": "midjourney",
+        "title": "Midjourney 创意绘画",
+        "subtitle": "全球最受欢迎的AI绘画工具，艺术级图像生成",
+        "img": "img/home2.png",
+        "url": "https://midjourney.com",
+        "btnText": "开始创作"
+      },
+      {
+        "id": "notion",
+        "title": "Notion AI",
+        "subtitle": "AI加持的知识库，笔记、文档、项目管理一体化",
+        "img": "img/home3.png",
+        "url": "https://notion.so",
+        "btnText": "提升效率"
+      },
+      {
+        "id": "cursor",
+        "title": "Cursor AI 编辑器",
+        "subtitle": "AI原生代码编辑器，编程效率提升10倍",
+        "img": "img/home3.png",
+        "url": "https://cursor.sh",
+        "btnText": "下载使用"
+      },
+      {
+        "id": "perplexity",
+        "title": "Perplexity AI",
+        "subtitle": "AI驱动的搜索引擎，实时联网给出引用答案",
+        "img": "img/home2.png",
+        "url": "https://perplexity.ai",
+        "btnText": "开始搜索"
+      },
+      {
+        "id": "runway",
+        "title": "Runway Gen-3",
+        "subtitle": "专业级AI视频生成与编辑，商业创作首选",
+        "img": "img/home2.png",
+        "url": "https://runwayml.com",
+        "btnText": "创作视频"
+      },
+      {
+        "id": "stable-diffusion",
+        "title": "Stable Diffusion",
+        "subtitle": "开源图像生成模型，本地部署完全免费",
+        "img": "img/home3.png",
+        "url": "https://stability.ai",
+        "btnText": "了解更多"
+      }
     ],
     "compact": [
-      {"id": "suno", "title": "Suno 音乐生成", "subtitle": "一键生成专业级音乐，支持多种风格", "img": "img/home4.png", "url": "https://suno.com", "btnText": "生成音乐"},
-      {"id": "elevenlabs", "title": "ElevenLabs", "subtitle": "AI语音克隆与合成，声音以假乱真", "img": "img/home4.png", "url": "https://elevenlabs.io", "btnText": "体验语音"},
-      {"id": "kling", "title": "可灵 Kling AI", "subtitle": "快手出品，国产顶级AI视频生成工具", "img": "img/home4.png", "url": "https://klingai.com", "btnText": "生成视频"},
-      {"id": "pika", "title": "Pika Labs", "subtitle": "简单易用的AI视频生成，适合新手入门", "img": "img/home4.png", "url": "https://pika.art", "btnText": "开始创作"},
-      {"id": "luma", "title": "Luma Dream Machine", "subtitle": "高质量AI视频生成，物理效果逼真", "img": "img/home4.png", "url": "https://lumalabs.ai", "btnText": "体验生成"},
-      {"id": "heygen", "title": "HeyGen 数字人", "subtitle": "AI数字人视频生成，一键制作口播视频", "img": "img/home4.png", "url": "https://heygen.com", "btnText": "制作视频"},
-      {"id": "descript", "title": "Descript", "subtitle": "AI视频剪辑，像编辑文档一样剪视频", "img": "img/home4.png", "url": "https://descript.com", "btnText": "开始剪辑"},
-      {"id": "udio", "title": "Udio 音乐创作", "subtitle": "高质量AI音乐生成，媲美专业制作", "img": "img/home4.png", "url": "https://udio.com", "btnText": "创作音乐"},
-      {"id": "ideogram", "title": "Ideogram AI", "subtitle": "擅长文字排版的AI绘画工具，Logo设计利器", "img": "img/home4.png", "url": "https://ideogram.ai", "btnText": "开始设计"},
-      {"id": "adobe-firefly", "title": "Adobe Firefly", "subtitle": "Adobe出品，商业安全的AI图像生成工具", "img": "img/home4.png", "url": "https://firefly.adobe.com", "btnText": "免费体验"},
-      {"id": "canva-ai", "title": "Canva AI", "subtitle": "设计师必备，AI加持的在线设计平台", "img": "img/home4.png", "url": "https://canva.com", "btnText": "开始设计"},
-      {"id": "gamma", "title": "Gamma AI", "subtitle": "AI一键生成PPT和演示文稿，告别手动排版", "img": "img/home4.png", "url": "https://gamma.app", "btnText": "生成PPT"},
-      {"id": "copy-ai", "title": "Copy.ai", "subtitle": "AI营销文案生成，广告语、邮件、社媒一键搞定", "img": "img/home4.png", "url": "https://copy.ai", "btnText": "写文案"},
-      {"id": "jasper", "title": "Jasper AI", "subtitle": "企业级AI写作助手，品牌语气一致性保障", "img": "img/home4.png", "url": "https://jasper.ai", "btnText": "了解更多"},
-      {"id": "github-copilot", "title": "GitHub Copilot", "subtitle": "程序员AI副驾驶，代码补全与生成神器", "img": "img/home4.png", "url": "https://github.com/features/copilot", "btnText": "开始编程"},
-      {"id": "v0", "title": "v0 by Vercel", "subtitle": "AI生成前端UI组件，设计稿秒变代码", "img": "img/home4.png", "url": "https://v0.dev", "btnText": "生成UI"},
-      {"id": "bolt", "title": "Bolt.new", "subtitle": "AI全栈开发工具，自然语言构建完整应用", "img": "img/home4.png", "url": "https://bolt.new", "btnText": "开始构建"},
-      {"id": "lovable", "title": "Lovable", "subtitle": "AI驱动的应用开发平台，无需编程基础", "img": "img/home4.png", "url": "https://lovable.dev", "btnText": "立即体验"},
-      {"id": "windsurf", "title": "Windsurf IDE", "subtitle": "Codeium出品的AI编程环境，深度代码理解", "img": "img/home4.png", "url": "https://codeium.com/windsurf", "btnText": "下载使用"},
-      {"id": "claude-artifacts", "title": "Claude Artifacts", "subtitle": "Claude实时预览功能，代码即时运行可视化", "img": "img/home4.png", "url": "https://claude.ai", "btnText": "立即体验"},
-      {"id": "napkin-ai", "title": "Napkin AI", "subtitle": "文字一键转信息图，可视化表达更高效", "img": "img/home4.png", "url": "https://napkin.ai", "btnText": "生成图表"},
-      {"id": "krea", "title": "Krea AI", "subtitle": "实时AI图像生成，边画边出图的创作体验", "img": "img/home4.png", "url": "https://krea.ai", "btnText": "开始创作"}
+      {
+        "id": "suno",
+        "title": "Suno 音乐生成",
+        "subtitle": "一键生成专业级音乐，支持多种风格",
+        "img": "img/home4.png",
+        "url": "https://suno.com",
+        "btnText": "生成音乐"
+      },
+      {
+        "id": "elevenlabs",
+        "title": "ElevenLabs",
+        "subtitle": "AI语音克隆与合成，声音以假乱真",
+        "img": "img/home4.png",
+        "url": "https://elevenlabs.io",
+        "btnText": "体验语音"
+      },
+      {
+        "id": "kling",
+        "title": "可灵 Kling AI",
+        "subtitle": "快手出品，国产顶级AI视频生成工具",
+        "img": "img/home4.png",
+        "url": "https://klingai.com",
+        "btnText": "生成视频"
+      },
+      {
+        "id": "pika",
+        "title": "Pika Labs",
+        "subtitle": "简单易用的AI视频生成，适合新手入门",
+        "img": "img/home4.png",
+        "url": "https://pika.art",
+        "btnText": "开始创作"
+      },
+      {
+        "id": "luma",
+        "title": "Luma Dream Machine",
+        "subtitle": "高质量AI视频生成，物理效果逼真",
+        "img": "img/home4.png",
+        "url": "https://lumalabs.ai",
+        "btnText": "体验生成"
+      },
+      {
+        "id": "heygen",
+        "title": "HeyGen 数字人",
+        "subtitle": "AI数字人视频生成，一键制作口播视频",
+        "img": "img/home4.png",
+        "url": "https://heygen.com",
+        "btnText": "制作视频"
+      },
+      {
+        "id": "descript",
+        "title": "Descript",
+        "subtitle": "AI视频剪辑，像编辑文档一样剪视频",
+        "img": "img/home4.png",
+        "url": "https://descript.com",
+        "btnText": "开始剪辑"
+      },
+      {
+        "id": "udio",
+        "title": "Udio 音乐创作",
+        "subtitle": "高质量AI音乐生成，媲美专业制作",
+        "img": "img/home4.png",
+        "url": "https://udio.com",
+        "btnText": "创作音乐"
+      },
+      {
+        "id": "ideogram",
+        "title": "Ideogram AI",
+        "subtitle": "擅长文字排版的AI绘画工具，Logo设计利器",
+        "img": "img/home4.png",
+        "url": "https://ideogram.ai",
+        "btnText": "开始设计"
+      },
+      {
+        "id": "adobe-firefly",
+        "title": "Adobe Firefly",
+        "subtitle": "Adobe出品，商业安全的AI图像生成工具",
+        "img": "img/home4.png",
+        "url": "https://firefly.adobe.com",
+        "btnText": "免费体验"
+      },
+      {
+        "id": "canva-ai",
+        "title": "Canva AI",
+        "subtitle": "设计师必备，AI加持的在线设计平台",
+        "img": "img/home4.png",
+        "url": "https://canva.com",
+        "btnText": "开始设计"
+      },
+      {
+        "id": "gamma",
+        "title": "Gamma AI",
+        "subtitle": "AI一键生成PPT和演示文稿，告别手动排版",
+        "img": "img/home4.png",
+        "url": "https://gamma.app",
+        "btnText": "生成PPT"
+      },
+      {
+        "id": "copy-ai",
+        "title": "Copy.ai",
+        "subtitle": "AI营销文案生成，广告语、邮件、社媒一键搞定",
+        "img": "img/home4.png",
+        "url": "https://copy.ai",
+        "btnText": "写文案"
+      },
+      {
+        "id": "jasper",
+        "title": "Jasper AI",
+        "subtitle": "企业级AI写作助手，品牌语气一致性保障",
+        "img": "img/home4.png",
+        "url": "https://jasper.ai",
+        "btnText": "了解更多"
+      },
+      {
+        "id": "github-copilot",
+        "title": "GitHub Copilot",
+        "subtitle": "程序员AI副驾驶，代码补全与生成神器",
+        "img": "img/home4.png",
+        "url": "https://github.com/features/copilot",
+        "btnText": "开始编程"
+      },
+      {
+        "id": "v0",
+        "title": "v0 by Vercel",
+        "subtitle": "AI生成前端UI组件，设计稿秒变代码",
+        "img": "img/home4.png",
+        "url": "https://v0.dev",
+        "btnText": "生成UI"
+      },
+      {
+        "id": "bolt",
+        "title": "Bolt.new",
+        "subtitle": "AI全栈开发工具，自然语言构建完整应用",
+        "img": "img/home4.png",
+        "url": "https://bolt.new",
+        "btnText": "开始构建"
+      },
+      {
+        "id": "lovable",
+        "title": "Lovable",
+        "subtitle": "AI驱动的应用开发平台，无需编程基础",
+        "img": "img/home4.png",
+        "url": "https://lovable.dev",
+        "btnText": "立即体验"
+      },
+      {
+        "id": "windsurf",
+        "title": "Windsurf IDE",
+        "subtitle": "Codeium出品的AI编程环境，深度代码理解",
+        "img": "img/home4.png",
+        "url": "https://codeium.com/windsurf",
+        "btnText": "下载使用"
+      },
+      {
+        "id": "claude-artifacts",
+        "title": "Claude Artifacts",
+        "subtitle": "Claude实时预览功能，代码即时运行可视化",
+        "img": "img/home4.png",
+        "url": "https://claude.ai",
+        "btnText": "立即体验"
+      },
+      {
+        "id": "napkin-ai",
+        "title": "Napkin AI",
+        "subtitle": "文字一键转信息图，可视化表达更高效",
+        "img": "img/home4.png",
+        "url": "https://napkin.ai",
+        "btnText": "生成图表"
+      },
+      {
+        "id": "krea",
+        "title": "Krea AI",
+        "subtitle": "实时AI图像生成，边画边出图的创作体验",
+        "img": "img/home4.png",
+        "url": "https://krea.ai",
+        "btnText": "开始创作"
+      }
     ]
   },
   "prompts": [
     {
       "id": "prompt-0",
       "title": "电影级极客科幻场景 - Cinematic AI Video B-roll",
-      "models": ["Runway Gen-3", "Pika 1.0"],
+      "models": [
+        "Runway Gen-3",
+        "Pika 1.0"
+      ],
       "skills": "核心技巧在于使用镜头语言描述词，如 Cinematic lighting 和 Low-angle motion。建议配合 --motion 5 提升画面流动性。",
       "content": "Cinematic low-angle tracking shot of a futuristic cyberpunk city at midnight, heavy neon reflections on wet pavement, volumetric fog, hyper-detailed architecture, 8k, photorealistic, high motion.",
       "category": "视频生成"
@@ -51,7 +278,10 @@
     {
       "id": "prompt-1",
       "title": "YouTube/TikTok 爆款 3D 角色动画指令",
-      "models": ["Sora", "Luma Dream Machine"],
+      "models": [
+        "Sora",
+        "Luma Dream Machine"
+      ],
       "skills": "重点描述角色的面部表情和肢体动态。使用 --ar 9:16 适配竖屏短视频平台。",
       "content": "A cute 3D fluffy monster dancing joyfully in a bright meadow, soft Pixar-style fur simulation, sunlight filtering through trees, expressive eyes, smooth 60fps movement.",
       "category": "视频生成"
@@ -59,7 +289,10 @@
     {
       "id": "prompt-2",
       "title": "专业级商业产品展示视频",
-      "models": ["Runway Gen-3", "Kling AI"],
+      "models": [
+        "Runway Gen-3",
+        "Kling AI"
+      ],
       "skills": "产品视频讲究环境的纯净度。建议使用 Minimalist studio setup 作为背景描述词。",
       "content": "Macro slow-motion shot of luxury perfume bottle, water droplets slowly sliding down the glass, soft studio lighting, minimalist beige background, high-end commercial aesthetic.",
       "category": "商业应用"
@@ -67,7 +300,10 @@
     {
       "id": "prompt-3",
       "title": "日系高清动漫转场视频",
-      "models": ["AnimateDiff", "Pika Art"],
+      "models": [
+        "AnimateDiff",
+        "Pika Art"
+      ],
       "skills": "关键在于锁定画风。使用 Studio Ghibli style 或 Makoto Shinkai aesthetic 快速建立调性。",
       "content": "A breathtaking Japanese anime landscape, summer sky with towering cumulus clouds, cherry blossom petals blowing in the wind, Makoto Shinkai aesthetic, vibrant colors.",
       "category": "视频生成"
@@ -75,7 +311,10 @@
     {
       "id": "prompt-4",
       "title": "史诗级史前地球纪录片画面",
-      "models": ["Sora", "Stable Video Diffusion"],
+      "models": [
+        "Sora",
+        "Stable Video Diffusion"
+      ],
       "skills": "使用 Wide-angle drone shot 可以营造宏大感。配合 National Geographic style 提升纪录片质感。",
       "content": "Wide-angle drone shot over a prehistoric valley, herds of mammoths walking through a snowy mountain pass, realistic fur textures, National Geographic style.",
       "category": "视频生成"
@@ -83,7 +322,10 @@
     {
       "id": "prompt-5",
       "title": "Midjourney 极简风格品牌 Logo 设计",
-      "models": ["Midjourney V6", "DALL-E 3"],
+      "models": [
+        "Midjourney V6",
+        "DALL-E 3"
+      ],
       "skills": "品牌设计讲究简洁识别度。使用 minimal logo design 和 flat design 风格词，加 --no text 避免乱码文字。",
       "content": "Minimalist logo design for a tech startup, abstract geometric shape representing connection and innovation, clean lines, single color gradient from teal to purple, white background, vector style.",
       "category": "图像生成"
@@ -91,7 +333,10 @@
     {
       "id": "prompt-6",
       "title": "ChatGPT 高效文案写作指令模板",
-      "models": ["ChatGPT-4o", "Claude 3.5"],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5"
+      ],
       "skills": "文案写作的秘诀在于明确受众和语气。使用 persona: [目标用户] 和 tone: [语气] 参数，输出格式越具体越好。",
       "content": "Write a compelling product description for [产品名]. Target audience: [目标用户]. Key benefits: [核心卖点]. Tone: professional yet friendly. Format: headline + 3 bullet points + call-to-action. Length: under 150 words.",
       "category": "文案写作"
@@ -99,7 +344,10 @@
     {
       "id": "prompt-7",
       "title": "Stable Diffusion 超写实人像摄影",
-      "models": ["Stable Diffusion XL", "Midjourney V6"],
+      "models": [
+        "Stable Diffusion XL",
+        "Midjourney V6"
+      ],
       "skills": "人像生成要避免恐怖谷效应。使用 photorealistic 和 8k portrait 风格词，加 --style raw 减少AI感。",
       "content": "Photorealistic portrait of a young professional woman, soft natural lighting from window, shallow depth of field, shot on Sony A7IV, 85mm f1.8 lens, subtle smile, skin texture detail, 8k.",
       "category": "图像生成"
@@ -107,7 +355,10 @@
     {
       "id": "prompt-8",
       "title": "AI 爆款小红书种草文案生成器",
-      "models": ["ChatGPT-4o", "Claude 3.5"],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5"
+      ],
       "skills": "小红书文案要有情绪价值。开头用疑问句或感叹句抓眼球，中间用数字增加可信度，结尾引导互动。",
       "content": "你是一位小红书爆款文案专家。请为以下产品写一篇种草笔记：\n产品：[产品名称]\n核心卖点：[1-3个卖点]\n目标用户：[用户画像]\n\n要求：\n1. 标题含emoji，制造悬念或共鸣\n2. 正文分3段：痛点引入→产品介绍→使用体验\n3. 结尾加3-5个相关话题标签\n4. 语气真实自然，像真实用户分享",
       "category": "文案写作"
@@ -115,7 +366,10 @@
     {
       "id": "prompt-9",
       "title": "Midjourney 赛博朋克城市夜景",
-      "models": ["Midjourney V6", "Stable Diffusion XL"],
+      "models": [
+        "Midjourney V6",
+        "Stable Diffusion XL"
+      ],
       "skills": "赛博朋克风格的核心是霓虹灯与黑暗的对比。使用 neon lights, rain-soaked streets, high contrast 三件套。",
       "content": "Cyberpunk cityscape at night, towering skyscrapers with holographic advertisements, rain-soaked streets reflecting neon lights, flying vehicles in the distance, dense fog, ultra-detailed, cinematic composition, --ar 16:9 --v 6",
       "category": "图像生成"
@@ -123,7 +377,10 @@
     {
       "id": "prompt-10",
       "title": "AI 商业计划书一键生成",
-      "models": ["ChatGPT-4o", "Claude 3.5 Sonnet"],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
       "skills": "商业计划书要有逻辑框架。让AI先输出目录，再逐章展开，避免一次性生成导致内容空洞。",
       "content": "你是一位资深创业顾问。请为以下项目生成一份完整的商业计划书大纲：\n\n项目名称：[项目名]\n行业：[所属行业]\n目标市场：[目标用户群]\n核心产品/服务：[简述]\n\n请包含：执行摘要、市场分析、竞争分析、商业模式、营销策略、财务预测、团队介绍、融资需求。每个章节给出3-5个关键要点。",
       "category": "商业应用"
@@ -131,7 +388,10 @@
     {
       "id": "prompt-11",
       "title": "ElevenLabs 情感化有声书旁白",
-      "models": ["ElevenLabs", "OpenAI TTS"],
+      "models": [
+        "ElevenLabs",
+        "OpenAI TTS"
+      ],
       "skills": "有声书旁白要有节奏感。在关键情节前加 [pause] 标记，用 [emphasis] 突出重要词汇，提升听觉体验。",
       "content": "Voice style: Warm, storytelling narrator with subtle emotional depth. Pacing: Moderate, with natural pauses at punctuation. Emphasis: Highlight key emotional words. Tone: Engaging and immersive, like a professional audiobook narrator. Apply to the following text: [在此粘贴你的文本内容]",
       "category": "音频生成"
@@ -139,7 +399,10 @@
     {
       "id": "prompt-12",
       "title": "Suno 中国风古典音乐生成",
-      "models": ["Suno V3.5", "Udio"],
+      "models": [
+        "Suno V3.5",
+        "Udio"
+      ],
       "skills": "中国风音乐要指定乐器。使用 erhu, guqin, pipa 等具体乐器名，比 Chinese style 更精准。",
       "content": "Traditional Chinese instrumental music, featuring erhu and guqin, pentatonic scale melody, peaceful and meditative atmosphere, bamboo forest ambiance, slow tempo 60 BPM, high quality recording, no vocals.",
       "category": "音频生成"
@@ -147,7 +410,10 @@
     {
       "id": "prompt-13",
       "title": "DALL-E 3 产品包装设计",
-      "models": ["DALL-E 3", "Midjourney V6"],
+      "models": [
+        "DALL-E 3",
+        "Midjourney V6"
+      ],
       "skills": "包装设计要指定视角和材质。使用 product mockup, studio lighting, isolated on white 确保干净的展示效果。",
       "content": "Professional product packaging design mockup for [产品类型], minimalist design with [主色调] color scheme, premium matte finish, elegant typography, studio lighting, isolated on white background, photorealistic render, 4k.",
       "category": "图像生成"
@@ -155,7 +421,10 @@
     {
       "id": "prompt-14",
       "title": "Claude 代码审查与优化助手",
-      "models": ["Claude 3.5 Sonnet", "ChatGPT-4o"],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
       "skills": "代码审查要分层次。先让AI找Bug，再优化性能，最后改善可读性，三步走比一次性要求效果好得多。",
       "content": "你是一位资深软件工程师，请对以下代码进行全面审查：\n\n```\n[粘贴你的代码]\n```\n\n请按以下顺序分析：\n1. **Bug检查**：找出潜在的错误和边界情况\n2. **性能优化**：识别性能瓶颈并给出改进方案\n3. **代码质量**：命名规范、注释、可读性建议\n4. **安全隐患**：SQL注入、XSS等安全问题\n\n每个问题给出具体的修改建议和示例代码。",
       "category": "编程开发"
@@ -163,7 +432,10 @@
     {
       "id": "prompt-15",
       "title": "Runway 产品广告片分镜脚本",
-      "models": ["Runway Gen-3", "Kling AI"],
+      "models": [
+        "Runway Gen-3",
+        "Kling AI"
+      ],
       "skills": "广告片要有节奏感。每个镜头控制在3-5秒，用 cut to 和 dissolve 指定转场方式，配合音乐节拍。",
       "content": "Shot 1 (3s): Extreme close-up of product, slow rotation, dramatic lighting, dark background. Cut to — Shot 2 (4s): Product in use, lifestyle setting, natural light, happy user expression. Dissolve to — Shot 3 (3s): Product logo reveal, clean white background, subtle particle effect, brand color accent.",
       "category": "商业应用"
@@ -171,7 +443,10 @@
     {
       "id": "prompt-16",
       "title": "ChatGPT 竞品分析报告生成器",
-      "models": ["ChatGPT-4o", "Perplexity AI"],
+      "models": [
+        "ChatGPT-4o",
+        "Perplexity AI"
+      ],
       "skills": "竞品分析要有框架。用波特五力模型或SWOT分析，让AI按固定框架输出，结果更专业可用。",
       "content": "你是一位市场分析师。请对[公司/产品名]进行竞品分析：\n\n分析框架：\n1. **市场定位**：目标用户、价格区间、核心价值主张\n2. **产品功能对比**：列出5-8个核心功能维度打分（1-10分）\n3. **SWOT分析**：优势、劣势、机会、威胁\n4. **差异化建议**：基于分析给出3个可执行的差异化方向\n\n竞品列表：[列出3-5个竞品]",
       "category": "商业应用"
@@ -179,7 +454,10 @@
     {
       "id": "prompt-17",
       "title": "Midjourney 极简主义室内设计",
-      "models": ["Midjourney V6", "DALL-E 3"],
+      "models": [
+        "Midjourney V6",
+        "DALL-E 3"
+      ],
       "skills": "室内设计要指定风格、材质和光线。Japandi（日式+北欧）风格词组合效果极佳，加 golden hour lighting 提升质感。",
       "content": "Japandi style living room interior, minimalist furniture with natural wood textures, neutral color palette of beige and warm white, large floor-to-ceiling windows, golden hour sunlight, indoor plants, cozy atmosphere, architectural photography, --ar 16:9 --v 6",
       "category": "图像生成"
@@ -187,7 +465,10 @@
     {
       "id": "prompt-18",
       "title": "AI 面试准备教练",
-      "models": ["ChatGPT-4o", "Claude 3.5"],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5"
+      ],
       "skills": "面试准备要针对性强。提供具体的岗位JD和公司背景，AI给出的建议会更精准，比泛泛而谈有用10倍。",
       "content": "你是一位资深HR和职业教练。我即将参加[公司名]的[职位名]面试。\n\n公司背景：[简述公司]\n岗位要求：[粘贴JD关键要求]\n我的背景：[简述你的经历]\n\n请帮我：\n1. 预测5个最可能被问到的问题\n2. 为每个问题提供STAR法则答题框架\n3. 给出3个我应该主动问面试官的问题\n4. 指出我背景中需要重点包装的亮点",
       "category": "文案写作"
@@ -195,7 +476,10 @@
     {
       "id": "prompt-19",
       "title": "HeyGen 数字人口播视频脚本",
-      "models": ["HeyGen", "Synthesia"],
+      "models": [
+        "HeyGen",
+        "Synthesia"
+      ],
       "skills": "数字人口播脚本要口语化。避免长句和复杂词汇，每句话不超过20字，加入停顿标记[pause]让节奏自然。",
       "content": "请将以下内容改写为适合AI数字人口播的视频脚本：\n\n原始内容：[粘贴你的内容]\n\n改写要求：\n1. 每句话不超过20字，口语化表达\n2. 开头15秒必须有钩子（问题/惊喜数据/共鸣场景）\n3. 在需要停顿的地方标注[pause 1s]或[pause 2s]\n4. 结尾加明确的行动号召\n5. 总时长控制在60-90秒（约150-200字）",
       "category": "商业应用"
@@ -301,6 +585,16 @@
       "content": "## 什么是Prompt工程\n\nPrompt工程就是「如何跟AI说话」的学问。同样的需求，不同的表达方式，输出质量可以差10倍。\n\n## 5个核心技巧\n\n### 技巧1：角色扮演（Role Prompting）\n\n给AI一个具体的角色，它会调用对应的知识库和表达风格。\n\n❌ 「帮我写一份营销方案」\n✅ 「你是一位有10年经验的数字营销总监，专注于B2B SaaS行业，请为...」\n\n### 技巧2：少样本示例（Few-shot）\n\n给AI看1-3个你想要的输出样例，比描述风格更有效。\n\n「请按照以下格式输出：\n示例输入：[xxx]\n示例输出：[xxx]\n\n现在处理：[你的实际输入]」\n\n### 技巧3：思维链（Chain of Thought）\n\n让AI先思考再回答，复杂问题准确率提升40%+。\n\n「请一步步思考这个问题，先列出你的分析过程，再给出最终答案。」\n\n### 技巧4：输出格式约束\n\n明确指定输出格式，避免AI自由发挥。\n\n「请用以下格式输出：\n**标题**：xxx\n**核心观点**：3条，每条不超过20字\n**详细说明**：每条观点展开100字\n**行动建议**：3个可执行步骤」\n\n### 技巧5：迭代优化\n\n把AI当成协作者，不断迭代。\n\n「第2段太学术化，用更口语的方式重写，加入一个真实案例」\n\n## 实战练习\n\n用这5个技巧重写你最近用过的一个Prompt，对比前后输出质量的差异。",
       "author": "格尼斯AI团队",
       "readTime": "8 min"
+    },
+    {
+      "id": "article-10",
+      "title": "Claude 3.5 Sonnet 完全使用指南：比 ChatGPT 更懂你的 AI 助手",
+      "category": "工具教程",
+      "date": "2026-04-16",
+      "excerpt": "Claude 3.5 Sonnet 是目前最强的长文本处理和代码生成AI。本文详解其核心优势、使用技巧和20个实战Prompt模板。",
+      "content": "## 为什么 Claude 3.5 Sonnet 与众不同\n\n在众多 AI 助手中，Claude 3.5 Sonnet 以三个核心优势脱颖而出：\n\n**1. 超长上下文理解（200K tokens）**\n可以一次性处理 15 万字的长文档，保持全文记忆不遗忘。非常适合：\n- 长篇小说创作\n- 学术论文分析\n- 大型代码库理解\n- 多轮深度对话\n\n**2. 精准遵循指令**\nClaude 对格式要求、字数限制、风格约束的执行能力远超其他模型。让它输出 800 字，不会多写或少写。\n\n**3. 代码能力极强**\n在 HumanEval 编程基准测试中，Claude 3.5 Sonnet 达到了 92% 的准确率，是目前最强的代码生成模型。\n\n## 5 个 Claude 专属使用技巧\n\n### 技巧1：Artifacts 功能 - 实时预览生成的内容\n\nClaude 的 Artifacts 功能可以将生成的代码、图表、文档实时渲染在侧边栏。\n\n使用方法：\n```\n「用 HTML + CSS 创建一个交互式待办事项应用，使用 Artifacts 展示」\n```\n\nClaude 会自动生成可运行的代码，并在右侧实时展示效果。\n\n### 技巧2：Projects 功能 - 建立专属知识库\n\n将常用文档、参考资料上传到 Project，Claude 会在所有对话中记住这些内容。\n\n适合场景：\n- 企业品牌文档和风格指南\n- 产品技术文档\n- 常见问答知识库\n- 个人写作素材库\n\n### 技巧3：长文档分析工作流\n\nClaude 擅长处理长文档，推荐以下工作流：\n\n**第一步：整体概括**\n「请用 3 句话概括这篇文档的核心观点」\n\n**第二步：深度提取**\n「列出文档中提到的 10 个关键数据，并标注出处」\n\n**第三步：批判性分析**\n「文档有哪些逻辑漏洞或未被充分论证的观点？」\n\n**第四步：实际应用**\n「基于文档内容，为我制定一个可执行的 30 天行动计划」\n\n### 技巧4：代码开发最佳实践\n\nClaude 是目前最强的 AI 编程助手，善用以下 Prompt 模式：\n\n**模式1：完整项目生成**\n```\n你是一个全栈开发者，请创建一个 Python Flask 博客应用，包含：\n- 用户注册/登录\n- 文章 CRUD\n- 评论系统\n- 使用 SQLite 数据库\n- Bootstrap 前端\n请使用 Artifacts 展示完整代码结构\n```\n\n**模式2：代码审查**\n```\n请审查以下代码，重点关注：\n1. 安全漏洞（SQL 注入、XSS 等）\n2. 性能瓶颈\n3. 代码规范问题\n4. 给出优化后的代码\n\n[粘贴代码]\n```\n\n**模式3：Bug 调试**\n```\n我的代码出现以下错误：\n[错误信息]\n\n这是相关代码：\n[代码片段]\n\n请分析可能的原因，并给出 3 个排查方向\n```\n\n### 技巧5：创意写作的「迭代精修」法\n\nClaude 特别适合需要多次打磨的长文本创作：\n\n**第一轮：生成初稿**\n「写一篇关于『AI 与未来教育』的深度文章，3000 字，面向教育工作者」\n\n**第二轮：结构调整**\n「目前的结构稍显松散，请重新组织为：问题→案例分析→解决方案→行动建议」\n\n**第三轮：风格优化**\n「文风太学术，加入更多真实案例和对话式表达，让读者更容易理解」\n\n**第四轮：细节打磨**\n「第 3 段的数据需要最新来源，补充 2024-2025 年的具体统计数字」\n\n## 10 个 Claude 专属实战 Prompt\n\n### 写作类\n\n**1. 深度研究报告**\n```\n你是一位资深行业分析师，请撰写一份关于「中国 AIGC 产业现状」的深度报告（5000 字）。\n结构：\n1. 市场概况（规模、增速、主要玩家）\n2. 技术演进路径\n3. 典型应用场景（附 5 个真实案例）\n4. 挑战与风险\n5. 2026 年趋势预测\n6. 对从业者的建议\n\n要求：\n- 引用具体数据和来源\n- 语言专业但不晦涩\n- 适合向企业高管汇报\n```\n\n**2. 邮件系列撰写**\n```\n为 SaaS 产品编写 5 封用户激活邮件序列，目标：让注册 7 天内未使用的用户完成首次核心功能体验。\n\n邮件 1：欢迎 + 核心功能介绍（发送：立即）\n邮件 2：成功案例分享（发送：第 2 天）\n邮件 3：功能深度教程（发送：第 4 天）\n邮件 4：限时优惠 + 紧迫感（发送：第 6 天）\n邮件 5：最后机会 + 反馈收集（发送：第 7 天）\n\n每封邮件控制在 150 字以内，语气友好专业。\n```\n\n### 编程类\n\n**3. 系统架构设计**\n```\n设计一个高并发的电商秒杀系统架构，要求：\n- 支持 10 万 QPS\n- 防止超卖\n- 响应时间 < 200ms\n- 使用微服务架构\n\n请提供：\n1. 架构图（用 Mermaid 语法）\n2. 核心服务拆分说明\n3. 数据库设计\n4. 关键技术选型（Redis、MQ、分库分表等）\n5. 限流和降级策略\n```\n\n**4. 算法题解析**\n```\n请详细解释「最长递增子序列」动态规划算法：\n1. 问题定义\n2. DP 状态设计\n3. 状态转移方程推导过程\n4. Python 实现\n5. 时间/空间复杂度分析\n6. 优化思路\n\n用通俗易懂的方式解释，假设读者有基础编程能力但不懂 DP。\n```\n\n### 分析类\n\n**5. 商业决策分析**\n```\n我是一家 50 人的软件公司 CEO，正在考虑是否要将核心产品从 Web 端扩展到移动端（iOS + Android）。\n\n请帮我分析：\n- 投入的显性成本和隐性成本\n- 预期收益和风险\n- 与竞品（已有 App）的竞争策略\n- 3 种可行方案及其优劣\n- 你的最终建议和理由\n\n请用决策矩阵的形式呈现，便于我向董事会汇报。\n```\n\n**6. 学术论文润色**\n```\n请将以下论文摘要润色为符合 Nature 子刊投稿标准的学术英语（300 词以内）：\n\n[粘贴中文摘要]\n\n要求：\n- 使用规范的学术表达\n- 突出创新点\n- 逻辑清晰，层次分明\n- 附上修改对照表，说明每处修改的原因\n```\n\n## Claude vs ChatGPT 选择指南\n\n| 场景 | 推荐工具 | 原因 |\n|------|----------|------|\n| 长文本创作（>3000字） | Claude | 上下文更长，不会遗忘前文 |\n| 代码生成与审查 | Claude | 准确率更高，Artifacts实时预览 |\n| 复杂逻辑推理 | Claude | 思维链更清晰 |\n| 多模态任务（图文） | ChatGPT | 支持图像输入输出 |\n| 联网搜索 | ChatGPT | 原生支持实时搜索 |\n| 日常闲聊 | ChatGPT | personality 更活泼 |\n| 严格格式要求 | Claude | 遵循指令更精准 |\n| 中文内容优化 | ChatGPT | 中文语感略好 |\n\n## 进阶技巧：组合使用 Claude + ChatGPT\n\n对于重要项目，建议双模型工作流：\n\n**第一步：用 Claude 生成框架**\n让 Claude 生成详细大纲和初稿，利用其长文本和结构化能力。\n\n**第二步：用 ChatGPT 补充细节**\n将 Claude 的输出分段给 ChatGPT，让其添加案例、数据、优化表达。\n\n**第三步：Claude 整合输出**\n将 ChatGPT 的优化内容交给 Claude，让其整合为统一风格的最终版本。\n\n这种组合方式可以兼得两者的优势，输出质量远超单一模型。\n\n## 结语\n\nClaude 3.5 Sonnet 是目前最强的「深度工作」AI 助手。无论是写长文、审代码、做分析，它都能提供接近专家级的输出。\n\n掌握本文的技巧，你将解锁 Claude 的全部潜力，让它成为你工作流中最可靠的智能伙伴。",
+      "author": "格尼斯AI团队",
+      "readTime": "18 min"
     }
   ]
 }

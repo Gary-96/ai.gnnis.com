@@ -15,6 +15,7 @@
     <meta name="theme-color" content="#14b8a6">
     <link href="static/iconfont.css" rel="stylesheet">
     <link rel="stylesheet" href="static/index.082d951a.css">
+    <script src="i18n.js"></script>
     <style>
       /* Site Header (Navbar) */
       .site-header { position: sticky; top: 0; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: rgba(0,0,0,0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
@@ -90,10 +91,10 @@
         <header class="site-header">
             <a href="index.html" class="site-logo">ai.gnnis.com</a>
             <nav class="nav-links">
-                <a href="index.html" class="active">首页</a>
-                <a href="ai-tools.html">AI Tools</a>
-                <a href="prompts.html">Prompts</a>
-                <a href="blog.html">Skills</a>
+                <a href="index.html" class="active" data-i18n="nav_home">首页</a>
+                <a href="ai-tools.html" data-i18n="nav_tools">AI Tools</a>
+                <a href="prompts.html" data-i18n="nav_prompts">Prompts</a>
+                <a href="blog.html" data-i18n="nav_skills">Skills</a>
             </nav>
             <div class="nav-actions">
                 <svg id="search-btn" role="button" tabindex="0" aria-label="搜索工具" style="color: rgba(255,255,255,0.7); cursor: pointer;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -172,29 +173,29 @@
             <!-- Hero Section -->
             <section class="hero-section">
                 <div class="hero-content">
-                    <span class="hero-badge">🚀 数字化创造时代</span>
-                    <h1 class="hero-title">格尼斯 <span>AI</span></h1>
-                    <p class="hero-subtitle">智能化工具唤醒创造新力。精选全球优质 AI 工具，助你提升工作效率，释放无限创意。</p>
+                    <span class="hero-badge" data-i18n="home_badge">🚀 数字化创造时代</span>
+                    <h1 class="hero-title"><span data-i18n="home_title">格尼斯</span> <span data-i18n="home_title_ai">AI</span></h1>
+                    <p class="hero-subtitle" data-i18n="home_subtitle">智能化工具唤醒创造新力。精选全球优质 AI 工具，助你提升工作效率，释放无限创意。</p>
                     <div class="hero-stats">
                         <div class="stat-item">
                             <span class="stat-number" id="stat-tools">40+</span>
-                            <span class="stat-label">AI 工具</span>
+                            <span class="stat-label" data-i18n="home_stat_tools">AI 工具</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" id="stat-prompts">20+</span>
-                            <span class="stat-label">精选 Prompt</span>
+                            <span class="stat-label" data-i18n="home_stat_prompts">精选 Prompt</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" id="stat-articles">10+</span>
-                            <span class="stat-label">深度文章</span>
+                            <span class="stat-label" data-i18n="home_stat_articles">深度文章</span>
                         </div>
                     </div>
                     <div class="hero-cta">
                         <a href="ai-tools.html" class="btn-primary">
                             <i class="iconfont icon-arrow-right"></i>
-                            浏览 AI 工具
+                            <span data-i18n="home_cta_tools">浏览 AI 工具</span>
                         </a>
-                        <a href="prompts.html" class="btn-secondary">
+                        <a href="prompts.html" class="btn-secondary" data-i18n="home_cta_prompts">
                             探索 Prompts
                         </a>
                     </div>
@@ -206,37 +207,37 @@
 
             <!-- Feature Preview -->
             <section class="feature-preview">
-                <h2>探索 AI 的无限可能</h2>
+                <h2 data-i18n="home_features_title">探索 AI 的无限可能</h2>
                 <div class="feature-grid">
                     <div class="feature-card">
                         <div class="icon">🤖</div>
-                        <h3>AI 写作</h3>
-                        <p>ChatGPT、Claude、Gemini 等顶级 AI 助手，助你高效完成文案、报告、代码等创作任务。</p>
+                        <h3 data-i18n="home_feature_writing">AI 写作</h3>
+                        <p data-i18n="home_feature_writing_desc">ChatGPT、Claude、Gemini 等顶级 AI 助手，助你高效完成文案、报告、代码等创作任务。</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon">🎨</div>
-                        <h3>AI 绘画</h3>
-                        <p>Midjourney、Stable Diffusion、DALL-E 等图像生成工具，将创意变为视觉艺术。</p>
+                        <h3 data-i18n="home_feature_art">AI 绘画</h3>
+                        <p data-i18n="home_feature_art_desc">Midjourney、Stable Diffusion、DALL-E 等图像生成工具，将创意变为视觉艺术。</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon">🎬</div>
-                        <h3>AI 视频</h3>
-                        <p>Runway、可灵、Pika 等视频生成工具，让视频创作前所未有的简单高效。</p>
+                        <h3 data-i18n="home_feature_video">AI 视频</h3>
+                        <p data-i18n="home_feature_video_desc">Runway、可灵、Pika 等视频生成工具，让视频创作前所未有的简单高效。</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon">🎵</div>
-                        <h3>AI 音频</h3>
-                        <p>Suno、ElevenLabs、Udio 等音频工具，一键生成专业级音乐和语音。</p>
+                        <h3 data-i18n="home_feature_audio">AI 音频</h3>
+                        <p data-i18n="home_feature_audio_desc">Suno、ElevenLabs、Udio 等音频工具，一键生成专业级音乐和语音。</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon">💻</div>
-                        <h3>AI 编程</h3>
-                        <p>Cursor、GitHub Copilot、Bolt 等编程助手，让代码编写效率提升 10 倍。</p>
+                        <h3 data-i18n="home_feature_code">AI 编程</h3>
+                        <p data-i18n="home_feature_code_desc">Cursor、GitHub Copilot、Bolt 等编程助手，让代码编写效率提升 10 倍。</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon">📚</div>
-                        <h3>精选教程</h3>
-                        <p>深度文章和 Prompt 技巧分享，从入门到精通，掌握 AI 工具的最佳实践。</p>
+                        <h3 data-i18n="home_feature_tutorial">精选教程</h3>
+                        <p data-i18n="home_feature_tutorial_desc">深度文章和 Prompt 技巧分享，从入门到精通，掌握 AI 工具的最佳实践。</p>
                     </div>
                 </div>
             </section>
@@ -245,23 +246,16 @@
 
         <footer class="site-footer">
             <div class="footer-links">
-                <a href="about.html">About Us</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="about.html" data-i18n="footer_about">关于我们</a>
+                <a href="privacy.html" data-i18n="footer_privacy">隐私政策</a>
+                <a href="terms.html" data-i18n="footer_terms">服务条款</a>
+                <a href="contact.html" data-i18n="footer_contact">联系我们</a>
             </div>
-            <div class="footer-copy">© 2026 ai.gnnis.com. All rights reserved.</div>
+            <div class="footer-copy" data-i18n="footer_copyright">© 2026 ai.gnnis.com. All rights reserved.</div>
         </footer>
     </div>
 
     <script>
-        // 语言切换功能
-        let currentLang = 'zh';
-        document.getElementById('lang-btn').addEventListener('click', function() {
-            currentLang = currentLang === 'zh' ? 'en' : 'zh';
-            this.textContent = currentLang === 'zh' ? 'En / 中' : '中 / En';
-        });
-
         // 搜索功能
         document.getElementById('search-btn').addEventListener('click', function() {
             window.location.href = 'ai-tools.html';
@@ -278,11 +272,11 @@
             if (animationEnabled) {
                 canvas.style.display = 'block';
                 this.classList.remove('disabled');
-                this.innerHTML = '✨ 动画';
+                this.innerHTML = i18n.t('anim_toggle_on');
             } else {
                 canvas.style.display = 'none';
                 this.classList.add('disabled');
-                this.innerHTML = '⏸️ 动画';
+                this.innerHTML = i18n.t('anim_toggle_off');
             }
         });
 
@@ -299,6 +293,9 @@
                 document.getElementById('stat-tools').textContent = toolsCount + '+';
                 document.getElementById('stat-prompts').textContent = promptsCount + '+';
                 document.getElementById('stat-articles').textContent = articlesCount + '+';
+                
+                // 更新统计数据标签
+                i18n.updateStats({tools: toolsCount, prompts: promptsCount, articles: articlesCount});
             } catch (e) {
                 console.error('Failed to load stats:', e);
             }
