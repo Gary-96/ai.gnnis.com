@@ -65,13 +65,6 @@ export default function HomePageClient({ initialData }: HomePageClientProps) {
           
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="border-t border-white/5 py-12 text-center">
-        <p className="text-sm text-white/20">
-          © {new Date().getFullYear()} GNNIS AI. All rights reserved.
-        </p>
-      </footer>
     </div>
   );
 }
